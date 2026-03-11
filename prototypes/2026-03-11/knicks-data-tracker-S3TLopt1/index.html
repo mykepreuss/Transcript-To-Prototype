@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knicks Data Tracker</title>
+  <meta name="description" content="Review the upcoming five-game schedule and Jalen Brunson's recent scoring behaviour.">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="ledger-container">
+    <header class="ledger-header">
+      <div class="eyebrow">Player & Team Statistics</div>
+      <h1>Knicks Data Tracker</h1>
+      <p class="lede">Review the upcoming five-game schedule and Jalen Brunson's recent scoring behaviour.</p>
+    </header>
+
+    <section class="highlights-grid" id="highlights-container">
+      <!-- Populated by JS -->
+    </section>
+
+    <main class="data-split">
+      <section class="panel schedule-panel">
+        <header class="panel-header">
+          <h2>Upcoming Schedule</h2>
+          <p>Next five fixtures for the New York Knicks.</p>
+        </header>
+        <div class="table-wrapper">
+          <table id="schedule-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Opponent</th>
+                <th>Location</th>
+              </tr>
+            </thead>
+            <tbody id="schedule-body">
+              <!-- Populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel scoring-panel">
+        <header class="panel-header">
+          <h2>Recent Scoring</h2>
+          <p>Jalen Brunson's points over the last five starts.</p>
+        </header>
+        <div class="chart-container">
+          <div class="threshold-line" id="threshold-line">
+            <span class="threshold-label">30-Point Threshold</span>
+          </div>
+          <div class="chart-bars" id="chart-bars">
+             <!-- Populated by JS -->
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>

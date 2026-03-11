@@ -1,0 +1,112 @@
+{
+  "title": "Knicks Data Tracker",
+  "eyebrow": "Player & Team Statistics",
+  "lede": "Review the upcoming five-game schedule and Jalen Brunson's recent scoring behaviour.",
+  "highlights": [
+    {
+      "label": "L5 Scoring Average",
+      "value": "31.2",
+      "detail": "Points per game",
+      "tone": "neutral"
+    },
+    {
+      "label": "L3 Scoring Average",
+      "value": "33.7",
+      "detail": "Points per game",
+      "tone": "neutral"
+    },
+    {
+      "label": "L3 Threshold Status",
+      "value": "Active",
+      "detail": "Average ≥ 30 points",
+      "tone": "positive"
+    }
+  ],
+  "sections": [
+    {
+      "type": "table",
+      "title": "Upcoming Schedule",
+      "description": "Next five fixtures for the New York Knicks.",
+      "columns": [
+        "Date",
+        "Opponent",
+        "Location"
+      ],
+      "rows": [
+        [
+          "2026-03-12",
+          "Boston",
+          "Home"
+        ],
+        [
+          "2026-03-14",
+          "Miami",
+          "Away"
+        ],
+        [
+          "2026-03-16",
+          "Philly",
+          "Home"
+        ],
+        [
+          "2026-03-18",
+          "Chicago",
+          "Away"
+        ],
+        [
+          "2026-03-20",
+          "Cleveland",
+          "Home"
+        ]
+      ],
+      "emptyMessage": "No upcoming fixtures found."
+    },
+    {
+      "type": "series",
+      "title": "Recent Scoring",
+      "description": "Jalen Brunson's points over the last five starts.",
+      "unit": "pts",
+      "threshold": 30,
+      "thresholdLabel": "30-Point Threshold",
+      "points": [
+        {
+          "label": "Game 1",
+          "value": 31,
+          "detail": "Opponent 1"
+        },
+        {
+          "label": "Game 2",
+          "value": 24,
+          "detail": "Opponent 2"
+        },
+        {
+          "label": "Game 3",
+          "value": 39,
+          "detail": "Opponent 3"
+        },
+        {
+          "label": "Game 4",
+          "value": 27,
+          "detail": "Opponent 4"
+        },
+        {
+          "label": "Game 5",
+          "value": 35,
+          "detail": "Opponent 5"
+        }
+      ],
+      "emptyMessage": "No scoring data available."
+    }
+  ],
+  "demoSteps": [
+    "Load the local dashboard view in the browser.",
+    "Observe the calculated highlights for L5 and L3 averages.",
+    "Verify the threshold flag triggers accurately based on the 33.7 average.",
+    "Review the upcoming schedule table for correct dates and locations."
+  ],
+  "notes": [
+    "All data is fed via static JSON fixtures to ensure zero network variance.",
+    "Maintains UK spelling (e.g., 'behaviour', 'colour') across any additional interface text.",
+    "Architecture is decoupled, allowing seamless API integration in V2 without structural changes."
+  ]
+}
