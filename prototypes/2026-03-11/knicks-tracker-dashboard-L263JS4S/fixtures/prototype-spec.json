@@ -1,0 +1,106 @@
+{
+  "title": "Knicks Tracker Dashboard",
+  "eyebrow": "Deterministic V1",
+  "lede": "Upcoming game schedule and recent scoring averages for Jalen Brunson.",
+  "highlights": [
+    {
+      "label": "L5 Average",
+      "value": "31.2",
+      "detail": "Points across last 5 starts",
+      "tone": "neutral"
+    },
+    {
+      "label": "L3 Average",
+      "value": "33.7",
+      "detail": "Threshold flag: >= 30",
+      "tone": "positive"
+    }
+  ],
+  "sections": [
+    {
+      "type": "series",
+      "title": "Jalen Brunson Scoring (Last 5)",
+      "description": "Points scored per game in recent starts.",
+      "unit": "pts",
+      "threshold": 30,
+      "thresholdLabel": "30pt threshold",
+      "points": [
+        {
+          "label": "Game 1",
+          "value": 31,
+          "detail": "Opponent 1"
+        },
+        {
+          "label": "Game 2",
+          "value": 24,
+          "detail": "Opponent 2"
+        },
+        {
+          "label": "Game 3",
+          "value": 39,
+          "detail": "Opponent 3"
+        },
+        {
+          "label": "Game 4",
+          "value": 27,
+          "detail": "Opponent 4"
+        },
+        {
+          "label": "Game 5",
+          "value": 35,
+          "detail": "Opponent 5"
+        }
+      ],
+      "emptyMessage": "No scoring data available."
+    },
+    {
+      "type": "table",
+      "title": "Upcoming Schedule",
+      "description": "Next 5 scheduled games.",
+      "columns": [
+        "Date",
+        "Opponent",
+        "Location"
+      ],
+      "rows": [
+        [
+          "2026-03-12",
+          "Boston",
+          "Home"
+        ],
+        [
+          "2026-03-14",
+          "Miami",
+          "Away"
+        ],
+        [
+          "2026-03-16",
+          "Philly",
+          "Home"
+        ],
+        [
+          "2026-03-18",
+          "Chicago",
+          "Away"
+        ],
+        [
+          "2026-03-20",
+          "Cleveland",
+          "Home"
+        ]
+      ],
+      "emptyMessage": "No upcoming fixtures found."
+    }
+  ],
+  "demoSteps": [
+    "Load the local dashboard via the run command.",
+    "Observe the 31.2 L5 average and 33.7 L3 average in the highlights.",
+    "Verify the L3 average triggers the positive threshold flag (>= 30).",
+    "Check the scoring chart to see variance against the 30-point line.",
+    "Review the schedule table to confirm all 5 deterministic fixtures render correctly."
+  ],
+  "notes": [
+    "Keep all copy factual; avoid hyping the player's performance.",
+    "Ensure UK spelling is maintained (e.g., 'visualise', 'behaviour') in any accompanying documentation."
+  ]
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knicks Tracker | Deterministic V1</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="layout-wrapper">
+    <header class="site-header">
+      <div class="meta-tag">[DETERMINISTIC V1]</div>
+      <h1>Knicks Tracker Dashboard</h1>
+      <p>Upcoming game schedule and recent scoring averages for Jalen Brunson.</p>
+    </header>
+
+    <main>
+      <section class="metrics-grid" id="highlights-container">
+        <!-- Injected via app.js -->
+      </section>
+
+      <div class="data-panels-grid">
+        <section class="panel chart-panel">
+          <header class="panel-header">
+            <h2>Jalen Brunson Scoring (Last 5)</h2>
+            <span class="panel-desc">Points scored per game in recent starts.</span>
+          </header>
+          <div class="chart-wrapper">
+            <div class="threshold-line" data-label="30pt threshold"></div>
+            <div class="bar-chart" id="scoring-chart-container">
+              <!-- Injected via app.js -->
+            </div>
+          </div>
+        </section>
+
+        <section class="panel table-panel">
+          <header class="panel-header">
+            <h2>Upcoming Schedule</h2>
+            <span class="panel-desc">Next 5 scheduled games.</span>
+          </header>
+          <div class="table-wrapper">
+            <table id="schedule-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Opponent</th>
+                  <th>Location</th>
+                </tr>
+              </thead>
+              <tbody id="schedule-tbody">
+                <!-- Injected via app.js -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>

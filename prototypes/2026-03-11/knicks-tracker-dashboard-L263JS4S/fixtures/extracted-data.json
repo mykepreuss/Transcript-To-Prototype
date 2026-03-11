@@ -1,0 +1,57 @@
+{
+  "schedule": [
+    {
+      "date": "2026-03-12",
+      "opponent": "Boston",
+      "homeAway": "Home"
+    },
+    {
+      "date": "2026-03-14",
+      "opponent": "Miami",
+      "homeAway": "Away"
+    },
+    {
+      "date": "2026-03-16",
+      "opponent": "Philly",
+      "homeAway": "Home"
+    },
+    {
+      "date": "2026-03-18",
+      "opponent": "Chicago",
+      "homeAway": "Away"
+    },
+    {
+      "date": "2026-03-20",
+      "opponent": "Cleveland",
+      "homeAway": "Home"
+    }
+  ],
+  "scoring": [
+    {
+      "date": "game-1",
+      "opponent": "Opponent 1",
+      "points": 31
+    },
+    {
+      "date": "game-2",
+      "opponent": "Opponent 2",
+      "points": 24
+    },
+    {
+      "date": "game-3",
+      "opponent": "Opponent 3",
+      "points": 39
+    },
+    {
+      "date": "game-4",
+      "opponent": "Opponent 4",
+      "points": 27
+    },
+    {
+      "date": "game-5",
+      "opponent": "Opponent 5",
+      "points": 35
+    }
+  ],
+  "summary": "This prototype is a deterministic web dashboard to track Jalen Brunson's scoring and the upcoming Knicks schedule using local fixture files. Acceptance checks: executes correctly from local data, accurately calculates L5 (31.2) and L3 (33.7) averages, flags L3 average if greater than or equal to 30, stays deterministic, and keeps copy neutral without hype."
+}
