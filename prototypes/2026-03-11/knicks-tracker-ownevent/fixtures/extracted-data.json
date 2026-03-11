@@ -1,0 +1,57 @@
+{
+  "schedule": [
+    {
+      "date": "2026-03-12",
+      "opponent": "Boston",
+      "homeAway": "Home"
+    },
+    {
+      "date": "2026-03-14",
+      "opponent": "Miami",
+      "homeAway": "Away"
+    },
+    {
+      "date": "2026-03-16",
+      "opponent": "Philly",
+      "homeAway": "Home"
+    },
+    {
+      "date": "2026-03-18",
+      "opponent": "Chicago",
+      "homeAway": "Away"
+    },
+    {
+      "date": "2026-03-20",
+      "opponent": "Cleveland",
+      "homeAway": "Home"
+    }
+  ],
+  "scoring": [
+    {
+      "date": "game-1",
+      "opponent": "Opponent 1",
+      "points": 31
+    },
+    {
+      "date": "game-2",
+      "opponent": "Opponent 2",
+      "points": 24
+    },
+    {
+      "date": "game-3",
+      "opponent": "Opponent 3",
+      "points": 39
+    },
+    {
+      "date": "game-4",
+      "opponent": "Opponent 4",
+      "points": 27
+    },
+    {
+      "date": "game-5",
+      "opponent": "Opponent 5",
+      "points": 35
+    }
+  ],
+  "summary": "Recap: The team requires a simple, deterministic tool to track the upcoming Knicks schedule and Jalen Brunson's recent scoring averages. Chosen prototype: A minimal web view focusing on data density and quick comprehension, built entirely with local fixtures. Acceptance checks: Accurate 5-game and 3-game averages, a threshold flag for a 3-game average of 30 or above, and neutral, factual copy."
+}

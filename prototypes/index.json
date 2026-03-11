@@ -1,5 +1,14 @@
 [
   {
+    "issue_number": 13,
+    "title": "Prototype: Knicks Tracker (unknown-event)",
+    "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/13",
+    "created_at": "2026-03-11T21:19:52Z",
+    "run_dir": "prototypes/2026-03-11/knicks-tracker-ownevent",
+    "preview_url": "https://mykepreuss.github.io/Transcript-To-Prototype/prototypes/2026-03-11/knicks-tracker-ownevent/",
+    "summary": "Recap: The team requires a simple, deterministic tool to track the upcoming Knicks schedule and Jalen Brunson's recent scoring averages. Chosen prototype: A minimal web view focusing on data density and quick comprehension, built entirely with local fixtures. Acceptance checks: Accurate 5-game and 3-game averages, a threshold flag for a 3-game average of 30 or above, and neutral, factual copy.\n\n## Chosen prototype\n\n- Title: Knicks Tracker\n- Eyebrow: Player & Team Dashboard\n- Sections: Recent Scoring, Upcoming Schedule\n\n## Design direction\n\n- Purpose: Provide a clear, deterministic view of the Knicks schedule and Jalen Brunson's scoring trends.\n- Audience: Internal team testing data structures and thresholds.\n- Tone: Neutral, factual, and strictly historical. No hype language.\n- Memorable detail: Threshold flag triggering when the recent 3-game moving average hits or exceeds 30 points.\n- Constraints: No external network calls or APIs | Local fixture data only | Deterministic output | No predictive modelling"
+  },
+  {
     "issue_number": 12,
     "title": "Prototype: Knicks Brunson Tracker (Ev0ALVLSAD4G)",
     "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/12",

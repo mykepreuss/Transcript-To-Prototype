@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knicks Tracker | Telemetry View</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="grid-background"></div>
+  
+  <main class="dashboard">
+    <header class="dashboard-header">
+      <div class="eyebrow">Player & Team Dashboard</div>
+      <h1 class="title">Knicks Tracker</h1>
+      <p class="lede">Upcoming schedule and recent scoring performance for Jalen Brunson.</p>
+    </header>
+
+    <section class="metrics-bar">
+      <div class="metric-card" id="l5-card">
+        <div class="metric-label">L5 Scoring Avg</div>
+        <div class="metric-value" id="l5-value">--</div>
+        <div class="metric-detail">Last 5 starts</div>
+      </div>
+      <div class="metric-card" id="l3-card">
+        <div class="metric-label">L3 Scoring Avg</div>
+        <div class="metric-value" id="l3-value">--</div>
+        <div class="metric-detail" id="l3-detail">Calculating...</div>
+      </div>
+    </section>
+
+    <div class="data-panels">
+      <section class="panel scoring-panel">
+        <header class="panel-header">
+          <h2>Recent Scoring</h2>
+          <p>Brunson's points across the last five starts.</p>
+        </header>
+        <div class="chart-container">
+          <div class="y-axis">
+            <span>50</span>
+            <span>25</span>
+            <span>0</span>
+          </div>
+          <div class="bar-chart" id="scoring-chart"></div>
+        </div>
+      </section>
+
+      <section class="panel schedule-panel">
+        <header class="panel-header">
+          <h2>Upcoming Schedule</h2>
+          <p>Next five fixtures for the New York Knicks.</p>
+        </header>
+        <div class="table-wrapper">
+          <table id="schedule-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Opponent</th>
+                <th>Location</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Rows injected via JS -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
