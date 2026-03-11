@@ -1,0 +1,27 @@
+[
+  {
+    "date": "game-1",
+    "opponent": "Opponent 1",
+    "points": 31
+  },
+  {
+    "date": "game-2",
+    "opponent": "Opponent 2",
+    "points": 24
+  },
+  {
+    "date": "game-3",
+    "opponent": "Opponent 3",
+    "points": 39
+  },
+  {
+    "date": "game-4",
+    "opponent": "Opponent 4",
+    "points": 27
+  },
+  {
+    "date": "game-5",
+    "opponent": "Opponent 5",
+    "points": 35
+  }
+]
