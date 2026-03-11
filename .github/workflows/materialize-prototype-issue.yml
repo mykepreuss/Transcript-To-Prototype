@@ -1,0 +1,58 @@
+name: Materialize Prototype Issue
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  materialize:
+    if: contains(github.event.issue.title, 'Prototype:')
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Materialize prototype files
+        id: materialize
+        run: python scripts/materialize_prototype_issue.py
+
+      - name: Commit prototype output
+        run: |
+          if git diff --quiet; then
+            echo "No repo changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Materialize prototype issue #${{ github.event.issue.number }}"
+          git push
+
+      - name: Comment with prototype links
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const runDir = `${{ steps.materialize.outputs.run_dir }}`;
+            const previewUrl = `${{ steps.materialize.outputs.preview_url }}`;
+            const body = [
+              `Prototype materialised into \`${runDir}\` on \`main\`.`,
+              "",
+              `Preview: ${previewUrl}`,
+              `Repo path: ${runDir}`,
+            ].join("\n");
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body,
+            });
