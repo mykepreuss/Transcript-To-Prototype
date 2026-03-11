@@ -217,6 +217,10 @@ def render_gallery() -> None:
     GALLERY_PATH.write_text(html)
 
 
+def ensure_pages_static_site() -> None:
+    (ROOT / ".nojekyll").write_text("")
+
+
 def main() -> int:
     event_path = pathlib.Path(os.environ["GITHUB_EVENT_PATH"])
     payload = load_issue_payload(event_path)
@@ -232,6 +236,7 @@ def main() -> int:
     write_files(files)
     update_manifest(payload, run_dir, summary)
     render_gallery()
+    ensure_pages_static_site()
 
     with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as handle:
         handle.write(f"run_dir={run_dir}\n")
