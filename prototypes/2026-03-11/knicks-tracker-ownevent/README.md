@@ -1,15 +1,22 @@
-# Knicks Brunson Tracker Prototype
+# Knicks Tracker Prototype
 
-## Overview
-A deterministic, local-only web view designed to track Jalen Brunson's scoring trends and the upcoming Knicks schedule. Built for internal validation of data structures and threshold triggers.
+## Purpose
+A minimal, deterministic web view to track Jalen Brunson's recent scoring trends and the upcoming Knicks schedule. Built for fast comprehension and data density.
 
-## Features
-- **Zero Dependencies**: Pure HTML, CSS, and vanilla JavaScript.
-- **Local Fixtures**: Data is embedded directly in the application logic. No external network calls.
-- **Threshold Flag**: Highlights automatically when the 3-game moving average (L3) hits or exceeds 30 points.
-- **Aesthetic**: A bold, high-contrast 'telemetry' design direction, favouring data density and quick comprehension over decorative elements.
-
-## Execution
-1. Ensure all files (`index.html`, `styles.css`, `app.js`) are in the same directory.
+## Run Instructions
+1. Save all files (`index.html`, `styles.css`, `app.js`) in the same directory.
 2. Open `index.html` in any modern web browser.
-3. Verify behaviour: The L5 average should read 31.2, the L3 average should read 33.7, and the L3 module should aggressively highlight via the threshold trigger.
+3. No server or build process is required.
+
+## Acceptance Checks
+- [x] Page renders locally without network calls.
+- [x] 5-game average calculates to 31.2.
+- [x] 3-game average calculates to 33.7.
+- [x] 30+ threshold flag displays correctly (alerts visually due to L3 average >= 30).
+- [x] Output is strictly deterministic (hardcoded fixture data).
+- [x] Employs UK spelling internally and externally.
+
+## Design Notes
+- Aesthetic: 'Financial Data Terminal'. 
+- Typography: Strict monospace stack to avoid system defaults and enforce data alignment.
+- Interaction: Minimal, focusing purely on factual presentation.

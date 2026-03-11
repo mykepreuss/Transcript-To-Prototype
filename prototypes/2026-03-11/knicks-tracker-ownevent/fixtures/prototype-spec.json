@@ -1,18 +1,18 @@
 {
   "title": "Knicks Tracker",
-  "eyebrow": "Player & Team Dashboard",
-  "lede": "Upcoming schedule and recent scoring performance for Jalen Brunson.",
+  "eyebrow": "Player Performance & Fixtures",
+  "lede": "Jalen Brunson's recent scoring trends and upcoming Knicks schedule.",
   "highlights": [
     {
-      "label": "L5 Scoring Avg",
+      "label": "L5 Average",
       "value": "31.2",
-      "detail": "Last 5 starts",
+      "detail": "Points per game",
       "tone": "neutral"
     },
     {
-      "label": "L3 Scoring Avg",
+      "label": "L3 Average",
       "value": "33.7",
-      "detail": "Threshold >= 30 reached",
+      "detail": "Threshold: 30+",
       "tone": "positive"
     }
   ],
@@ -20,10 +20,10 @@
     {
       "type": "series",
       "title": "Recent Scoring",
-      "description": "Brunson's points across the last five starts.",
+      "description": "Points scored across the last five starts.",
       "unit": "pts",
       "threshold": 30,
-      "thresholdLabel": "30+ Point Threshold",
+      "thresholdLabel": "30pt threshold",
       "points": [
         {
           "label": "Game 1",
@@ -51,12 +51,12 @@
           "detail": "Opponent 5"
         }
       ],
-      "emptyMessage": "No scoring data available."
+      "emptyMessage": "No recent scoring data available."
     },
     {
       "type": "table",
-      "title": "Upcoming Schedule",
-      "description": "Next five fixtures for the New York Knicks.",
+      "title": "Upcoming Fixtures",
+      "description": "Next five scheduled games.",
       "columns": [
         "Date",
         "Opponent",
@@ -64,43 +64,44 @@
       ],
       "rows": [
         [
-          "12 Mar 2026",
+          "2026-03-12",
           "Boston",
           "Home"
         ],
         [
-          "14 Mar 2026",
+          "2026-03-14",
           "Miami",
           "Away"
         ],
         [
-          "16 Mar 2026",
+          "2026-03-16",
           "Philly",
           "Home"
         ],
         [
-          "18 Mar 2026",
+          "2026-03-18",
           "Chicago",
           "Away"
         ],
         [
-          "20 Mar 2026",
+          "2026-03-20",
           "Cleveland",
           "Home"
         ]
       ],
-      "emptyMessage": "No upcoming fixtures found."
+      "emptyMessage": "No upcoming fixtures scheduled."
     }
   ],
   "demoSteps": [
-    "Load the page to view static local fixtures.",
-    "Verify the L5 average calculates to exactly 31.2.",
-    "Verify the L3 average calculates to 33.7 and triggers the positive threshold highlight.",
-    "Check that the schedule table renders all five games accurately based on the local array."
+    "Load the local web view.",
+    "Observe the 5-game (31.2) and 3-game (33.7) scoring averages in the highlights.",
+    "Verify the 3-game average triggers the positive threshold flag (>= 30).",
+    "Check the scoring series chart against the static data points.",
+    "Review the schedule table to ensure all five upcoming fixtures render correctly."
   ],
   "notes": [
-    "V1 uses a decoupled data architecture to easily swap in an API in V2.",
-    "Copy favours neutral, factual language as requested.",
-    "No predictive forecasting features are included; strict reliance on historicals."
+    "Data architecture is decoupled to allow swapping in an API for V2.",
+    "All calculations are hardcoded to the fixture data to guarantee deterministic output.",
+    "No predictive modelling is included in this build."
   ]
 }

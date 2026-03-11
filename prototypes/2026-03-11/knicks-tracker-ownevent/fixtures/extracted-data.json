@@ -53,5 +53,5 @@
       "points": 35
     }
   ],
-  "summary": "Recap: The team requires a simple, deterministic tool to track the upcoming Knicks schedule and Jalen Brunson's recent scoring averages. Chosen prototype: A minimal web view focusing on data density and quick comprehension, built entirely with local fixtures. Acceptance checks: Accurate 5-game and 3-game averages, a threshold flag for a 3-game average of 30 or above, and neutral, factual copy."
+  "summary": "Recap: A simple input-output data tool to track Jalen Brunson's recent scoring and the upcoming Knicks schedule. Chosen prototype: Minimal web view. Acceptance checks: Page renders locally without network calls, 5-game and 3-game averages calculate accurately, 30+ threshold flag displays correctly, and output is strictly deterministic."
 }
