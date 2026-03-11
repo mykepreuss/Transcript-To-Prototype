@@ -1,5 +1,14 @@
 [
   {
+    "issue_number": 6,
+    "title": "Prototype: knicks-brunson-tracker (local-replay-1773255814877)",
+    "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/6",
+    "created_at": "2026-03-11T19:03:35Z",
+    "run_dir": "prototypes/2026-03-11/knicks-brunson-tracker-55814877",
+    "preview_url": "https://mykepreuss.github.io/Transcript-To-Prototype/prototypes/2026-03-11/knicks-brunson-tracker-55814877/",
+    "summary": "Recap + plan:\n- Goal: build a deterministic, browser-viewable knicks brunson tracker prototype.\n- Constraints: local fixtures only, no external APIs, neutral copy, minimal implementation.\n- Data: 5 schedule entries and 5 scoring entries parsed from the transcript.\n- Build: static web view with next fixture Boston (Home) on 2026-03-12, L5 31.2 ppg, L3 33.7 ppg.\n- Acceptance: direct browser open, deterministic calculations, threshold flag: 30+ form."
+  },
+  {
     "issue_number": 5,
     "title": "Prototype: knicks-brunson-tracker (Ev0ALUSB4UUQ)",
     "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/5",
