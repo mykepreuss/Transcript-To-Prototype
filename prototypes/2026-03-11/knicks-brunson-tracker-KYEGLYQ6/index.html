@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Transcript Prototype · knicks-brunson-tracker</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">Transcript-to-prototype</p>
+        <h1>knicks brunson tracker</h1>
+        <p class="lede">Deterministic V1 generated from a Slack transcript with local fixture data only.</p>
+      </header>
+
+      <section class="cards">
+        <article class="card">
+          <p class="label">Next fixture</p>
+          <h2 id="next-game">Loading…</h2>
+          <p id="next-game-meta" class="muted"></p>
+        </article>
+        <article class="card">
+          <p class="label">Brunson L5</p>
+          <h2 id="last-five-average">--</h2>
+          <p class="muted">Average points across the latest five starts in the fixture data.</p>
+        </article>
+        <article class="card">
+          <p class="label">Brunson L3</p>
+          <h2 id="last-three-average">--</h2>
+          <p id="threshold-flag" class="muted"></p>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Upcoming schedule</h2>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Opponent</th>
+              <th>Venue</th>
+            </tr>
+          </thead>
+          <tbody id="schedule-table"></tbody>
+        </table>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Scoring trend</h2>
+        </div>
+        <div id="scoring-bars" class="bars"></div>
+      </section>
+
+      <section class="panel prose">
+        <h2>Generated recap</h2>
+        <pre id="summary-block">**Recap**
+• Build a deterministic Knicks tracker using local static fixtures (no external APIs).
+• Display a 5-game schedule and Jalen Brunson&#39;s last 5 scoring outputs.
+• Calculate 5-game and 3-game averages, flagging if the 3-game average hits 30+.
+• Favour data density and neutral, factual copy.
+
+**Prototype Opportunities**
+1. **CLI Tool**: &quot;The first prototype opportunity is a CLI. It prints the upcoming five games...&quot;
+2. **Minimal Web View**: &quot;Second option would be a minimal web view. Maybe just a table for the schedule...&quot;
+3. **Slack Summary Generator**: &quot;Third option could be a Slack summary generator. Something that outputs a short line...&quot;
+
+**Plan: Minimal Web View**
+*Chosen to provide a simple, browser-viewable demo with zero infrastructure.*
+
+**Steps:**
+1. Create a single `index.html` file with embedded CSS and JS.
+2. Hardcode schedule and scoring arrays (31, 24, 39, 27, 35) as local JS variables.
+3. Write JS to calculate the 5-game average (31.2) and 3-game moving average (33.7).
+4. Render a dense HTML table for the schedule and a basic bar visual for scoring.
+5. Apply a distinct colour flag to the 3-game average if it meets the &gt;= 30 threshold.
+
+**Acceptance Checks:**
+• File loads directly in a browser (no server required).
+• Upcoming 5-game schedule displays deterministically.
+• 5-game and 3-game averages calculate accurately.
+• Threshold flag triggers correctly for the 33.7 average.
+• Copy and interface remain neutral, factual, and use UK spelling.</pre>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

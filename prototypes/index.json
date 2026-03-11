@@ -1,5 +1,14 @@
 [
   {
+    "issue_number": 3,
+    "title": "Prototype: knicks-brunson-tracker (Ev0AKYEGLYQ6)",
+    "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/3",
+    "created_at": "2026-03-11T18:50:25Z",
+    "run_dir": "prototypes/2026-03-11/knicks-brunson-tracker-KYEGLYQ6",
+    "preview_url": "https://mykepreuss.github.io/Transcript-To-Prototype/prototypes/2026-03-11/knicks-brunson-tracker-KYEGLYQ6/",
+    "summary": "**Recap**\n\u2022 Build a deterministic Knicks tracker using local static fixtures (no external APIs).\n\u2022 Display a 5-game schedule and Jalen Brunson's last 5 scoring outputs.\n\u2022 Calculate 5-game and 3-game averages, flagging if the 3-game average hits 30+.\n\u2022 Favour data density and neutral, factual copy.\n\n**Prototype Opportunities**\n1. **CLI Tool**: \"The first prototype opportunity is a CLI. It prints the upcoming five games...\"\n2. **Minimal Web View**: \"Second option would be a minimal web view. Maybe just a table for the schedule...\"\n3. **Slack Summary Generator**: \"Third option could be a Slack summary generator. Something that outputs a short line...\"\n\n**Plan: Minimal Web View**\n*Chosen to provide a simple, browser-viewable demo with zero infrastructure.*\n\n**Steps:**\n1. Create a single `index.html` file with embedded CSS and JS.\n2. Hardcode schedule and scoring arrays (31, 24, 39, 27, 35) as local JS variables.\n3. Write JS to calculate the 5-game average (31.2) and 3-game moving average (33.7).\n4. Render a dense HTML table for the schedule and a basic bar visual for scoring.\n5. Apply a distinct colour flag to the 3-game average if it meets the >= 30 threshold.\n\n**Acceptance Checks:**\n\u2022 File loads directly in a browser (no server required).\n\u2022 Upcoming 5-game schedule displays deterministically.\n\u2022 5-game and 3-game averages calculate accurately.\n\u2022 Threshold flag triggers correctly for the 33.7 average.\n\u2022 Copy and interface remain neutral, factual, and use UK spelling."
+  },
+  {
     "issue_number": 2,
     "title": "Prototype: knicks-brunson-tracker (local-replay-1773254386557)",
     "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/2",
