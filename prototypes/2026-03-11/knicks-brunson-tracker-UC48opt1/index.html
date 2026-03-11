@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knicks & Brunson Tracker</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="terminal-wrapper">
+        <header class="panel header-panel">
+            <div class="eyebrow">[ V1 DASHBOARD ]</div>
+            <h1>KNICKS & BRUNSON TRACKER</h1>
+            <p class="lede">Upcoming scheduled fixtures and Jalen Brunson's recent scoring performance.</p>
+        </header>
+
+        <main class="grid-layout">
+            <section class="panel highlights-panel">
+                <div class="stat-block" id="l5-block">
+                    <div class="stat-label">L5 AVERAGE</div>
+                    <div class="stat-value" id="l5-val">--.-</div>
+                    <div class="stat-detail">Points per game (Last 5)</div>
+                </div>
+                <div class="stat-block" id="l3-block">
+                    <div class="stat-label">L3 AVERAGE</div>
+                    <div class="stat-value" id="l3-val">--.-</div>
+                    <div class="stat-detail" id="l3-detail">Calculating...</div>
+                </div>
+            </section>
+
+            <section class="panel schedule-panel">
+                <div class="panel-header">
+                    <h2>[ UPCOMING SCHEDULE ]</h2>
+                    <span class="panel-desc">Next five fixtures for the New York Knicks.</span>
+                </div>
+                <div class="table-container">
+                    <table id="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>DATE</th>
+                                <th>OPPONENT</th>
+                                <th>VENUE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Injected via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="panel chart-panel">
+                <div class="panel-header">
+                    <h2>[ BRUNSON GAME LOGS ]</h2>
+                    <span class="panel-desc">Points scored in the last five starts.</span>
+                </div>
+                <div class="chart-container">
+                    <div class="threshold-line" id="threshold-line">
+                        <span class="threshold-label">30-PT THRESHOLD</span>
+                    </div>
+                    <div class="bars-wrapper" id="chart-bars">
+                        <!-- Injected via JS -->
+                    </div>
+                    <div class="x-axis" id="chart-labels">
+                         <!-- Injected via JS -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

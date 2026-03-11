@@ -1,0 +1,106 @@
+{
+  "title": "Knicks & Brunson Tracker",
+  "eyebrow": "V1 Dashboard",
+  "lede": "Upcoming scheduled fixtures and Jalen Brunson's recent scoring performance.",
+  "highlights": [
+    {
+      "label": "L5 Average",
+      "value": "31.2",
+      "detail": "Points per game over the last 5 starts",
+      "tone": "neutral"
+    },
+    {
+      "label": "L3 Average",
+      "value": "33.7",
+      "detail": "Threshold flag active (≥ 30 pts)",
+      "tone": "positive"
+    }
+  ],
+  "sections": [
+    {
+      "type": "table",
+      "title": "Upcoming Schedule",
+      "description": "Next five fixtures for the New York Knicks.",
+      "columns": [
+        "Date",
+        "Opponent",
+        "Venue"
+      ],
+      "rows": [
+        [
+          "2026-03-12",
+          "Boston",
+          "Home"
+        ],
+        [
+          "2026-03-14",
+          "Miami",
+          "Away"
+        ],
+        [
+          "2026-03-16",
+          "Philly",
+          "Home"
+        ],
+        [
+          "2026-03-18",
+          "Chicago",
+          "Away"
+        ],
+        [
+          "2026-03-20",
+          "Cleveland",
+          "Home"
+        ]
+      ],
+      "emptyMessage": "No upcoming fixtures available."
+    },
+    {
+      "type": "series",
+      "title": "Brunson Game Logs",
+      "description": "Points scored in the last five starts.",
+      "unit": "pts",
+      "threshold": 30,
+      "thresholdLabel": "30-point mark",
+      "points": [
+        {
+          "label": "Game 1",
+          "value": 31,
+          "detail": "Opponent 1"
+        },
+        {
+          "label": "Game 2",
+          "value": 24,
+          "detail": "Opponent 2"
+        },
+        {
+          "label": "Game 3",
+          "value": 39,
+          "detail": "Opponent 3"
+        },
+        {
+          "label": "Game 4",
+          "value": 27,
+          "detail": "Opponent 4"
+        },
+        {
+          "label": "Game 5",
+          "value": 35,
+          "detail": "Opponent 5"
+        }
+      ],
+      "emptyMessage": "No recent scoring data available."
+    }
+  ],
+  "demoSteps": [
+    "Load the dashboard using the local fixture JSON.",
+    "Verify the upcoming schedule table populates with five games.",
+    "Check the scoring chart displays five bars with correct values.",
+    "Observe the highlights to confirm L5 calculates to 31.2 and L3 to 33.7.",
+    "Verify the L3 highlight adopts a positive tone indicating the 30-point threshold is met."
+  ],
+  "notes": [
+    "Data architecture must remain decoupled to allow easy swapping to a live API in V2.",
+    "Interface should favour data density without decorative elements."
+  ]
+}
