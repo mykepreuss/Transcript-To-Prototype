@@ -82,6 +82,28 @@ def extract_summary(body: str) -> str:
     return match.group("summary").strip()
 
 
+def extract_source_metadata(body: str) -> dict[str, str]:
+    match = re.search(
+        r"## Source metadata\s+```json\s+(?P<json>.*?)\s+```",
+        body,
+        flags=re.DOTALL,
+    )
+    if not match:
+        return {}
+
+    try:
+        raw = json.loads(match.group("json"))
+    except json.JSONDecodeError:
+        return {}
+
+    metadata: dict[str, str] = {}
+    for key in ("slackChannel", "slackThreadTs", "slackMessageTs"):
+        value = raw.get(key)
+        if isinstance(value, str) and value.strip():
+            metadata[key] = value.strip()
+    return metadata
+
+
 def write_files(files: list[tuple[str, str]]) -> None:
     for relative_path, content in files:
         target_path = ROOT / relative_path
@@ -232,6 +254,7 @@ def main() -> int:
     run_dir = extract_run_dir(payload.body)
     files = extract_files(payload.body)
     summary = extract_summary(payload.body)
+    source_metadata = extract_source_metadata(payload.body)
 
     write_files(files)
     update_manifest(payload, run_dir, summary)
@@ -245,6 +268,9 @@ def main() -> int:
             f"https://{os.environ['GITHUB_REPOSITORY_OWNER']}.github.io/"
             f"{os.environ['GITHUB_REPOSITORY'].split('/')[1]}/{run_dir}/\n"
         )
+        handle.write(f"slack_channel={source_metadata.get('slackChannel', '')}\n")
+        handle.write(f"slack_thread_ts={source_metadata.get('slackThreadTs', '')}\n")
+        handle.write(f"slack_message_ts={source_metadata.get('slackMessageTs', '')}\n")
 
     print(f"Materialised prototype files for issue #{payload.number} into {run_dir}")
     return 0

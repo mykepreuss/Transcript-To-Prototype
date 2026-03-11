@@ -56,3 +56,48 @@ jobs:
               issue_number: context.issue.number,
               body,
             });
+
+      - name: Reply in Slack thread
+        if: ${{ secrets.SLACK_BOT_TOKEN != '' && steps.materialize.outputs.slack_channel != '' && steps.materialize.outputs.slack_thread_ts != '' }}
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL: ${{ steps.materialize.outputs.slack_channel }}
+          SLACK_THREAD_TS: ${{ steps.materialize.outputs.slack_thread_ts }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
+          PREVIEW_URL: ${{ steps.materialize.outputs.preview_url }}
+          RUN_DIR: ${{ steps.materialize.outputs.run_dir }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import urllib.request
+
+          body = {
+              "channel": os.environ["SLACK_CHANNEL"],
+              "thread_ts": os.environ["SLACK_THREAD_TS"],
+              "text": "\n".join(
+                  [
+                      "Prototype ready.",
+                      f"Issue: {os.environ['ISSUE_URL']}",
+                      f"Preview: {os.environ['PREVIEW_URL']}",
+                      f"Repo path: {os.environ['RUN_DIR']}",
+                  ]
+              ),
+          }
+
+          request = urllib.request.Request(
+              "https://slack.com/api/chat.postMessage",
+              data=json.dumps(body).encode("utf-8"),
+              headers={
+                  "Authorization": f"Bearer {os.environ['SLACK_BOT_TOKEN']}",
+                  "Content-Type": "application/json; charset=utf-8",
+              },
+              method="POST",
+          )
+
+          with urllib.request.urlopen(request) as response:
+              payload = json.loads(response.read().decode("utf-8"))
+
+          if not payload.get("ok"):
+              raise SystemExit(f"Slack completion reply failed: {payload}")
+          PY
