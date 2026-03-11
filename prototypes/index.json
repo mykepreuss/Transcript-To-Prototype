@@ -1,5 +1,14 @@
 [
   {
+    "issue_number": 8,
+    "title": "Prototype: https-jvk9696-com-archives (Ev0ALV3U2AQY)",
+    "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/8",
+    "created_at": "2026-03-11T19:31:30Z",
+    "run_dir": "prototypes/2026-03-11/https-jvk9696-com-archives-LV3U2AQY",
+    "preview_url": "https://mykepreuss.github.io/Transcript-To-Prototype/prototypes/2026-03-11/https-jvk9696-com-archives-LV3U2AQY/",
+    "summary": "**Recap**\n* Team needs a tool to organise daily tasks and schedules.\n* Highlighted the desire to track and score positive team behaviours.\n* Agreed to build a standalone V1 demo without external APIs.\n\n**Prototype Opportunities**\n1. **Schedule Organiser View**\n*\"We need a simple view to organise the weekly schedule.\"*\n2. **Behaviour Scoring Tracker**\n*\"Let's track when people show good behaviour and assign points.\"*\n3. **Combined Colour-Coded Dashboard**\n*\"We want both schedules and scores in one colour-coded place.\"*\n\n**Prototype Plan: Behaviour Scoring Tracker**\nA simple, zero-dependency HTML/JS prototype using local state to track team scores (falling back to mock data as no fixtures were provided).\n\n**Steps:**\n1. Scaffold a static HTML/CSS/JS page.\n2. Initialise an array of mock users with a baseline score of 0.\n3. Render a list of users with \"Add Point\" buttons.\n4. Add logic to increment scores and dynamically update the card's colour when reaching 5 points.\n\n**Acceptance Checks:**\n* [ ] App loads locally in a browser without errors or external API calls.\n* [ ] Displays at least three mock users.\n* [ ] Clicking \"Add Point\" increments the score instantly.\n* [ ] Card colour updates to reflect positive behaviour thresholds."
+  },
+  {
     "issue_number": 7,
     "title": "Prototype: knicks-brunson-tracker (Ev0AKYLUKWTG)",
     "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/7",

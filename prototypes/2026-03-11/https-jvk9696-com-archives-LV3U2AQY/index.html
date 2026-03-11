@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Transcript Prototype · https-jvk9696-com-archives</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">Transcript-to-prototype</p>
+        <h1>https jvk9696 com archives</h1>
+        <p class="lede">Deterministic V1 generated from a Slack transcript with local fixture data only.</p>
+      </header>
+
+      <section class="cards">
+        <article class="card">
+          <p class="label">Next fixture</p>
+          <h2 id="next-game">Loading…</h2>
+          <p id="next-game-meta" class="muted"></p>
+        </article>
+        <article class="card">
+          <p class="label">Brunson L5</p>
+          <h2 id="last-five-average">--</h2>
+          <p class="muted">Average points across the latest five starts in the fixture data.</p>
+        </article>
+        <article class="card">
+          <p class="label">Brunson L3</p>
+          <h2 id="last-three-average">--</h2>
+          <p id="threshold-flag" class="muted"></p>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Upcoming schedule</h2>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Opponent</th>
+              <th>Venue</th>
+            </tr>
+          </thead>
+          <tbody id="schedule-table"></tbody>
+        </table>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Scoring trend</h2>
+        </div>
+        <div id="scoring-bars" class="bars"></div>
+      </section>
+
+      <section class="panel prose">
+        <h2>Generated recap</h2>
+        <pre id="summary-block">**Recap**
+* Team needs a tool to organise daily tasks and schedules.
+* Highlighted the desire to track and score positive team behaviours.
+* Agreed to build a standalone V1 demo without external APIs.
+
+**Prototype Opportunities**
+1. **Schedule Organiser View**
+*&quot;We need a simple view to organise the weekly schedule.&quot;*
+2. **Behaviour Scoring Tracker**
+*&quot;Let&#39;s track when people show good behaviour and assign points.&quot;*
+3. **Combined Colour-Coded Dashboard**
+*&quot;We want both schedules and scores in one colour-coded place.&quot;*
+
+**Prototype Plan: Behaviour Scoring Tracker**
+A simple, zero-dependency HTML/JS prototype using local state to track team scores (falling back to mock data as no fixtures were provided).
+
+**Steps:**
+1. Scaffold a static HTML/CSS/JS page.
+2. Initialise an array of mock users with a baseline score of 0.
+3. Render a list of users with &quot;Add Point&quot; buttons.
+4. Add logic to increment scores and dynamically update the card&#39;s colour when reaching 5 points.
+
+**Acceptance Checks:**
+* [ ] App loads locally in a browser without errors or external API calls.
+* [ ] Displays at least three mock users.
+* [ ] Clicking &quot;Add Point&quot; increments the score instantly.
+* [ ] Card colour updates to reflect positive behaviour thresholds.</pre>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
