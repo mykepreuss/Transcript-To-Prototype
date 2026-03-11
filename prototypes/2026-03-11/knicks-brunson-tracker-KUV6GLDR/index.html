@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Transcript Prototype</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p id="eyebrow" class="eyebrow">Transcript-selected prototype</p>
+        <h1 id="prototype-title">Loading prototype…</h1>
+        <p id="prototype-lede" class="lede">Preparing the generated view.</p>
+      </header>
+
+      <section id="highlight-grid" class="cards"></section>
+
+      <section class="panel prose">
+        <h2>Generated recap</h2>
+        <pre id="summary-block">Recap + plan:
+- Goal: build a deterministic, browser-viewable knicks brunson tracker prototype.
+- Constraints: local fixtures only, no external APIs, neutral copy, minimal implementation.
+- Data: 5 schedule entries and 5 scoring entries parsed from the transcript.
+- Build: static web view with next fixture Boston (Home) on 2026-03-12, L5 31.2 ppg, L3 33.7 ppg.
+- Acceptance: direct browser open, deterministic calculations, threshold flag: 30+ form.</pre>
+      </section>
+
+      <section id="section-stack" class="section-stack"></section>
+
+      <section id="demo-steps-panel" class="panel">
+        <div class="panel-header">
+          <h2>Demo steps</h2>
+        </div>
+        <ol id="demo-steps" class="stack-list ordered"></ol>
+      </section>
+
+      <section id="notes-panel" class="panel">
+        <div class="panel-header">
+          <h2>Notes</h2>
+        </div>
+        <ul id="notes-list" class="stack-list"></ul>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
