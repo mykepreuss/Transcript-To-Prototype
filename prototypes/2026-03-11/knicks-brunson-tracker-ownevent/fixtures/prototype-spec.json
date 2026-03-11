@@ -1,0 +1,135 @@
+{
+  "title": "Knicks Brunson Tracker",
+  "eyebrow": "Transcript-selected prototype",
+  "lede": "Quick browser prototype aligned to the strongest signal in the intake transcript.",
+  "highlights": [
+    {
+      "label": "Next fixture",
+      "value": "Boston",
+      "detail": "Home on 2026-03-12"
+    },
+    {
+      "label": "L5 average",
+      "value": "31.2 ppg",
+      "detail": "Latest five scoring entries in the transcript fixtures."
+    },
+    {
+      "label": "L3 form",
+      "value": "33.7 ppg",
+      "detail": "Threshold reached for 30+ form.",
+      "tone": "positive"
+    }
+  ],
+  "sections": [
+    {
+      "type": "table",
+      "title": "Upcoming schedule",
+      "description": "Structured rows extracted from the transcript for the initial demo.",
+      "columns": [
+        "Date",
+        "Opponent",
+        "Venue"
+      ],
+      "rows": [
+        [
+          "2026-03-12",
+          "Boston",
+          "Home"
+        ],
+        [
+          "2026-03-14",
+          "Miami",
+          "Away"
+        ],
+        [
+          "2026-03-16",
+          "Philly",
+          "Home"
+        ],
+        [
+          "2026-03-18",
+          "Chicago",
+          "Away"
+        ],
+        [
+          "2026-03-20",
+          "Cleveland",
+          "Home"
+        ]
+      ],
+      "emptyMessage": "No schedule rows were extracted from the transcript."
+    },
+    {
+      "type": "series",
+      "title": "Scoring trend",
+      "description": "Numeric series derived from the transcript fixtures.",
+      "unit": "pts",
+      "threshold": 30,
+      "thresholdLabel": "30+ form threshold",
+      "points": [
+        {
+          "label": "Opponent 1",
+          "value": 31,
+          "detail": "game-1"
+        },
+        {
+          "label": "Opponent 2",
+          "value": 24,
+          "detail": "game-2"
+        },
+        {
+          "label": "Opponent 3",
+          "value": 39,
+          "detail": "game-3"
+        },
+        {
+          "label": "Opponent 4",
+          "value": 27,
+          "detail": "game-4"
+        },
+        {
+          "label": "Opponent 5",
+          "value": 35,
+          "detail": "game-5"
+        }
+      ],
+      "emptyMessage": "No numeric series was extracted from the transcript."
+    },
+    {
+      "type": "list",
+      "title": "Transcript signals",
+      "description": "Key lines preserved from the intake conversation.",
+      "items": [
+        "Knicks tracker prototype",
+        "Morgan, Casey, Riley, Jordan",
+        "Alright, let’s keep this one tight. What we need for the prototype is basically two answers. One, what is the upcoming Knicks schedule. Two, how is Jalen Brunson scoring across his recent starts.",
+        "Yeah. I think for V1 we should make this a very simple input-output data tool. No external APIs. Just use a local fixture file so we can test it repeatedly and not worry about network variance.",
+        "That makes sense. If we do any interface at all, it should favour data density and quick comprehension. Nothing decorative."
+      ],
+      "ordered": false,
+      "emptyMessage": "No transcript signals were extracted."
+    },
+    {
+      "type": "list",
+      "title": "Acceptance checks",
+      "description": "The browser demo should satisfy these checks on first open.",
+      "items": [
+        "Goal: build a deterministic, browser-viewable knicks brunson tracker prototype.",
+        "Constraints: local fixtures only, no external APIs, neutral copy, minimal implementation.",
+        "Data: 5 schedule entries and 5 scoring entries parsed from the transcript.",
+        "Build: static web view with next fixture Boston (Home) on 2026-03-12, L5 31.2 ppg, L3 33.7 ppg."
+      ],
+      "ordered": true,
+      "emptyMessage": "No acceptance checks were generated."
+    }
+  ],
+  "demoSteps": [
+    "Open index.html in a browser.",
+    "Review the highlights and generated sections against the transcript intent.",
+    "Inspect fixtures/prototype-spec.json for the selected build contract."
+  ],
+  "notes": [
+    "Deterministic V1 using local fixture data only.",
+    "No external APIs or live integrations are required."
+  ]
+}
