@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Transcript Prototype · knicks-brunson-tracker</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">Transcript-to-prototype</p>
+        <h1>knicks brunson tracker</h1>
+        <p class="lede">Deterministic V1 generated from a Slack transcript with local fixture data only.</p>
+      </header>
+
+      <section class="cards">
+        <article class="card">
+          <p class="label">Next fixture</p>
+          <h2 id="next-game">Loading…</h2>
+          <p id="next-game-meta" class="muted"></p>
+        </article>
+        <article class="card">
+          <p class="label">Brunson L5</p>
+          <h2 id="last-five-average">--</h2>
+          <p class="muted">Average points across the latest five starts in the fixture data.</p>
+        </article>
+        <article class="card">
+          <p class="label">Brunson L3</p>
+          <h2 id="last-three-average">--</h2>
+          <p id="threshold-flag" class="muted"></p>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Upcoming schedule</h2>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Opponent</th>
+              <th>Venue</th>
+            </tr>
+          </thead>
+          <tbody id="schedule-table"></tbody>
+        </table>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Scoring trend</h2>
+        </div>
+        <div id="scoring-bars" class="bars"></div>
+      </section>
+
+      <section class="panel prose">
+        <h2>Generated recap</h2>
+        <pre id="summary-block">**Recap**
+• V1 needs a deterministic Knicks schedule and Brunson scoring tracker.
+• Must use static local fixtures with zero external network calls.
+• Requires 5-game and 3-game averages, plus a threshold flag if the 3-game average hits 30+.
+• Design must favour strict data density and use neutral, factual copy.
+
+**Prototype Opportunities**
+1. **CLI App** - *&quot;The first prototype opportunity is a CLI. It prints the upcoming five games...&quot;*
+2. **Minimal Web View** - *&quot;Second option would be a minimal web view. Maybe just a table for the schedule and a basic bar visual...&quot;*
+3. **Slack Summary** - *&quot;Third option could be a Slack summary generator.&quot;*
+
+**Plan: Minimal Web View**
+*(Chosen to satisfy the prompt&#39;s preference for a browser-viewable demo)*
+
+**Steps:**
+1. Create a single `index.html` file with embedded CSS and JS to minimise infrastructure bloat.
+2. Hardcode the local fixture arrays (5 scheduled games, 5 historic scores: 31, 24, 39, 27, 35).
+3. Write JS logic to calculate the 5-game average and 3-game moving average.
+4. Render a dense schedule table and scoring summary, injecting a flag if the 3-game average is ≥ 30.
+
+**Acceptance Checks:**
+• File loads instantly in a browser with no network calls or build step.
+• L5 and L3 averages calculate accurately from the static arrays.
+• Threshold flag triggers correctly (≥ 30).
+• UI uses neutral copy and favours data density.</pre>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

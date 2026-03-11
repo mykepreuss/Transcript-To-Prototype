@@ -1,5 +1,14 @@
 [
   {
+    "issue_number": 7,
+    "title": "Prototype: knicks-brunson-tracker (Ev0AKYLUKWTG)",
+    "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/7",
+    "created_at": "2026-03-11T19:18:26Z",
+    "run_dir": "prototypes/2026-03-11/knicks-brunson-tracker-KYLUKWTG",
+    "preview_url": "https://mykepreuss.github.io/Transcript-To-Prototype/prototypes/2026-03-11/knicks-brunson-tracker-KYLUKWTG/",
+    "summary": "**Recap**\n\u2022 V1 needs a deterministic Knicks schedule and Brunson scoring tracker.\n\u2022 Must use static local fixtures with zero external network calls.\n\u2022 Requires 5-game and 3-game averages, plus a threshold flag if the 3-game average hits 30+.\n\u2022 Design must favour strict data density and use neutral, factual copy.\n\n**Prototype Opportunities**\n1. **CLI App** - *\"The first prototype opportunity is a CLI. It prints the upcoming five games...\"*\n2. **Minimal Web View** - *\"Second option would be a minimal web view. Maybe just a table for the schedule and a basic bar visual...\"*\n3. **Slack Summary** - *\"Third option could be a Slack summary generator.\"*\n\n**Plan: Minimal Web View**\n*(Chosen to satisfy the prompt's preference for a browser-viewable demo)*\n\n**Steps:**\n1. Create a single `index.html` file with embedded CSS and JS to minimise infrastructure bloat.\n2. Hardcode the local fixture arrays (5 scheduled games, 5 historic scores: 31, 24, 39, 27, 35).\n3. Write JS logic to calculate the 5-game average and 3-game moving average.\n4. Render a dense schedule table and scoring summary, injecting a flag if the 3-game average is \u2265 30.\n\n**Acceptance Checks:**\n\u2022 File loads instantly in a browser with no network calls or build step.\n\u2022 L5 and L3 averages calculate accurately from the static arrays.\n\u2022 Threshold flag triggers correctly (\u2265 30).\n\u2022 UI uses neutral copy and favours data density."
+  },
+  {
     "issue_number": 6,
     "title": "Prototype: knicks-brunson-tracker (local-replay-1773255814877)",
     "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/6",
