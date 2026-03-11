@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knicks Tracker - Data Dashboard V1</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="ledger-container">
+    <header class="ledger-header">
+      <div class="header-meta">
+        <span class="eyebrow">DATA DASHBOARD V1</span>
+        <h1>KNICKS TRACKER</h1>
+      </div>
+      <p class="lede">Review upcoming fixtures and recent scoring behaviour for Jalen Brunson.</p>
+    </header>
+
+    <section class="highlights-grid">
+      <div class="highlight-card">
+        <span class="highlight-label">L5 AVERAGE</span>
+        <div class="highlight-value" id="l5-value">--</div>
+        <span class="highlight-detail">Points per game</span>
+      </div>
+      <div class="highlight-card" id="l3-card">
+        <span class="highlight-label">L3 AVERAGE</span>
+        <div class="highlight-value" id="l3-value">--</div>
+        <span class="highlight-detail" id="l3-flag">Threshold pending</span>
+      </div>
+      <div class="highlight-card">
+        <span class="highlight-label">NEXT FIXTURE</span>
+        <div class="highlight-value" id="next-fixture-val">--</div>
+        <span class="highlight-detail" id="next-fixture-detail">--</span>
+      </div>
+    </section>
+
+    <div class="data-grid">
+      <section class="data-panel">
+        <header class="panel-header">
+          <h2>UPCOMING SCHEDULE</h2>
+          <p>Next five scheduled fixtures.</p>
+        </header>
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>DATE</th>
+              <th>OPPONENT</th>
+              <th>LOCATION</th>
+            </tr>
+          </thead>
+          <tbody id="schedule-body">
+            <!-- Injected via app.js -->
+          </tbody>
+        </table>
+      </section>
+
+      <section class="data-panel">
+        <header class="panel-header">
+          <h2>RECENT SCORING</h2>
+          <p>Jalen Brunson's points across his last five starts.</p>
+        </header>
+        <div class="chart-container">
+          <div class="threshold-line" id="threshold-line">
+            <span class="threshold-label">TARGET: 30 PTS</span>
+          </div>
+          <div class="bars-wrapper" id="scoring-bars">
+             <!-- Injected via app.js -->
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
