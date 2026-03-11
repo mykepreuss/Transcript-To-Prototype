@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Transcript Prototype · knicks-brunson-tracker</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">Transcript-to-prototype</p>
+        <h1>knicks brunson tracker</h1>
+        <p class="lede">Deterministic V1 generated from a Slack transcript with local fixture data only.</p>
+      </header>
+
+      <section class="cards">
+        <article class="card">
+          <p class="label">Next fixture</p>
+          <h2 id="next-game">Loading…</h2>
+          <p id="next-game-meta" class="muted"></p>
+        </article>
+        <article class="card">
+          <p class="label">Brunson L5</p>
+          <h2 id="last-five-average">--</h2>
+          <p class="muted">Average points across the latest five starts in the fixture data.</p>
+        </article>
+        <article class="card">
+          <p class="label">Brunson L3</p>
+          <h2 id="last-three-average">--</h2>
+          <p id="threshold-flag" class="muted"></p>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Upcoming schedule</h2>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Opponent</th>
+              <th>Venue</th>
+            </tr>
+          </thead>
+          <tbody id="schedule-table"></tbody>
+        </table>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Scoring trend</h2>
+        </div>
+        <div id="scoring-bars" class="bars"></div>
+      </section>
+
+      <section class="panel prose">
+        <h2>Generated recap</h2>
+        <pre id="summary-block">Recap + plan:
+- Goal: build a deterministic, browser-viewable knicks brunson tracker prototype.
+- Constraints: local fixtures only, no external APIs, neutral copy, minimal implementation.
+- Data: 5 schedule entries and 5 scoring entries parsed from the transcript.
+- Build: static web view with next fixture Boston (Home) on 2026-03-12, L5 31.2 ppg, L3 33.7 ppg.
+- Acceptance: direct browser open, deterministic calculations, threshold flag: 30+ form.</pre>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

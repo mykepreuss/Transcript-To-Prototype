@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Transcript to Prototype Playground</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #07111f;
+        --panel: #0f1d31;
+        --border: rgba(159, 179, 200, 0.18);
+        --text: #f4f7fb;
+        --muted: #9fb3c8;
+        --accent: #ff671f;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+        background: linear-gradient(180deg, #09111d 0%, var(--bg) 100%);
+        color: var(--text);
+      }
+      main {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 40px 0 64px;
+      }
+      h1 { margin: 0 0 8px; font-size: clamp(32px, 5vw, 52px); }
+      p { color: var(--muted); line-height: 1.6; }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 16px;
+        margin-top: 28px;
+      }
+      .card {
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 20px;
+        background: linear-gradient(180deg, rgba(20, 39, 66, 0.92) 0%, rgba(15, 29, 49, 0.95) 100%);
+      }
+      .eyebrow {
+        margin: 0 0 8px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .links {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 16px;
+      }
+      a { color: #ffbf69; text-decoration: none; }
+      code {
+        display: inline-block;
+        color: var(--text);
+        background: rgba(255, 255, 255, 0.06);
+        border-radius: 8px;
+        padding: 6px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">Prototype playground</p>
+      <h1>Transcript to Prototype</h1>
+      <p>Static prototypes materialised from GitHub issues opened by the Guild Slack intake agent.</p>
+      <section class="grid">
+        
+      <article class="card">
+        <p class="eyebrow">Issue #2</p>
+        <h2>Prototype: knicks-brunson-tracker (local-replay-1773254386557)</h2>
+        <p>Recap + plan:
+- Goal: build a deterministic, browser-viewable knicks brunson tracker prototype.
+- Constraints: local fixtures only, no external APIs, neutral copy, minimal implementation.
+- Data: 5 schedule entries and 5 scoring entries parsed from the transcr</p>
+        <div class="links">
+          <a href="https://mykepreuss.github.io/Transcript-To-Prototype/prototypes/2026-03-11/knicks-brunson-tracker-54386557/">Open prototype</a>
+          <a href="https://github.com/mykepreuss/Transcript-To-Prototype/issues/2">View issue</a>
+          <code>prototypes/2026-03-11/knicks-brunson-tracker-54386557</code>
+        </div>
+      </article>
+      </section>
+    </main>
+  </body>
+</html>
