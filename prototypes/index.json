@@ -1,5 +1,14 @@
 [
   {
+    "issue_number": 30,
+    "title": "Prototype: Brunson Dependency Index (Ev0ALMJB7KED-opt-3)",
+    "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/30",
+    "created_at": "2026-03-12T17:23:23Z",
+    "run_dir": "prototypes/2026-03-12/brunson-dependency-index-7KEDopt3",
+    "preview_url": "https://mykepreuss.github.io/Transcript-To-Prototype/prototypes/2026-03-12/brunson-dependency-index-7KEDopt3/",
+    "summary": "The team pivoted from a basic stats tracker to a more opinionated tool. The chosen prototype is the Schedule Dependency Index, which evaluates upcoming fixtures based on how heavily the Knicks will rely on a big scoring night from Jalen Brunson. Acceptance checks: use local fixtures only, maintain a minimal web view without decorative chart junk, ensure the predictive logic is transparent, and strictly use UK spelling.\n\n## Chosen prototype\n\n- Title: Brunson Dependency Index\n- Eyebrow: Upcoming Schedule Analysis\n- Sections: Upcoming Fixtures Pressure Ranking, Knicks Win Rate by Brunson Points, Model Inputs\n\n## Design direction\n\n- Purpose: To highlight upcoming games where the Knicks are most reliant on Jalen Brunson's scoring to secure a win.\n- Audience: Knicks fans and analysts looking for meaningful context ahead of tipoff.\n- Tone: Analytical, grounded, and straightforward. No sports betting aesthetics or mystery math.\n- Memorable detail: A 'Pressure Level' indicator that clearly communicates scoring burden without over-modelling.\n- Constraints: Strictly UK spelling (e.g., colour, behaviour, organise) | Local fixtures only; no live external APIs for V1 | No chart junk or decorative dashboard elements | Maximum of 3 highlights and 4 sections"
+  },
+  {
     "issue_number": 29,
     "title": "Prototype: Brunson Impact Mapper (Ev0ALMJB7KED-opt-2)",
     "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/29",

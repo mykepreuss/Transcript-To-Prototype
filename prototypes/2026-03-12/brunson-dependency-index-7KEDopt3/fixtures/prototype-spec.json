@@ -1,0 +1,113 @@
+{
+  "title": "Brunson Dependency Index",
+  "eyebrow": "Upcoming Schedule Analysis",
+  "lede": "Evaluating the Knicks' upcoming fixtures to identify where a high-scoring performance from Jalen Brunson is most critical.",
+  "highlights": [
+    {
+      "label": "Highest Burden",
+      "value": "BOS (Away)",
+      "detail": "Historically requires 30+ points",
+      "tone": "warning"
+    },
+    {
+      "label": "Baseline Target",
+      "value": "28-32 pts",
+      "detail": "Most likely scoring band",
+      "tone": "neutral"
+    },
+    {
+      "label": "Recent Form",
+      "value": "31.4 pts",
+      "detail": "Average over last 10 games",
+      "tone": "positive"
+    }
+  ],
+  "sections": [
+    {
+      "type": "table",
+      "title": "Upcoming Fixtures Pressure Ranking",
+      "description": "Upcoming games ranked by how heavily the Knicks rely on Brunson's scoring, factoring in opponent and venue.",
+      "columns": [
+        "Date",
+        "Opponent",
+        "Venue",
+        "Historical Win Condition",
+        "Pressure Level"
+      ],
+      "rows": [
+        [
+          "12 Mar",
+          "Boston Celtics",
+          "Away",
+          "Brunson 30+ pts",
+          "High"
+        ],
+        [
+          "14 Mar",
+          "Miami Heat",
+          "Home",
+          "Brunson 25-29 pts",
+          "Medium"
+        ],
+        [
+          "16 Mar",
+          "Charlotte Hornets",
+          "Home",
+          "Brunson <25 pts",
+          "Low"
+        ]
+      ],
+      "emptyMessage": "No upcoming fixtures available."
+    },
+    {
+      "type": "series",
+      "title": "Knicks Win Rate by Brunson Points",
+      "description": "Historical win percentage based on Brunson's scoring output to provide context for the pressure index behaviour.",
+      "unit": "%",
+      "threshold": 50,
+      "thresholdLabel": "Average Win Rate",
+      "points": [
+        {
+          "label": "Under 25 pts",
+          "value": 35,
+          "detail": "Low reliance"
+        },
+        {
+          "label": "25 - 29 pts",
+          "value": 58,
+          "detail": "Standard performance"
+        },
+        {
+          "label": "30+ pts",
+          "value": 78,
+          "detail": "High dependence"
+        }
+      ],
+      "emptyMessage": "No scoring data available."
+    },
+    {
+      "type": "list",
+      "title": "Model Inputs",
+      "description": "Variables used to categorise and organise fixture pressure levels.",
+      "items": [
+        "Brunson's scoring average over the last 10 games",
+        "Historical Knicks win likelihood at specific scoring bands",
+        "Opponent defensive rating and recent performance",
+        "Home versus Away venue splits"
+      ],
+      "ordered": true,
+      "emptyMessage": "No inputs defined."
+    }
+  ],
+  "demoSteps": [
+    "Load the dashboard using local JSON fixtures to ensure deterministic behaviour.",
+    "Review the top highlights to instantly see the most critical upcoming game.",
+    "Examine the 'Upcoming Fixtures Pressure Ranking' table to see the next three games and their associated burden.",
+    "Check the win rate series to understand the transparent logic behind the pressure levels."
+  ],
+  "notes": [
+    "Ensure all text strictly uses UK spelling.",
+    "Keep the visual design minimal; avoid any sports betting aesthetic.",
+    "If live data is introduced later, the application must gracefully fall back to these static fixtures if an API fails."
+  ]
+}

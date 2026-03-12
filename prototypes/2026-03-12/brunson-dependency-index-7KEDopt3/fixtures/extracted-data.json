@@ -1,0 +1,5 @@
+{
+  "schedule": [],
+  "scoring": [],
+  "summary": "The team pivoted from a basic stats tracker to a more opinionated tool. The chosen prototype is the Schedule Dependency Index, which evaluates upcoming fixtures based on how heavily the Knicks will rely on a big scoring night from Jalen Brunson. Acceptance checks: use local fixtures only, maintain a minimal web view without decorative chart junk, ensure the predictive logic is transparent, and strictly use UK spelling."
+}
