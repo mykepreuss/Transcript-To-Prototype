@@ -1,0 +1,256 @@
+:root {
+  --bg-colour: #0a0b10;
+  --panel-bg: #14161f;
+  --border-colour: #2a2d3d;
+  --text-primary: #e2e4ed;
+  --text-secondary: #8a8d9b;
+  --accent-colour: #ff6b00;
+  --accent-glow: rgba(255, 107, 0, 0.4);
+  --positive-colour: #ff6b00;
+  --neutral-colour: #3d4255;
+  --font-mono: 'Consolas', 'Courier New', Courier, monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-colour);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  line-height: 1.5;
+  padding: 2rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+.dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Header */
+.dashboard-header {
+  border-bottom: 2px solid var(--border-colour);
+  padding-bottom: 1.5rem;
+}
+
+.header-meta {
+  font-size: 0.75rem;
+  color: var(--accent-colour);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.header-title {
+  font-size: 2rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+}
+
+.header-lede {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Telemetry Panel (Highlights) */
+.telemetry-panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.telemetry-card {
+  background-color: var(--panel-bg);
+  border: 1px solid var(--border-colour);
+  padding: 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.telemetry-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.telemetry-value {
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.telemetry-detail {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* The Unforgettable Move: Hardware Threshold Flag */
+.status-beacon {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--neutral-colour);
+}
+
+.status-beacon.active {
+  background-color: var(--accent-colour);
+  box-shadow: 0 0 15px var(--accent-colour), 0 0 30px var(--accent-glow);
+  animation: pulse 2s infinite alternate;
+}
+
+.telemetry-card.active-state {
+  border-color: var(--accent-colour);
+}
+
+.telemetry-card.active-state .telemetry-value {
+  color: var(--accent-colour);
+  text-shadow: 0 0 10px var(--accent-glow);
+}
+
+/* Data Grid */
+.data-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 800px) {
+  .data-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.data-module {
+  background-color: var(--panel-bg);
+  border: 1px solid var(--border-colour);
+  padding: 1.5rem;
+}
+
+.module-header {
+  margin-bottom: 1.5rem;
+}
+
+.module-header h2 {
+  font-size: 1.1rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.module-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* Table */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.data-table th {
+  color: var(--text-secondary);
+  font-weight: normal;
+  text-transform: uppercase;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-colour);
+}
+
+.data-table td {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-colour);
+}
+
+.data-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Chart */
+.chart-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 250px;
+  padding-top: 2rem;
+  border-bottom: 1px solid var(--border-colour);
+  position: relative;
+}
+
+.chart-threshold-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-top: 1px dashed var(--accent-colour);
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+}
+
+.chart-threshold-label {
+  position: absolute;
+  right: 0;
+  top: -1.2rem;
+  font-size: 0.7rem;
+  color: var(--accent-colour);
+}
+
+.bar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15%;
+  z-index: 2;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.bar {
+  width: 100%;
+  background-color: var(--neutral-colour);
+  transition: height 0.3s ease;
+}
+
+.bar.above-threshold {
+  background-color: var(--accent-colour);
+}
+
+.bar-value {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.bar-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px var(--accent-colour), 0 0 20px var(--accent-glow); }
+  100% { box-shadow: 0 0 20px var(--accent-colour), 0 0 40px var(--accent-glow); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .status-beacon.active {
+    animation: none;
+  }
+  .bar {
+    transition: none;
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "title": "Knicks Tracker & Event Scheduler",
+  "eyebrow": "Data Overview",
+  "lede": "Review upcoming scheduled fixtures and analyse recent scoring behaviour.",
+  "highlights": [
+    {
+      "label": "L5 Scoring Avg",
+      "value": "31.2",
+      "detail": "Last 5 games",
+      "tone": "neutral"
+    },
+    {
+      "label": "L3 Scoring Avg",
+      "value": "33.7",
+      "detail": "Last 3 games",
+      "tone": "positive"
+    },
+    {
+      "label": "Next Event",
+      "value": "Boston",
+      "detail": "12 Mar 2026 (Home)",
+      "tone": "neutral"
+    }
+  ],
+  "sections": [
+    {
+      "type": "table",
+      "title": "Upcoming Schedule",
+      "description": "The next five fixtures to organise and prepare for.",
+      "columns": [
+        "Date",
+        "Opponent",
+        "Location"
+      ],
+      "rows": [
+        [
+          "2026-03-12",
+          "Boston",
+          "Home"
+        ],
+        [
+          "2026-03-14",
+          "Miami",
+          "Away"
+        ],
+        [
+          "2026-03-16",
+          "Philly",
+          "Home"
+        ],
+        [
+          "2026-03-18",
+          "Chicago",
+          "Away"
+        ],
+        [
+          "2026-03-20",
+          "Cleveland",
+          "Home"
+        ]
+      ],
+      "emptyMessage": "No upcoming events scheduled."
+    },
+    {
+      "type": "series",
+      "title": "Scoring Trend",
+      "description": "Jalen Brunson's points across the last five starts.",
+      "unit": "pts",
+      "threshold": 30,
+      "thresholdLabel": "Target Average",
+      "points": [
+        {
+          "label": "Game 1",
+          "value": 31,
+          "detail": "Opponent 1"
+        },
+        {
+          "label": "Game 2",
+          "value": 24,
+          "detail": "Opponent 2"
+        },
+        {
+          "label": "Game 3",
+          "value": 39,
+          "detail": "Opponent 3"
+        },
+        {
+          "label": "Game 4",
+          "value": 27,
+          "detail": "Opponent 4"
+        },
+        {
+          "label": "Game 5",
+          "value": 35,
+          "detail": "Opponent 5"
+        }
+      ],
+      "emptyMessage": "No scoring data available."
+    }
+  ],
+  "demoSteps": [
+    "Load the web interface to view the deterministic data dashboard.",
+    "Verify the L5 average calculates to 31.2.",
+    "Check the L3 average highlights as positive, as 33.7 is greater than the 30-point threshold.",
+    "Ensure the schedule table accurately reflects the 5-game local fixture."
+  ],
+  "notes": [
+    "Utilises static local fixtures to eliminate network variance.",
+    "Ensures tone remains factual without hype language.",
+    "UI adopts the confirmed interactive scheduler approach while maintaining quick comprehension."
+  ]
+}
