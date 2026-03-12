@@ -1,0 +1,325 @@
+/* Design tokens & colour variables */
+:root {
+    --bg-colour: #EBE6DD;
+    --ink-colour: #0A0A0A;
+    --accent-colour: #FF5A00;
+    --muted-colour: #5A5A5A;
+    
+    --font-serif: Georgia, 'Times New Roman', serif;
+    --font-mono: 'Courier New', Courier, monospace;
+    
+    --border-weight: 2px;
+    --border-heavy: 4px;
+}
+
+/* Base Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-colour);
+    color: var(--ink-colour);
+    font-family: var(--font-serif);
+    line-height: 1.5;
+    padding: 2rem;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Dossier Layout */
+.dossier {
+    max-width: 1200px;
+    margin: 0 auto;
+    border: var(--border-heavy) solid var(--ink-colour);
+    background: var(--bg-colour);
+}
+
+.dossier-header {
+    padding: 3rem 2rem;
+    border-bottom: var(--border-heavy) solid var(--ink-colour);
+}
+
+.eyebrow {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    color: var(--accent-colour);
+}
+
+.title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: normal;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+.lede {
+    font-size: 1.25rem;
+    max-width: 800px;
+    color: var(--ink-colour);
+}
+
+/* Highlights Grid */
+.grid-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    border-bottom: var(--border-heavy) solid var(--ink-colour);
+}
+
+.highlight-card {
+    padding: 2rem;
+    border-right: var(--border-weight) solid var(--ink-colour);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background-color 0.2s ease;
+}
+
+.highlight-card:last-child {
+    border-right: none;
+}
+
+.highlight-card:hover {
+    background-color: var(--ink-colour);
+    color: var(--bg-colour);
+}
+
+.highlight-card:hover .highlight-detail {
+    color: var(--bg-colour);
+}
+
+.highlight-label {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.highlight-value {
+    font-size: 3rem;
+    font-family: var(--font-mono);
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.highlight-card[data-tone="positive"] .highlight-value {
+    color: var(--accent-colour);
+}
+
+.highlight-detail {
+    font-size: 0.9rem;
+    color: var(--muted-colour);
+    font-style: italic;
+}
+
+/* Split Layout for Matrix & Form */
+.layout-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 900px) {
+    .layout-split {
+        grid-template-columns: 1fr;
+    }
+}
+
+.panel {
+    border-bottom: var(--border-heavy) solid var(--ink-colour);
+    border-right: var(--border-heavy) solid var(--ink-colour);
+    display: flex;
+    flex-direction: column;
+}
+
+.panel:last-child {
+    border-right: none;
+}
+
+.panel-header {
+    padding: 2rem;
+    border-bottom: var(--border-weight) solid var(--ink-colour);
+}
+
+.panel-header h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.panel-header .desc {
+    color: var(--muted-colour);
+    font-size: 1rem;
+}
+
+.panel-content {
+    flex-grow: 1;
+    padding: 2rem;
+    position: relative;
+}
+
+/* Matrix Table (Data Brutalism) */
+.likelihood-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-mono);
+}
+
+.likelihood-table th,
+.likelihood-table td {
+    text-align: left;
+    padding: 1rem;
+    border-bottom: 1px solid var(--ink-colour);
+}
+
+.likelihood-table th {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: var(--muted-colour);
+    border-bottom: var(--border-weight) solid var(--ink-colour);
+}
+
+.likelihood-table tr:hover td {
+    background-color: var(--ink-colour);
+    color: var(--bg-colour);
+    cursor: default;
+}
+
+.likelihood-table tr[data-likelihood="High"] td:first-child {
+    font-weight: bold;
+    color: var(--accent-colour);
+}
+.likelihood-table tr:hover[data-likelihood="High"] td:first-child {
+    color: var(--accent-colour);
+}
+
+/* Form Chart (Typographic/Block Visualisation) */
+.chart-wrapper {
+    position: relative;
+}
+
+.threshold-marker {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 75%; /* Approximate mapping for 30pts on a 40pt scale */
+    border-left: 2px dashed var(--accent-colour);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.threshold-marker span {
+    position: absolute;
+    top: 1rem;
+    left: 5px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--accent-colour);
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.bar-label-group {
+    width: 120px;
+    flex-shrink: 0;
+}
+
+.bar-title {
+    font-family: var(--font-mono);
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: block;
+}
+
+.bar-detail {
+    font-size: 0.75rem;
+    color: var(--muted-colour);
+    text-transform: uppercase;
+}
+
+.bar-track {
+    flex-grow: 1;
+    height: 32px;
+    background-color: transparent;
+    border-left: var(--border-weight) solid var(--ink-colour);
+    position: relative;
+}
+
+.bar-fill {
+    height: 100%;
+    background-color: var(--ink-colour);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 0.5rem;
+    color: var(--bg-colour);
+    font-family: var(--font-mono);
+    font-weight: bold;
+    transition: width 0.5s ease;
+}
+
+.bar-fill.high-impact {
+    background-color: var(--accent-colour);
+}
+
+/* Footer */
+.dossier-footer {
+    padding: 2rem;
+    background-color: var(--ink-colour);
+    color: var(--bg-colour);
+}
+
+.dossier-footer h2 {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-colour);
+}
+
+.dossier-footer p {
+    max-width: 800px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Responsive & Accessibility Fallbacks */
+@media (max-width: 600px) {
+    body {
+        padding: 0;
+    }
+    .dossier {
+        border: none;
+    }
+    .grid-highlights {
+        grid-template-columns: 1fr;
+    }
+    .highlight-card {
+        border-right: none;
+        border-bottom: var(--border-weight) solid var(--ink-colour);
+    }
+    .panel {
+        border-right: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}

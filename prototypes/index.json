@@ -1,5 +1,14 @@
 [
   {
+    "issue_number": 29,
+    "title": "Prototype: Brunson Impact Mapper (Ev0ALMJB7KED-opt-2)",
+    "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/29",
+    "created_at": "2026-03-12T17:21:53Z",
+    "run_dir": "prototypes/2026-03-12/brunson-impact-mapper-7KEDopt2",
+    "preview_url": "https://mykepreuss.github.io/Transcript-To-Prototype/prototypes/2026-03-12/brunson-impact-mapper-7KEDopt2/",
+    "summary": "The team agreed to pivot from a basic stat tracker to a predictive 'Brunson-to-Knicks outcomes' tool. The V1 prototype will focus on mapping Jalen Brunson's predicted scoring band to the Knicks' win likelihood based on historical performance, using local fixtures to ensure reliability. The interface will be minimal and transparent, avoiding betting jargon or complex machine learning claims.\n\n## Chosen prototype\n\n- Title: Brunson Impact Mapper\n- Eyebrow: Knicks Matchup Analysis\n- Sections: Win Likelihood by Scoring Band, Recent Scoring Form, How This Is Calculated\n\n## Design direction\n\n- Purpose: To link Brunson's individual scoring output directly to team success, providing an analytical but accessible view of upcoming games.\n- Audience: Dedicated fans looking for deeper analytical context without the noise of betting markets or decorative chart junk.\n- Tone: Transparent, analytical, and grounded.\n- Memorable detail: Categorising win likelihood into clear scoring bands (Under 25, 25-29, 30+) to instantly show his impact.\n- Constraints: Must use deterministic local fixtures only for V1 | No external APIs | Avoid the word 'probability' in favour of 'likelihood' | Use UK spelling"
+  },
+  {
     "issue_number": 28,
     "title": "Prototype: Brunson Matchup & Impact Forecast (Ev0ALMJB7KED-opt-1)",
     "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/28",

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brunson Impact Mapper</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <main class="dossier">
+        <header class="dossier-header">
+            <div class="eyebrow" id="eyebrow"></div>
+            <h1 class="title" id="title"></h1>
+            <p class="lede" id="lede"></p>
+        </header>
+
+        <section class="grid-highlights" id="highlights-container">
+            <!-- Highlights injected via JS -->
+        </section>
+
+        <div class="layout-split">
+            <section class="panel" id="matrix-section">
+                <div class="panel-header">
+                    <h2 id="matrix-title"></h2>
+                    <p class="desc" id="matrix-desc"></p>
+                </div>
+                <div class="panel-content">
+                    <table class="likelihood-table" id="likelihood-table">
+                        <!-- Table injected via JS -->
+                    </table>
+                </div>
+            </section>
+
+            <section class="panel" id="form-section">
+                <div class="panel-header">
+                    <h2 id="form-title"></h2>
+                    <p class="desc" id="form-desc"></p>
+                </div>
+                <div class="panel-content chart-wrapper">
+                    <div class="threshold-marker">
+                        <span id="threshold-label"></span>
+                    </div>
+                    <div class="bar-chart" id="bar-chart">
+                        <!-- Chart injected via JS -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="dossier-footer">
+            <h2 id="method-title"></h2>
+            <p id="method-body"></p>
+        </footer>
+    </main>
+    <script src="./app.js"></script>
+</body>
+</html>

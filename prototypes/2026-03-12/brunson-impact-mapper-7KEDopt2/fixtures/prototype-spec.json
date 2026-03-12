@@ -1,0 +1,110 @@
+{
+  "title": "Brunson Impact Mapper",
+  "eyebrow": "Knicks Matchup Analysis",
+  "lede": "Analyse Jalen Brunson's recent form to project his next scoring band, and see how his offensive output influences the Knicks' likelihood of winning.",
+  "highlights": [
+    {
+      "label": "Recent Form",
+      "value": "29.4 pts",
+      "detail": "Average over last 10 games",
+      "tone": "neutral"
+    },
+    {
+      "label": "Predicted Band",
+      "value": "28–32 pts",
+      "detail": "Next Matchup: Away",
+      "tone": "neutral"
+    },
+    {
+      "label": "Win Likelihood",
+      "value": "High",
+      "detail": "If scoring within predicted band",
+      "tone": "positive"
+    }
+  ],
+  "sections": [
+    {
+      "type": "table",
+      "title": "Win Likelihood by Scoring Band",
+      "description": "Historical relationship between Brunson's points total and Knicks match outcomes.",
+      "columns": [
+        "Scoring Band",
+        "Matches Evaluated",
+        "Win Rate",
+        "Likelihood"
+      ],
+      "rows": [
+        [
+          "Under 25 pts",
+          "14",
+          "42%",
+          "Low"
+        ],
+        [
+          "25 to 29 pts",
+          "16",
+          "56%",
+          "Moderate"
+        ],
+        [
+          "30+ pts",
+          "20",
+          "75%",
+          "High"
+        ]
+      ],
+      "emptyMessage": "No historical data available."
+    },
+    {
+      "type": "series",
+      "title": "Recent Scoring Form",
+      "description": "Brunson's points total over the last 10 games used to calculate the predicted band.",
+      "unit": "pts",
+      "threshold": 30,
+      "thresholdLabel": "High Impact Threshold",
+      "points": [
+        {
+          "label": "Game 1",
+          "value": 24,
+          "detail": "Away"
+        },
+        {
+          "label": "Game 2",
+          "value": 31,
+          "detail": "Away"
+        },
+        {
+          "label": "Game 3",
+          "value": 28,
+          "detail": "Home"
+        },
+        {
+          "label": "Game 4",
+          "value": 34,
+          "detail": "Home"
+        },
+        {
+          "label": "Game 5",
+          "value": 22,
+          "detail": "Away"
+        }
+      ],
+      "emptyMessage": "No recent scoring data found."
+    },
+    {
+      "type": "text",
+      "title": "How This Is Calculated",
+      "body": "The predicted scoring band is calculated using a baseline of Brunson's last 10 games, adjusted for home/away splits and opponent defensive rating. Win likelihood maps those projected points against historical team outcomes. No black-box algorithms—just transparent, historical behaviour."
+    }
+  ],
+  "demoSteps": [
+    "Review the Highlights to see the baseline prediction for the upcoming match.",
+    "Check the 'Win Likelihood by Scoring Band' table to understand how crucial Brunson's output is for a team win.",
+    "Analyse the 'Recent Scoring Form' series to see the raw data driving the prediction."
+  ],
+  "notes": [
+    "Ensure all data flows strictly from local JSON fixtures to guarantee the demo works offline.",
+    "Keep the interface clean; avoid adding decorative elements that distract from the core data relationships.",
+    "Future iteration will include a matchup dependency view across the next 5 fixtures."
+  ]
+}

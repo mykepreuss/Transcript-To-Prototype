@@ -1,0 +1,5 @@
+{
+  "schedule": [],
+  "scoring": [],
+  "summary": "The team agreed to pivot from a basic stat tracker to a predictive 'Brunson-to-Knicks outcomes' tool. The V1 prototype will focus on mapping Jalen Brunson's predicted scoring band to the Knicks' win likelihood based on historical performance, using local fixtures to ensure reliability. The interface will be minimal and transparent, avoiding betting jargon or complex machine learning claims."
+}
