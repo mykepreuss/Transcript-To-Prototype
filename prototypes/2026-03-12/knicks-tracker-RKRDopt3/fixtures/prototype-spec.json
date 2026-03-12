@@ -1,0 +1,111 @@
+{
+  "title": "Knicks Tracker",
+  "eyebrow": "Data Prototype V1",
+  "lede": "Upcoming match schedule and recent player scoring trends based on static fixtures.",
+  "highlights": [
+    {
+      "label": "L5 Average",
+      "value": "31.2",
+      "detail": "Last 5 games scoring average",
+      "tone": "positive"
+    },
+    {
+      "label": "L3 Average",
+      "value": "33.7",
+      "detail": "Last 3 games scoring average",
+      "tone": "positive"
+    },
+    {
+      "label": "Threshold Flag",
+      "value": "Active",
+      "detail": "L3 average is 30 or above",
+      "tone": "warning"
+    }
+  ],
+  "sections": [
+    {
+      "type": "table",
+      "title": "Upcoming Schedule",
+      "description": "Next 5 scheduled fixtures.",
+      "columns": [
+        "Date",
+        "Opponent",
+        "Location"
+      ],
+      "rows": [
+        [
+          "2026-03-12",
+          "Boston",
+          "Home"
+        ],
+        [
+          "2026-03-14",
+          "Miami",
+          "Away"
+        ],
+        [
+          "2026-03-16",
+          "Philly",
+          "Home"
+        ],
+        [
+          "2026-03-18",
+          "Chicago",
+          "Away"
+        ],
+        [
+          "2026-03-20",
+          "Cleveland",
+          "Home"
+        ]
+      ],
+      "emptyMessage": "No upcoming fixtures found."
+    },
+    {
+      "type": "series",
+      "title": "Jalen Brunson Scoring Trend",
+      "description": "Points scored across the last 5 starts.",
+      "unit": "pts",
+      "threshold": 30,
+      "thresholdLabel": "30+ Point Threshold",
+      "points": [
+        {
+          "label": "Game 1",
+          "value": 31,
+          "detail": "Opponent 1"
+        },
+        {
+          "label": "Game 2",
+          "value": 24,
+          "detail": "Opponent 2"
+        },
+        {
+          "label": "Game 3",
+          "value": 39,
+          "detail": "Opponent 3"
+        },
+        {
+          "label": "Game 4",
+          "value": 27,
+          "detail": "Opponent 4"
+        },
+        {
+          "label": "Game 5",
+          "value": 35,
+          "detail": "Opponent 5"
+        }
+      ],
+      "emptyMessage": "No scoring data available."
+    }
+  ],
+  "demoSteps": [
+    "Load the static fixture data from the local repository",
+    "Calculate 5-game and 3-game moving averages",
+    "Determine if the 3-game average meets the 30-point threshold",
+    "Render the upcoming schedule table and scoring bar visual"
+  ],
+  "notes": [
+    "Data architecture must remain decoupled to allow API swaps in V2.",
+    "Ensure UK spelling is utilised for internal documentation where applicable."
+  ]
+}

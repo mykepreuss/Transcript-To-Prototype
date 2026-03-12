@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knicks Tracker | Data Prototype V1</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="telemetry-container">
+        <header class="masthead">
+            <div class="masthead-eyebrow">Data Prototype V1 // Local Execution</div>
+            <h1 class="masthead-title">KNICKS_TRACKER</h1>
+            <p class="masthead-lede">Upcoming match schedule and recent player scoring behaviour based on static fixtures.</p>
+        </header>
+
+        <main class="dashboard">
+            <!-- Highlights Row -->
+            <section class="panel highlights-panel">
+                <div class="stat-card">
+                    <div class="stat-label">L5 Average</div>
+                    <div class="stat-value" id="stat-l5">--</div>
+                    <div class="stat-detail">Last 5 starts</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">L3 Average</div>
+                    <div class="stat-value" id="stat-l3">--</div>
+                    <div class="stat-detail">Last 3 starts</div>
+                </div>
+                <div class="stat-card" id="threshold-card">
+                    <div class="stat-label">Threshold Flag (30+)</div>
+                    <div class="stat-value" id="stat-flag">INACTIVE</div>
+                    <div class="stat-detail">Status indicator</div>
+                </div>
+            </section>
+
+            <div class="grid-split">
+                <!-- Schedule Table -->
+                <section class="panel schedule-panel">
+                    <h2 class="panel-title">UPCOMING_FIXTURES</h2>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Opponent</th>
+                                    <th>Location</th>
+                                </tr>
+                            </thead>
+                            <tbody id="schedule-body">
+                                <!-- Injected via app.js -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Scoring Chart -->
+                <section class="panel scoring-panel">
+                    <h2 class="panel-title">SCORING_TREND (JB)</h2>
+                    <div class="chart-wrapper">
+                        <div class="chart-y-axis">
+                            <span>50</span>
+                            <span>40</span>
+                            <span>30</span>
+                            <span>20</span>
+                            <span>10</span>
+                            <span>0</span>
+                        </div>
+                        <div class="chart-stage" id="chart-container">
+                            <!-- Injected via app.js -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
