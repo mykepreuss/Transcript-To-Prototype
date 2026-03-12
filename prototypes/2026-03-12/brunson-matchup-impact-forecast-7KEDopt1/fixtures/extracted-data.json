@@ -1,0 +1,5 @@
+{
+  "schedule": [],
+  "scoring": [],
+  "summary": "The team decided to move away from a basic stats tracker, favouring a connected flow that forecasts Jalen Brunson's scoring band for the next fixture based on recent form, and translates that into the Knicks' historical win likelihood. The V1 prototype will use local fixtures, ensure transparent logic, and avoid opaque machine learning claims. Acceptance checks include: a predictive scoring band, clear win likelihood mapping, transparent forecasting logic, and a deterministic fixture-backed setup."
+}

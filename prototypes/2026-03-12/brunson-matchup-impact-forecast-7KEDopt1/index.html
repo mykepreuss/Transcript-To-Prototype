@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brunson Matchup & Impact Forecast</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="terminal-container">
+    <header class="site-header">
+      <span class="eyebrow" id="ui-eyebrow"></span>
+      <h1 id="ui-title"></h1>
+      <p class="lede" id="ui-lede"></p>
+    </header>
+
+    <main>
+      <section class="highlights-grid" id="ui-highlights">
+        <!-- Highlights injected here -->
+      </section>
+
+      <div class="layout-split">
+        <div class="layout-col">
+          <section class="data-section">
+            <div class="section-header">
+              <h2 id="ui-table-title"></h2>
+              <p class="section-desc" id="ui-table-desc"></p>
+            </div>
+            <div class="table-wrapper">
+              <table id="ui-historical-table">
+                <thead id="ui-table-head"></thead>
+                <tbody id="ui-table-body"></tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="data-section">
+            <div class="section-header">
+              <h2 id="ui-logic-title"></h2>
+              <p class="section-desc" id="ui-logic-desc"></p>
+            </div>
+            <ul class="logic-list" id="ui-logic-list"></ul>
+          </section>
+        </div>
+
+        <div class="layout-col">
+          <section class="data-section">
+            <div class="section-header">
+              <h2 id="ui-series-title"></h2>
+              <p class="section-desc" id="ui-series-desc"></p>
+            </div>
+            <div class="series-container" id="ui-series-container">
+              <!-- Series injected here -->
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>

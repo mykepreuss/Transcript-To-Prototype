@@ -1,0 +1,117 @@
+{
+  "title": "Brunson Matchup & Impact Forecast",
+  "eyebrow": "Next Fixture Analysis",
+  "lede": "Evaluating Jalen Brunson's recent behaviour on the court to forecast his scoring band and analyse the Knicks' likelihood of winning their next fixture.",
+  "highlights": [
+    {
+      "label": "Forecasted Band",
+      "value": "28–32 pts",
+      "detail": "Next fixture: BOS (Away)",
+      "tone": "neutral"
+    },
+    {
+      "label": "Historical Win Rate",
+      "value": "65%",
+      "detail": "When scoring 28–32 pts",
+      "tone": "positive"
+    },
+    {
+      "label": "Recent Form",
+      "value": "31.2 pts",
+      "detail": "Average over last 10 matches",
+      "tone": "neutral"
+    }
+  ],
+  "sections": [
+    {
+      "type": "table",
+      "title": "Historical Win Likelihood",
+      "description": "How the Knicks perform based on Brunson's scoring output.",
+      "columns": [
+        "Scoring Band",
+        "Matches",
+        "Knicks Wins",
+        "Win Percentage"
+      ],
+      "rows": [
+        [
+          "Under 25 pts",
+          "18",
+          "7",
+          "38%"
+        ],
+        [
+          "25 to 29 pts",
+          "24",
+          "13",
+          "54%"
+        ],
+        [
+          "30+ pts",
+          "30",
+          "22",
+          "73%"
+        ]
+      ],
+      "emptyMessage": "No historical match data available."
+    },
+    {
+      "type": "series",
+      "title": "Recent Form",
+      "description": "Brunson's points tally across his last 5 matches to contextualise the forecast.",
+      "unit": "pts",
+      "threshold": 28,
+      "thresholdLabel": "Forecast Lower Bound",
+      "points": [
+        {
+          "label": "vs PHI",
+          "value": 26,
+          "detail": "Home"
+        },
+        {
+          "label": "vs ORL",
+          "value": 34,
+          "detail": "Home"
+        },
+        {
+          "label": "at CLE",
+          "value": 29,
+          "detail": "Away"
+        },
+        {
+          "label": "at MIA",
+          "value": 31,
+          "detail": "Away"
+        },
+        {
+          "label": "vs ATL",
+          "value": 36,
+          "detail": "Home"
+        }
+      ],
+      "emptyMessage": "No recent scoring data available."
+    },
+    {
+      "type": "list",
+      "title": "Forecast Logic Context",
+      "description": "The variables used to determine the 28–32 points forecast.",
+      "items": [
+        "Baseline established from the last 10 matches (31.2 pts average)",
+        "Adjusted for Away venue, historically reducing output by 1.5 pts",
+        "Opponent defensive rating (BOS) factored as high resistance"
+      ],
+      "ordered": false,
+      "emptyMessage": "Forecast logic currently unavailable."
+    }
+  ],
+  "demoSteps": [
+    "Review the primary highlights to see the forecasted band and immediate win probability.",
+    "Analyse the historical table to understand how heavily the Knicks rely on Brunson exceeding 30 points.",
+    "Check the recent form series to visually verify the forecast against his actual recent behaviour.",
+    "Read the logic context list to ensure transparency in how the forecast was generated."
+  ],
+  "notes": [
+    "Ensure UK English spelling (e.g., behaviour, analyse, contextualise) is preserved in the UI.",
+    "Maintain a clean layout without extra charts; rely on the simple series and table for data presentation."
+  ]
+}

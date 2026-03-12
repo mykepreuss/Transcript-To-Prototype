@@ -1,5 +1,14 @@
 [
   {
+    "issue_number": 28,
+    "title": "Prototype: Brunson Matchup & Impact Forecast (Ev0ALMJB7KED-opt-1)",
+    "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/28",
+    "created_at": "2026-03-12T17:20:14Z",
+    "run_dir": "prototypes/2026-03-12/brunson-matchup-impact-forecast-7KEDopt1",
+    "preview_url": "https://mykepreuss.github.io/Transcript-To-Prototype/prototypes/2026-03-12/brunson-matchup-impact-forecast-7KEDopt1/",
+    "summary": "The team decided to move away from a basic stats tracker, favouring a connected flow that forecasts Jalen Brunson's scoring band for the next fixture based on recent form, and translates that into the Knicks' historical win likelihood. The V1 prototype will use local fixtures, ensure transparent logic, and avoid opaque machine learning claims. Acceptance checks include: a predictive scoring band, clear win likelihood mapping, transparent forecasting logic, and a deterministic fixture-backed setup.\n\n## Chosen prototype\n\n- Title: Brunson Matchup & Impact Forecast\n- Eyebrow: Next Fixture Analysis\n- Sections: Historical Win Likelihood, Recent Form, Forecast Logic Context\n\n## Design direction\n\n- Purpose: Connect predicted player performance directly to team outcomes.\n- Audience: Basketball fans wanting analytical context beyond basic schedules and scoring averages.\n- Tone: Clear, transparent, and objective. Avoiding 'sports betting' tropes or mystery math.\n- Memorable detail: Showing the direct correlation between Brunson's specific scoring bands and Knicks win percentages.\n- Constraints: Local fixtures only for V1 | UK English spelling throughout | Transparent forecasting logic | Minimal interface without chart junk"
+  },
+  {
     "issue_number": 27,
     "title": "Prototype: Knicks Tracker (Ev0AKT5VRKRD-opt-3)",
     "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/27",
