@@ -1,0 +1,112 @@
+{
+  "title": "Knicks Tracker",
+  "eyebrow": "V1 Local Execution",
+  "lede": "Deterministic output of upcoming fixtures and Jalen Brunson's recent scoring trends.",
+  "highlights": [
+    {
+      "label": "L5 Average",
+      "value": "31.2",
+      "detail": "Points across last 5 starts",
+      "tone": "neutral"
+    },
+    {
+      "label": "L3 Average",
+      "value": "33.7",
+      "detail": "Points across last 3 starts",
+      "tone": "positive"
+    },
+    {
+      "label": "Threshold Flag",
+      "value": "Active",
+      "detail": "L3 average is greater than or equal to 30",
+      "tone": "positive"
+    }
+  ],
+  "sections": [
+    {
+      "type": "table",
+      "title": "Upcoming Schedule",
+      "description": "Next 5 deterministic fixtures for the team.",
+      "columns": [
+        "Date",
+        "Opponent",
+        "Location"
+      ],
+      "rows": [
+        [
+          "2026-03-12",
+          "Boston",
+          "Home"
+        ],
+        [
+          "2026-03-14",
+          "Miami",
+          "Away"
+        ],
+        [
+          "2026-03-16",
+          "Philly",
+          "Home"
+        ],
+        [
+          "2026-03-18",
+          "Chicago",
+          "Away"
+        ],
+        [
+          "2026-03-20",
+          "Cleveland",
+          "Home"
+        ]
+      ],
+      "emptyMessage": "No upcoming fixtures found."
+    },
+    {
+      "type": "series",
+      "title": "Recent Scoring Logs",
+      "description": "Jalen Brunson's point totals over the last 5 starts.",
+      "unit": "pts",
+      "threshold": 30,
+      "thresholdLabel": "30pt Target",
+      "points": [
+        {
+          "label": "Game 1",
+          "value": 31,
+          "detail": "Opponent 1"
+        },
+        {
+          "label": "Game 2",
+          "value": 24,
+          "detail": "Opponent 2"
+        },
+        {
+          "label": "Game 3",
+          "value": 39,
+          "detail": "Opponent 3"
+        },
+        {
+          "label": "Game 4",
+          "value": 27,
+          "detail": "Opponent 4"
+        },
+        {
+          "label": "Game 5",
+          "value": 35,
+          "detail": "Opponent 5"
+        }
+      ],
+      "emptyMessage": "No scoring data available."
+    }
+  ],
+  "demoSteps": [
+    "Initialise the web view to simulate the command execution.",
+    "Review the upcoming schedule table for the next 5 deterministic fixtures.",
+    "Verify the L5 (31.2) and L3 (33.7) scoring averages match the underlying data.",
+    "Observe the threshold flag activating due to the L3 average exceeding 30 points."
+  ],
+  "notes": [
+    "All data is hardcoded via local fixtures to ensure zero network variance.",
+    "UK spelling applied to all user-facing copy.",
+    "Decoupled data architecture is in place to allow API swap in V2."
+  ]
+}

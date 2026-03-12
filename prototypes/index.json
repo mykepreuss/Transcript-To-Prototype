@@ -1,5 +1,14 @@
 [
   {
+    "issue_number": 25,
+    "title": "Prototype: Knicks Tracker (Ev0AL4E6BM7F-opt-1)",
+    "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/25",
+    "created_at": "2026-03-12T15:51:45Z",
+    "run_dir": "prototypes/2026-03-12/knicks-tracker-BM7Fopt1",
+    "preview_url": "https://mykepreuss.github.io/Transcript-To-Prototype/prototypes/2026-03-12/knicks-tracker-BM7Fopt1/",
+    "summary": "The team agreed to build a V1 deterministic Knicks tracker using local fixtures to display upcoming games and Jalen Brunson's scoring averages. Chosen prototype: Web-Simulated Command Line. Acceptance checks: command executes correctly, L5 and L3 averages calculate accurately, threshold flag activates at 30 or above, and output remains strictly deterministic with zero network calls.\n\n## Chosen prototype\n\n- Title: Knicks Tracker\n- Eyebrow: V1 Local Execution\n- Sections: Upcoming Schedule, Recent Scoring Logs\n\n## Design direction\n\n- Purpose: Provide a simple, zero-bloat tracking tool for upcoming fixtures and recent player scoring behaviour.\n- Audience: Basketball analysts and fans favouring high data density and quick comprehension.\n- Tone: Neutral and factual.\n- Memorable detail: CLI-style text output rendered cleanly in the browser to simulate terminal execution.\n- Constraints: No external APIs in V1 | No predictive modelling | Local fixtures only | UK spelling used in copy"
+  },
+  {
     "issue_number": 24,
     "title": "Prototype: Knicks Tracker (Ev0ALWNAKN3A-opt-1)",
     "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/24",
