@@ -1,0 +1,57 @@
+{
+  "schedule": [
+    {
+      "date": "2026-03-12",
+      "opponent": "Boston",
+      "homeAway": "Home"
+    },
+    {
+      "date": "2026-03-14",
+      "opponent": "Miami",
+      "homeAway": "Away"
+    },
+    {
+      "date": "2026-03-16",
+      "opponent": "Philly",
+      "homeAway": "Home"
+    },
+    {
+      "date": "2026-03-18",
+      "opponent": "Chicago",
+      "homeAway": "Away"
+    },
+    {
+      "date": "2026-03-20",
+      "opponent": "Cleveland",
+      "homeAway": "Home"
+    }
+  ],
+  "scoring": [
+    {
+      "date": "game-1",
+      "opponent": "Opponent 1",
+      "points": 31
+    },
+    {
+      "date": "game-2",
+      "opponent": "Opponent 2",
+      "points": 24
+    },
+    {
+      "date": "game-3",
+      "opponent": "Opponent 3",
+      "points": 39
+    },
+    {
+      "date": "game-4",
+      "opponent": "Opponent 4",
+      "points": 27
+    },
+    {
+      "date": "game-5",
+      "opponent": "Opponent 5",
+      "points": 35
+    }
+  ],
+  "summary": "The team agreed to build a V1 deterministic prototype for tracking the Knicks' schedule and Jalen Brunson's scoring. We will build a minimalist web dashboard using local fixture data to favour quick comprehension. Acceptance checks: executes via a single run command, calculates averages correctly, displays a threshold flag for 3-game averages of 30 or more, and remains completely deterministic without external APIs."
+}

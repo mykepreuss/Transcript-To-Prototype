@@ -1,0 +1,112 @@
+{
+  "title": "Knicks Tracker",
+  "eyebrow": "Jalen Brunson & Schedule Overview",
+  "lede": "Review upcoming fixtures and recent historical scoring based on localised data.",
+  "highlights": [
+    {
+      "label": "L5 Average",
+      "value": "31.2",
+      "detail": "Points per game",
+      "tone": "neutral"
+    },
+    {
+      "label": "L3 Average",
+      "value": "33.7",
+      "detail": "Threshold flag triggered (≥30)",
+      "tone": "positive"
+    },
+    {
+      "label": "Scheduled",
+      "value": "5",
+      "detail": "Upcoming fixtures",
+      "tone": "neutral"
+    }
+  ],
+  "sections": [
+    {
+      "type": "table",
+      "title": "Upcoming Schedule",
+      "description": "Next five fixtures using static data.",
+      "columns": [
+        "Date",
+        "Opponent",
+        "Location"
+      ],
+      "rows": [
+        [
+          "2026-03-12",
+          "Boston",
+          "Home"
+        ],
+        [
+          "2026-03-14",
+          "Miami",
+          "Away"
+        ],
+        [
+          "2026-03-16",
+          "Philly",
+          "Home"
+        ],
+        [
+          "2026-03-18",
+          "Chicago",
+          "Away"
+        ],
+        [
+          "2026-03-20",
+          "Cleveland",
+          "Home"
+        ]
+      ],
+      "emptyMessage": "No upcoming fixtures found."
+    },
+    {
+      "type": "series",
+      "title": "Recent Scoring Logs",
+      "description": "Points scored across the last five starts.",
+      "unit": "pts",
+      "threshold": 30,
+      "thresholdLabel": "30pt Threshold",
+      "points": [
+        {
+          "label": "Game 1",
+          "value": 31,
+          "detail": "Opponent 1"
+        },
+        {
+          "label": "Game 2",
+          "value": 24,
+          "detail": "Opponent 2"
+        },
+        {
+          "label": "Game 3",
+          "value": 39,
+          "detail": "Opponent 3"
+        },
+        {
+          "label": "Game 4",
+          "value": 27,
+          "detail": "Opponent 4"
+        },
+        {
+          "label": "Game 5",
+          "value": 35,
+          "detail": "Opponent 5"
+        }
+      ],
+      "emptyMessage": "No scoring data available."
+    }
+  ],
+  "demoSteps": [
+    "Run the local start command to boot the web view.",
+    "Observe the 5-game schedule table rendering deterministically.",
+    "Check the scoring bar chart to ensure Jalen's points are plotted correctly.",
+    "Verify the highlights section displays 31.2 for L5 and 33.7 for L3, along with the positive threshold flag."
+  ],
+  "notes": [
+    "Ensure all UI copy uses UK English spelling (e.g., 'favour', 'localised').",
+    "Keep visual styling minimal and data-dense without decorative elements.",
+    "V1 strictly relies on local fixture files; build the architecture so a real API can be swapped in for V2."
+  ]
+}
