@@ -1,5 +1,14 @@
 [
   {
+    "issue_number": 39,
+    "title": "Prototype: Parallel Experiment Simulator (Ev0ALXP04Y5P-opt-3)",
+    "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/39",
+    "created_at": "2026-03-13T21:42:09Z",
+    "run_dir": "prototypes/2026-03-13/parallel-experiment-simulator-4Y5Popt3",
+    "preview_url": "https://mykepreuss.github.io/Transcript-To-Prototype/prototypes/2026-03-13/parallel-experiment-simulator-4Y5Popt3/",
+    "summary": "A prototype demonstrating how product teams can use agentic engineering to spawn and evaluate parallel UI experiments, shifting the focus from manual coding to orchestration and UX polish. It verifies the concept of parallelised delivery against traditional linear constraints.\n\n## Chosen prototype\n\n- Title: Parallel Experiment Simulator\n- Eyebrow: Agentic Delivery\n- Sections: Managerial Intent, Spawned Workstreams, Delivery Velocity\n\n## Design direction\n\n- Purpose: To visualise the acceleration of product delivery when using autonomous agents for parallel UI experimentation.\n- Audience: Product managers and technical leads transitioning from writing code to orchestrating AI agents.\n- Tone: Efficient, authoritative, and forward-looking.\n- Memorable detail: A delivery velocity chart that visually breaks past the traditional 'linear capacity limit' once agents are deployed.\n- Constraints: No external API calls; use local state to simulate the generation of experiments. | Must use UK spelling (e.g., colours, behaviour, organise). | Do not imply real-time GitHub/linear syncing in this V1."
+  },
+  {
     "issue_number": 38,
     "title": "Prototype: Agent Management Scorecard (Ev0ALXP04Y5P-opt-2)",
     "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/38",
