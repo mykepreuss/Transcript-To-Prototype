@@ -1,0 +1,117 @@
+{
+  "title": "Agent Upward Review",
+  "eyebrow": "Delegation Analytics",
+  "lede": "Review your prompting behaviour and delegation effectiveness based on direct feedback from your AI coding agents.",
+  "highlights": [
+    {
+      "label": "Prompt Clarity Score",
+      "value": "B+",
+      "detail": "Based on context provided in your initial instructions",
+      "tone": "positive"
+    },
+    {
+      "label": "Zero-Touch PRs",
+      "value": "42%",
+      "detail": "Tasks completed by AI without human code edits",
+      "tone": "neutral"
+    },
+    {
+      "label": "Iteration Overhead",
+      "value": "4.1",
+      "detail": "Average prompts required to resolve a single issue",
+      "tone": "warning"
+    }
+  ],
+  "sections": [
+    {
+      "type": "series",
+      "title": "Delegation Efficiency",
+      "description": "Percentage of AI-generated Pull Requests requiring zero human intervention over time.",
+      "unit": "%",
+      "threshold": 50,
+      "thresholdLabel": "Target Efficiency",
+      "points": [
+        {
+          "label": "Week 1",
+          "value": 15,
+          "detail": "Onboarding"
+        },
+        {
+          "label": "Week 2",
+          "value": 28,
+          "detail": "Adjusting prompts"
+        },
+        {
+          "label": "Week 3",
+          "value": 35,
+          "detail": "Adding file paths"
+        },
+        {
+          "label": "Week 4",
+          "value": 42,
+          "detail": "Current"
+        }
+      ],
+      "emptyMessage": "No efficiency data available."
+    },
+    {
+      "type": "table",
+      "title": "Recent Task Feedback",
+      "description": "Upward reviews from your agents on recently assigned tickets.",
+      "columns": [
+        "Task",
+        "Agent",
+        "Complexity",
+        "Prompt Rating",
+        "Agent Feedback"
+      ],
+      "rows": [
+        [
+          "Refactor payment gateway",
+          "Linear Agent",
+          "High",
+          "Needs Context",
+          "Missing documentation on the legacy Stripe implementation."
+        ],
+        [
+          "Update navigation styling",
+          "Linear Agent",
+          "Low",
+          "Excellent",
+          "Clear acceptance criteria and exact file paths provided."
+        ],
+        [
+          "Implement user caching",
+          "RootCode Cloud",
+          "Medium",
+          "Adequate",
+          "Vague initial prompt; required 5 iterations to clarify Redis structure."
+        ]
+      ],
+      "emptyMessage": "No recent task feedback."
+    },
+    {
+      "type": "list",
+      "title": "Suggested Management Behaviours",
+      "description": "Actionable areas to optimise your AI delegation skills based on recent loops.",
+      "items": [
+        "Include specific file paths rather than asking the agent to search the entire repository.",
+        "Define explicit acceptance criteria in the initial prompt to reduce iteration overhead.",
+        "Provide context on upstream dependencies when assigning high-complexity architectural tasks."
+      ],
+      "ordered": true,
+      "emptyMessage": "No suggestions at this time."
+    }
+  ],
+  "demoSteps": [
+    "Review the highlights to gauge overall delegation effectiveness and prompt clarity.",
+    "Observe the 'Delegation Efficiency' trend to see how zero-touch PR rates are improving over time.",
+    "Read the 'Recent Task Feedback' table to see specific, constructive critiques from the AI on recent tickets.",
+    "Review the actionable 'Suggested Management Behaviours' list to understand how to optimise future prompts."
+  ],
+  "notes": [
+    "Demo data is entirely mocked to demonstrate the concept without requiring a live LLM integration.",
+    "The term 'Zero-Touch PRs' is used to represent the ideal state of parallelised agentic delivery mentioned in the transcript.",
+    "UK spelling is enforced in the user-facing copy (behaviour, optimise)."
+  ]
+}

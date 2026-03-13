@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent Upward Review</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="scanline"></div>
+  <div class="layout">
+    <header class="site-header">
+      <div class="header-meta">
+        <span class="eyebrow" id="ui-eyebrow"></span>
+        <span class="status-indicator">[SYS.ONLINE]</span>
+      </div>
+      <h1 class="title" id="ui-title"></h1>
+      <p class="lede" id="ui-lede"></p>
+    </header>
+
+    <main class="dashboard">
+      <!-- Highlights Section -->
+      <section class="region region-highlights" aria-label="Key Metrics">
+        <div class="grid-highlights" id="ui-highlights"></div>
+      </section>
+
+      <div class="region-split">
+        <!-- Chart Section -->
+        <section class="region region-chart">
+          <header class="region-header">
+            <h2 id="chart-title"></h2>
+            <p id="chart-desc"></p>
+          </header>
+          <div class="chart-container" id="ui-chart"></div>
+        </section>
+
+        <!-- List Section -->
+        <section class="region region-list">
+          <header class="region-header">
+            <h2 id="list-title"></h2>
+            <p id="list-desc"></p>
+          </header>
+          <div class="list-container" id="ui-list"></div>
+        </section>
+      </div>
+
+      <!-- Table Section -->
+      <section class="region region-table">
+        <header class="region-header">
+          <h2 id="table-title"></h2>
+          <p id="table-desc"></p>
+        </header>
+        <div class="table-container">
+          <table id="ui-table">
+            <thead id="ui-table-head"></thead>
+            <tbody id="ui-table-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>

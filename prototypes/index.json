@@ -1,5 +1,14 @@
 [
   {
+    "issue_number": 34,
+    "title": "Prototype: Agent Upward Review (Ev0AL37E98MD-opt-1)",
+    "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/34",
+    "created_at": "2026-03-13T21:05:24Z",
+    "run_dir": "prototypes/2026-03-13/upward-review-98MDopt1",
+    "preview_url": "https://mykepreuss.github.io/Transcript-To-Prototype/prototypes/2026-03-13/upward-review-98MDopt1/",
+    "summary": "A V1 prototype of an 'Upward Review' tool where AI agents evaluate a developer's prompting behaviour and delegation skills. This directly addresses the transcript's premise that successful AI coding requires treating the AI as a junior engineer and focusing on management training rather than raw coding.\n\n## Chosen prototype\n\n- Title: Agent Upward Review\n- Eyebrow: Delegation Analytics\n- Sections: Delegation Efficiency, Recent Task Feedback, Suggested Management Behaviours\n\n## Design direction\n\n- Purpose: To flip the traditional code review paradigm by allowing AI agents to provide constructive feedback on how well their human counterparts manage and prompt them.\n- Audience: Software engineers and engineering managers adopting agentic AI workflows.\n- Tone: Constructive, insightful, and subtly playful.\n- Memorable detail: The AI directly critiques the human's 'management' skills, highlighting missing context or vague instructions.\n- Constraints: No live LLM integration for V1; relies on static mock data to illustrate the review concept. | Focus metrics strictly on prompting behaviour and delegation, not code compilation or syntax. | Must use UK spelling (e.g., behaviour, optimise)."
+  },
+  {
     "issue_number": 33,
     "title": "Prototype: Brunson Matchup Dependency Index (Ev0ALXEGAC9X-opt-3)",
     "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/33",
