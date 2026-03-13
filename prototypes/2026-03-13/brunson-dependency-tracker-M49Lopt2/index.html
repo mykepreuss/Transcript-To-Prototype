@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brunson Dependency Tracker</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="site-header">
+      <div class="eyebrow" id="ui-eyebrow"></div>
+      <h1 class="title" id="ui-title"></h1>
+      <p class="lede" id="ui-lede"></p>
+    </header>
+
+    <main>
+      <section class="highlights-grid" id="ui-highlights">
+        <!-- Highlights populated by JS -->
+      </section>
+
+      <div class="layout-grid">
+        <div class="primary-column">
+          <section class="module" id="module-fixtures">
+            <div class="module-header">
+              <h2 id="fixtures-title"></h2>
+              <p class="module-desc" id="fixtures-desc"></p>
+            </div>
+            <div class="module-content" id="fixtures-content"></div>
+          </section>
+
+          <section class="module" id="module-outcomes">
+            <div class="module-header">
+              <h2 id="outcomes-title"></h2>
+              <p class="module-desc" id="outcomes-desc"></p>
+            </div>
+            <div class="module-content" id="outcomes-content"></div>
+          </section>
+        </div>
+
+        <div class="secondary-column">
+          <section class="module" id="module-form">
+            <div class="module-header">
+              <h2 id="form-title"></h2>
+              <p class="module-desc" id="form-desc"></p>
+            </div>
+            <div class="module-content" id="form-content"></div>
+          </section>
+
+          <section class="module methodology">
+            <div class="module-header">
+              <h2 id="method-title"></h2>
+            </div>
+            <div class="module-content">
+              <p id="method-body"></p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>

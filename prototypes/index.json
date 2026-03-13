@@ -1,5 +1,14 @@
 [
   {
+    "issue_number": 41,
+    "title": "Prototype: Brunson Dependency Tracker (Ev0ALGTPM49L-opt-2)",
+    "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/41",
+    "created_at": "2026-03-13T22:08:32Z",
+    "run_dir": "prototypes/2026-03-13/brunson-dependency-tracker-M49Lopt2",
+    "preview_url": "https://mykepreuss.github.io/Transcript-To-Prototype/prototypes/2026-03-13/brunson-dependency-tracker-M49Lopt2/",
+    "summary": "The prototype implements a Schedule Pressure Index, identifying upcoming Knicks fixtures where a high-scoring Jalen Brunson performance is critical. It relies on a transparent historical logic model mapping venue, opponent, and recent form to win likelihood, avoiding opaque predictive models and cluttered visualisations.\n\n## Chosen prototype\n\n- Title: Brunson Dependency Tracker\n- Eyebrow: Schedule Pressure Index\n- Sections: Upcoming Fixtures by Pressure, Knicks Outcomes by Scoring Band, Recent Form (Last 10 Games), Methodology\n\n## Design direction\n\n- Purpose: To forecast Knicks' dependency on Jalen Brunson's scoring for upcoming fixtures.\n- Audience: Basketball analysts and Knicks fans seeking data-driven matchup insights rather than generic stats.\n- Tone: Analytical, transparent, and practical. Straightforward data without sports-betting mystery math.\n- Memorable detail: A 'Pressure Level' that connects an individual player's scoring burden directly to team win likelihood.\n- Constraints: Must operate entirely on deterministic local fixtures for V1. | Logic must remain visible and legible (e.g., opponent + venue + 10-game scoring baseline). | No decorative dashboard elements or chart junk; prioritise high-density, readable layouts."
+  },
+  {
     "issue_number": 40,
     "title": "Prototype: Brunson Impact Forecaster (Ev0ALGTPM49L-opt-1)",
     "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/40",

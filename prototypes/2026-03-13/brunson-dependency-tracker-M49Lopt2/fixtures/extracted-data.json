@@ -1,0 +1,5 @@
+{
+  "schedule": [],
+  "scoring": [],
+  "summary": "The prototype implements a Schedule Pressure Index, identifying upcoming Knicks fixtures where a high-scoring Jalen Brunson performance is critical. It relies on a transparent historical logic model mapping venue, opponent, and recent form to win likelihood, avoiding opaque predictive models and cluttered visualisations."
+}

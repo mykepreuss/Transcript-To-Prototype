@@ -1,0 +1,120 @@
+{
+  "title": "Brunson Dependency Tracker",
+  "eyebrow": "Schedule Pressure Index",
+  "lede": "Evaluating upcoming Knicks fixtures to identify where a high-scoring Jalen Brunson performance is historically required to secure a win.",
+  "highlights": [
+    {
+      "label": "High Pressure Fixtures",
+      "value": "2",
+      "detail": "Upcoming games requiring 30+ points",
+      "tone": "warning"
+    },
+    {
+      "label": "Recent Form Baseline",
+      "value": "29.4 pts",
+      "detail": "Average across last 10 games",
+      "tone": "positive"
+    },
+    {
+      "label": "Win Likelihood Delta",
+      "value": "+25%",
+      "detail": "When scoring 30+ vs under 25",
+      "tone": "neutral"
+    }
+  ],
+  "sections": [
+    {
+      "type": "list",
+      "title": "Upcoming Fixtures by Pressure",
+      "description": "The next five games ranked by the projected scoring burden on Brunson.",
+      "items": [
+        "Boston (Away) — High Pressure (Historical requirement: 30+ pts)",
+        "Milwaukee (Away) — High Pressure (Historical requirement: 30+ pts)",
+        "Orlando (Home) — Medium Pressure (Historical requirement: 25-29 pts)",
+        "Charlotte (Home) — Low Pressure (Historical requirement: <25 pts)"
+      ],
+      "ordered": true,
+      "emptyMessage": "No upcoming fixtures available."
+    },
+    {
+      "type": "table",
+      "title": "Knicks Outcomes by Scoring Band",
+      "description": "Historical win likelihood mapped to Brunson's points totals.",
+      "columns": [
+        "Points Band",
+        "Win Likelihood",
+        "Offence Context"
+      ],
+      "rows": [
+        [
+          "Under 25",
+          "45%",
+          "High reliance on secondary scorers"
+        ],
+        [
+          "25 to 29",
+          "60%",
+          "Balanced scoring distribution"
+        ],
+        [
+          "30+",
+          "75%",
+          "Brunson dominant performance"
+        ]
+      ],
+      "emptyMessage": "No historical scoring data available."
+    },
+    {
+      "type": "series",
+      "title": "Recent Form (Last 10 Games)",
+      "description": "Brunson's scoring output over the baseline period.",
+      "unit": "pts",
+      "threshold": 30,
+      "thresholdLabel": "High Pressure Benchmark",
+      "points": [
+        {
+          "label": "G1",
+          "value": 32,
+          "detail": "Home"
+        },
+        {
+          "label": "G2",
+          "value": 24,
+          "detail": "Away"
+        },
+        {
+          "label": "G3",
+          "value": 28,
+          "detail": "Away"
+        },
+        {
+          "label": "G4",
+          "value": 35,
+          "detail": "Home"
+        },
+        {
+          "label": "G5",
+          "value": 31,
+          "detail": "Away"
+        }
+      ],
+      "emptyMessage": "No recent game logs available."
+    },
+    {
+      "type": "text",
+      "title": "Methodology",
+      "body": "The pressure index assesses the opponent's baseline strength and venue against the Knicks' historical win likelihood when Brunson scores in specific bands. It uses his last 10 games as a form baseline. There is no hidden machine learning model; the behaviour is entirely transparent and based on historical fixture data."
+    }
+  ],
+  "demoSteps": [
+    "Review the top highlights to understand Brunson's recent form and the schedule's immediate pressure.",
+    "Check the ranked list of upcoming fixtures to see which games demand the highest scoring output.",
+    "Examine the historical scoring table to understand the logic behind the 'High Pressure' designation.",
+    "Look at the recent form series to visually gauge how frequently he has hit the high-pressure benchmark."
+  ],
+  "notes": [
+    "V1 must run entirely on static JSON fixtures representing schedule and scoring.",
+    "Ensure the UI remains strictly analytical and avoids betting-style visual cues.",
+    "Use UK spelling variants (e.g., 'behaviour', 'colour', 'offence')."
+  ]
+}
