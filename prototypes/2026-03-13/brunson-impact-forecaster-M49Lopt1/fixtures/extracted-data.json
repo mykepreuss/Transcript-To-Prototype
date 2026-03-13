@@ -1,0 +1,5 @@
+{
+  "schedule": [],
+  "scoring": [],
+  "summary": "The team agreed to build a deterministic, fixture-backed forecaster that predicts Jalen Brunson's scoring band for the next matchup and maps it to the Knicks' historical win likelihood. V1 strictly focuses on this single-game predictive flow, deferring the broader multi-game schedule tracker to avoid scope creep and ensure logic remains transparent."
+}

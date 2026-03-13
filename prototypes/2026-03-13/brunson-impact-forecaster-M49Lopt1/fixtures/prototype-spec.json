@@ -1,0 +1,140 @@
+{
+  "title": "Brunson Impact Forecaster",
+  "eyebrow": "Next-Fixture Analysis",
+  "lede": "Analyse Jalen Brunson's projected scoring band for the upcoming matchup to determine the historical likelihood of a Knicks victory.",
+  "highlights": [
+    {
+      "label": "Projected Point Band",
+      "value": "28–32",
+      "detail": "Forecast for next fixture",
+      "tone": "neutral"
+    },
+    {
+      "label": "Implied Win Likelihood",
+      "value": "68%",
+      "detail": "When scoring within predicted band",
+      "tone": "positive"
+    },
+    {
+      "label": "Recent Baseline",
+      "value": "31.4",
+      "detail": "Average over last 10 fixtures",
+      "tone": "neutral"
+    }
+  ],
+  "sections": [
+    {
+      "type": "list",
+      "title": "Forecast Variables",
+      "description": "The logic and context used to generate the projected scoring band.",
+      "items": [
+        "Player scoring form over the previous 10 fixtures",
+        "Home/Away venue performance splits",
+        "Recent matchup history against the upcoming opponent"
+      ],
+      "ordered": false,
+      "emptyMessage": "No variables tracked."
+    },
+    {
+      "type": "table",
+      "title": "Historical Team Outcomes",
+      "description": "How the Knicks perform across different Brunson scoring thresholds.",
+      "columns": [
+        "Scoring Band",
+        "Knicks Record",
+        "Win Likelihood"
+      ],
+      "rows": [
+        [
+          "Under 25 pts",
+          "4-8",
+          "33.3%"
+        ],
+        [
+          "25–29 pts",
+          "12-6",
+          "66.7%"
+        ],
+        [
+          "30+ pts",
+          "18-4",
+          "81.8%"
+        ]
+      ],
+      "emptyMessage": "Historical data unavailable."
+    },
+    {
+      "type": "series",
+      "title": "Recent Scoring Behaviour",
+      "description": "Brunson's point totals across the 10-game baseline used for this projection.",
+      "unit": "pts",
+      "threshold": 30,
+      "thresholdLabel": "High Impact Threshold",
+      "points": [
+        {
+          "label": "G-10",
+          "value": 24,
+          "detail": "Away"
+        },
+        {
+          "label": "G-9",
+          "value": 31,
+          "detail": "Home"
+        },
+        {
+          "label": "G-8",
+          "value": 28,
+          "detail": "Home"
+        },
+        {
+          "label": "G-7",
+          "value": 35,
+          "detail": "Away"
+        },
+        {
+          "label": "G-6",
+          "value": 22,
+          "detail": "Away"
+        },
+        {
+          "label": "G-5",
+          "value": 41,
+          "detail": "Home"
+        },
+        {
+          "label": "G-4",
+          "value": 30,
+          "detail": "Home"
+        },
+        {
+          "label": "G-3",
+          "value": 27,
+          "detail": "Away"
+        },
+        {
+          "label": "G-2",
+          "value": 33,
+          "detail": "Away"
+        },
+        {
+          "label": "G-1",
+          "value": 38,
+          "detail": "Home"
+        }
+      ],
+      "emptyMessage": "Recent fixture data unavailable."
+    }
+  ],
+  "demoSteps": [
+    "Review the projected point band and implied win likelihood in the top highlights.",
+    "Verify the transparent forecast logic in the variables list.",
+    "Consult the historical team outcomes table to contextualise the projection.",
+    "Assess recent scoring behaviour in the series chart to see the raw data driving the baseline."
+  ],
+  "notes": [
+    "Ensure all user-facing copy strictly uses UK spelling (e.g., analyse, behaviour).",
+    "V1 is strictly local-fixture backed. Do not mock real-time API states or loading spinners.",
+    "Data presented in the Historical Team Outcomes table is illustrative for the prototype but establishes the exact shape required.",
+    "Do not display a precise single-decimal prediction as the primary output; keep the projected band (e.g., 28-32) prominent to manage expectations."
+  ]
+}

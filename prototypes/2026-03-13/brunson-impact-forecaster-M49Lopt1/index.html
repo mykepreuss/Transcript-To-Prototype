@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brunson Impact Forecaster</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="eyebrow" id="eyebrow"></div>
+      <h1 id="title"></h1>
+      <p class="lede" id="lede"></p>
+    </header>
+
+    <main>
+      <section class="highlights" id="highlights">
+        <!-- Populated via JS -->
+      </section>
+
+      <div class="analysis-grid">
+        <div class="grid-column left-column">
+          <section class="card" id="variables-section">
+            <div class="card-header">
+              <h2 id="variables-title"></h2>
+              <p class="card-desc" id="variables-desc"></p>
+            </div>
+            <ul class="variables-list" id="variables-list"></ul>
+          </section>
+
+          <section class="card" id="historical-section">
+            <div class="card-header">
+              <h2 id="historical-title"></h2>
+              <p class="card-desc" id="historical-desc"></p>
+            </div>
+            <div class="table-wrapper">
+              <table id="historical-table">
+                <thead id="historical-thead"></thead>
+                <tbody id="historical-tbody"></tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+
+        <div class="grid-column right-column">
+          <section class="card behaviour-card" id="behaviour-section">
+            <div class="card-header">
+              <h2 id="behaviour-title"></h2>
+              <p class="card-desc" id="behaviour-desc"></p>
+            </div>
+            <div class="chart-container" id="chart-container">
+              <!-- Populated via JS -->
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>

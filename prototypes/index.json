@@ -1,5 +1,14 @@
 [
   {
+    "issue_number": 40,
+    "title": "Prototype: Brunson Impact Forecaster (Ev0ALGTPM49L-opt-1)",
+    "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/40",
+    "created_at": "2026-03-13T22:07:03Z",
+    "run_dir": "prototypes/2026-03-13/brunson-impact-forecaster-M49Lopt1",
+    "preview_url": "https://mykepreuss.github.io/Transcript-To-Prototype/prototypes/2026-03-13/brunson-impact-forecaster-M49Lopt1/",
+    "summary": "The team agreed to build a deterministic, fixture-backed forecaster that predicts Jalen Brunson's scoring band for the next matchup and maps it to the Knicks' historical win likelihood. V1 strictly focuses on this single-game predictive flow, deferring the broader multi-game schedule tracker to avoid scope creep and ensure logic remains transparent.\n\n## Chosen prototype\n\n- Title: Brunson Impact Forecaster\n- Eyebrow: Next-Fixture Analysis\n- Sections: Forecast Variables, Historical Team Outcomes, Recent Scoring Behaviour\n\n## Design direction\n\n- Purpose: To translate player statistics into actionable team narratives by forecasting scoring behaviour and evaluating its impact on team success.\n- Audience: Basketball analysts and Knicks fans seeking meaningful context beyond raw game logs.\n- Tone: Analytical, transparent, and direct.\n- Memorable detail: The seamless flow from a grounded player projection (scoring band) to a team-level outcome (win likelihood), avoiding isolated trivia.\n- Constraints: Must use deterministic local fixtures only for V1 (no external API dependencies). | Calculations must be based strictly on a 10-game baseline, venue context, and opponent. | Logic must remain highly visible to avoid an opaque, sports-betting aesthetic. | Interface must be minimal and dense; avoid decorative charts or generic dashboard elements."
+  },
+  {
     "issue_number": 39,
     "title": "Prototype: Parallel Experiment Simulator (Ev0ALXP04Y5P-opt-3)",
     "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/39",
