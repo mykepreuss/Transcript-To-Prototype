@@ -1,0 +1,87 @@
+{
+  "title": "Papercut Resolver",
+  "eyebrow": "UX Polish Workstream",
+  "lede": "Turn customer feedback into shipped code. Highlight rough edges and review AI-drafted pull requests instantly.",
+  "highlights": [
+    {
+      "label": "Active Papercuts",
+      "value": "14",
+      "detail": "Awaiting triage",
+      "tone": "neutral"
+    },
+    {
+      "label": "PRs Drafted",
+      "value": "32",
+      "detail": "This week",
+      "tone": "positive"
+    },
+    {
+      "label": "Avg. Resolution",
+      "value": "< 2 hours",
+      "detail": "From report to PR",
+      "tone": "positive"
+    }
+  ],
+  "sections": [
+    {
+      "type": "table",
+      "title": "Incoming Feedback Triage",
+      "description": "Reported UX issues and their current AI resolution status.",
+      "columns": [
+        "Issue",
+        "Source",
+        "Status",
+        "Proposed Fix"
+      ],
+      "rows": [
+        [
+          "Misaligned submit button on mobile",
+          "Support Ticket #492",
+          "Drafting",
+          "Adjust CSS padding"
+        ],
+        [
+          "Typo in billing error message",
+          "Slack (Internal)",
+          "Ready for Review",
+          "Update text string in i18n"
+        ],
+        [
+          "Hover colour contrast too low",
+          "Design QA",
+          "Needs Approval",
+          "Update hex value to #333333"
+        ]
+      ],
+      "emptyMessage": "No pending papercuts."
+    },
+    {
+      "type": "text",
+      "title": "Review Proposed Change: Hover Colour Contrast",
+      "body": "Current Behaviour: The 'Cancel' button uses a light grey text on a white background on hover, failing accessibility guidelines.\n\nAI Proposed Fix: Update the hover state text colour to a darker grey (#4B5563) to meet WCAG AA contrast requirements. A pull request has been staged for the front-end repository. No structural changes were made to the component."
+    },
+    {
+      "type": "list",
+      "title": "Resolution Workflow",
+      "description": "Steps to deploy this fix.",
+      "items": [
+        "Review the plain-text description of the AI proposed fix.",
+        "Verify the visual difference matches the intended behaviour.",
+        "Approve the generated code changes to merge the automated PR."
+      ],
+      "ordered": true,
+      "emptyMessage": "No active workflow steps."
+    }
+  ],
+  "demoSteps": [
+    "Review the high-level metrics of resolved papercuts.",
+    "Scan the triage table for incoming UX issues reported by the support team.",
+    "Read the plain-text summary of the AI's proposed fix for the colour contrast issue.",
+    "Follow the resolution workflow steps to simulate approving the change."
+  ],
+  "notes": [
+    "Ensure all user-facing copy uses UK spelling (e.g., colour, behaviour).",
+    "The V1 demo uses static fixture data to simulate the AI's proposed fixes; no live LLM or GitHub API calls are made.",
+    "The layout should emphasise readability for non-technical users, keeping actual code hidden behind the plain-English summaries."
+  ]
+}

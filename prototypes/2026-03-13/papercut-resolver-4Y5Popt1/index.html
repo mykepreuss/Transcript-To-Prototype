@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papercut Resolver</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="site-header">
+            <div class="header-content">
+                <span class="eyebrow">UX Polish Workstream</span>
+                <h1>Papercut Resolver</h1>
+                <p class="lede">Turn customer feedback into shipped code. Highlight rough edges and review AI-drafted pull requests instantly.</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="highlights-section" id="highlights-container">
+                <!-- Highlights injected via JS -->
+            </section>
+
+            <div class="workspace-grid">
+                <section class="triage-panel">
+                    <div class="panel-header">
+                        <h2>Incoming Feedback Triage</h2>
+                        <p class="panel-desc">Reported UX issues and their current AI resolution status.</p>
+                    </div>
+                    <div class="table-wrapper">
+                        <table id="triage-table">
+                            <thead>
+                                <tr>
+                                    <th>Issue</th>
+                                    <th>Source</th>
+                                    <th>Status</th>
+                                    <th>Proposed Fix</th>
+                                </tr>
+                            </thead>
+                            <tbody id="triage-tbody">
+                                <!-- Table rows injected via JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <aside class="review-panel">
+                    <div id="empty-state" class="empty-state">
+                        Select a papercut from the triage list to review the AI proposed fix.
+                    </div>
+                    <div id="review-content" class="review-content hidden">
+                        <!-- Review text injected via JS -->
+                    </div>
+                    <div id="workflow-content" class="workflow-content hidden">
+                        <!-- Workflow injected via JS -->
+                    </div>
+                    <div class="action-footer hidden" id="action-footer">
+                        <button id="approve-btn" class="btn-primary">
+                            <span class="btn-text">Approve Generated Code</span>
+                        </button>
+                    </div>
+                </aside>
+            </div>
+        </main>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

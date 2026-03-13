@@ -1,5 +1,14 @@
 [
   {
+    "issue_number": 37,
+    "title": "Prototype: Papercut Resolver (Ev0ALXP04Y5P-opt-1)",
+    "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/37",
+    "created_at": "2026-03-13T21:39:19Z",
+    "run_dir": "prototypes/2026-03-13/papercut-resolver-4Y5Popt1",
+    "preview_url": "https://mykepreuss.github.io/Transcript-To-Prototype/prototypes/2026-03-13/papercut-resolver-4Y5Popt1/",
+    "summary": "The transcript discusses how AI coding tools are shifting the engineering bottleneck, allowing non-technical staff like support teams to fix UX 'paper cuts' directly. The chosen prototype is the UX Papercut Resolver, a workflow tool for support staff to report visual bugs and generate AI-driven pull requests. Acceptance checks: empowers non-engineers, previews changes before submitting, and focuses on rapid UI polish.\n\n## Chosen prototype\n\n- Title: Papercut Resolver\n- Eyebrow: UX Polish Workstream\n- Sections: Incoming Feedback Triage, Review Proposed Change: Hover Colour Contrast, Resolution Workflow\n\n## Design direction\n\n- Purpose: To let non-technical team members propose and preview code-level UX fixes based on user feedback.\n- Audience: Customer support agents, product managers, and designers.\n- Tone: Approachable, precise, and empowering.\n- Memorable detail: A clear, plain-English explanation of the AI's proposed code change alongside the reported issue.\n- Constraints: Use UK spelling strictly (colour, behaviour). | V1 must rely on static mock data to simulate AI-generated pull requests. | Do not require a live GitHub or code repository connection. | Focus entirely on the triage and approval workflow."
+  },
+  {
     "issue_number": 36,
     "title": "Prototype: Papercut Dispatcher (Ev0ALF8EUJS1-opt-1)",
     "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/36",
