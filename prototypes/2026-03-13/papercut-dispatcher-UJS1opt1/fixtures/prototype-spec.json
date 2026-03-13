@@ -1,0 +1,86 @@
+{
+  "title": "Papercut Dispatcher",
+  "eyebrow": "Support-led Engineering",
+  "lede": "Convert user-reported UI issues directly into draft pull requests. Assign AI agents to handle the visual polish so engineering can focus on the core architecture.",
+  "highlights": [
+    {
+      "label": "Agents Dispatched",
+      "value": "14",
+      "detail": "This week",
+      "tone": "positive"
+    },
+    {
+      "label": "Pending Review",
+      "value": "6",
+      "detail": "Draft PRs awaiting engineers",
+      "tone": "neutral"
+    },
+    {
+      "label": "Avg. Resolution",
+      "value": "4m",
+      "detail": "From ticket to draft PR",
+      "tone": "positive"
+    }
+  ],
+  "sections": [
+    {
+      "type": "table",
+      "title": "Triage Queue",
+      "description": "Recent support tickets flagged as UX paper cuts. Review the reported behaviour and dispatch an AI agent to generate a fix.",
+      "columns": [
+        "Ticket ID",
+        "Reported Behaviour",
+        "Component",
+        "Action"
+      ],
+      "rows": [
+        [
+          "#8492",
+          "Hover state colour missing on primary nav",
+          "Navigation",
+          "Dispatch AI"
+        ],
+        [
+          "#8495",
+          "Tooltip overlaps with submit button on mobile",
+          "Forms",
+          "Dispatch AI"
+        ],
+        [
+          "#8501",
+          "Inconsistent date format in billing table",
+          "Settings",
+          "Dispatch AI"
+        ]
+      ],
+      "emptyMessage": "No pending paper cuts in the queue."
+    },
+    {
+      "type": "list",
+      "title": "Active Agent Activity",
+      "description": "Live status of AI agents currently drafting pull requests based on support feedback.",
+      "items": [
+        "Drafting fix for #8488: Aligning table columns in dashboard view",
+        "Running local UI tests for #8472: Correcting mobile padding on login screen",
+        "PR #102 opened for #8450: Updating legacy icon assets"
+      ],
+      "ordered": false,
+      "emptyMessage": "No agents currently active."
+    },
+    {
+      "type": "text",
+      "title": "Agent Configuration & Safeguards",
+      "body": "AI agents are currently constrained to frontend display logic, CSS variables, and copy changes. Modifications to core database schemas or authentication logic will automatically fail the dispatch process and require standard engineering escalation."
+    }
+  ],
+  "demoSteps": [
+    "Review the Triage Queue for recent customer complaints regarding UI behaviour.",
+    "Click 'Dispatch AI' on a pending ticket to assign a junior engineering agent to the task.",
+    "Monitor the Agent Activity list to see the AI draft the pull request and run initial tests."
+  ],
+  "notes": [
+    "Ensure UK spelling across all UI copy (e.g., colour, behaviour).",
+    "The demo relies on static dummy data representing support tickets; no live Zendesk or GitHub integration is present.",
+    "Assume the user has the authority to dispatch AI agents but not merge code directly to production."
+  ]
+}

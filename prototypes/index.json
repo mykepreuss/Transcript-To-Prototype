@@ -1,5 +1,14 @@
 [
   {
+    "issue_number": 36,
+    "title": "Prototype: Papercut Dispatcher (Ev0ALF8EUJS1-opt-1)",
+    "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/36",
+    "created_at": "2026-03-13T21:08:02Z",
+    "run_dir": "prototypes/2026-03-13/papercut-dispatcher-UJS1opt1",
+    "preview_url": "https://mykepreuss.github.io/Transcript-To-Prototype/prototypes/2026-03-13/papercut-dispatcher-UJS1opt1/",
+    "summary": "A workflow interface empowering support teams to translate customer-reported UX paper cuts into draft pull requests using AI agents. Includes ticket queuing, AI dispatching, and PR tracking.\n\n## Chosen prototype\n\n- Title: Papercut Dispatcher\n- Eyebrow: Support-led Engineering\n- Sections: Triage Queue, Active Agent Activity, Agent Configuration & Safeguards\n\n## Design direction\n\n- Purpose: Bridge the gap between frontline support and engineering by turning minor UI/UX issues into ready-to-review code.\n- Audience: Technical support agents and product support specialists.\n- Tone: Pragmatic, action-oriented, and efficient.\n- Memorable detail: A seamless transition from a user complaint directly to an 'Awaiting Review' GitHub PR status.\n- Constraints: No live ticketing or version control APIs | UK spelling strictly enforced | Must clearly distinguish between human support triage and AI engineering agent tasks"
+  },
+  {
     "issue_number": 35,
     "title": "Prototype: Agentic Support Dispatch (Ev0AL37E98MD-opt-2)",
     "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/35",

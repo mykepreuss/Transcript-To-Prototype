@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Papercut Dispatcher</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app-grid">
+    <header class="site-header">
+      <div class="header-content">
+        <span class="eyebrow">Support-led Engineering</span>
+        <h1>Papercut Dispatcher</h1>
+        <p class="lede">Convert user-reported UI issues directly into draft pull requests. Assign AI agents to handle the visual polish so engineering can focus on the core architecture.</p>
+      </div>
+    </header>
+
+    <section class="highlights" id="highlights-container">
+      <!-- Populated via JS -->
+    </section>
+
+    <main class="workspace">
+      <section class="triage-section">
+        <div class="section-header">
+          <h2>Triage Queue</h2>
+          <p>Recent support tickets flagged as UX paper cuts. Review the reported behaviour and dispatch an AI agent to generate a fix.</p>
+        </div>
+        <div class="table-container">
+          <table class="triage-table">
+            <thead>
+              <tr>
+                <th>Ticket ID</th>
+                <th>Reported Behaviour</th>
+                <th>Component</th>
+                <th class="action-col">Action</th>
+              </tr>
+            </thead>
+            <tbody id="triage-tbody">
+              <!-- Populated via JS -->
+            </tbody>
+          </table>
+          <div id="empty-queue-msg" class="empty-message hidden">No pending paper cuts in the queue.</div>
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <section class="activity-section">
+          <div class="section-header">
+            <h2>Active Agent Activity</h2>
+            <p>Live status of AI agents currently drafting pull requests based on support feedback.</p>
+          </div>
+          <ul class="activity-list" id="activity-list">
+            <!-- Populated via JS -->
+          </ul>
+          <div id="empty-activity-msg" class="empty-message hidden">No agents currently active.</div>
+        </section>
+
+        <section class="safeguards-section">
+          <div class="section-header">
+            <h2>Agent Configuration & Safeguards</h2>
+          </div>
+          <div class="safeguards-content">
+            <p>AI agents are currently constrained to frontend display logic, CSS variables, and copy changes. Modifications to core database schemas or authentication logic will automatically fail the dispatch process and require standard engineering escalation.</p>
+          </div>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
