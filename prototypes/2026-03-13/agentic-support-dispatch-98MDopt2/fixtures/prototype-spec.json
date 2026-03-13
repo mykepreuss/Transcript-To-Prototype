@@ -1,0 +1,115 @@
+{
+  "title": "Agentic Support Dispatch",
+  "eyebrow": "Issue Resolution",
+  "lede": "Turn user feedback and UX paper cuts into active pull requests without waiting on the engineering backlog.",
+  "highlights": [
+    {
+      "label": "Active PRs",
+      "value": "4",
+      "detail": "Drafted by agents this week",
+      "tone": "positive"
+    },
+    {
+      "label": "Avg. Turnaround",
+      "value": "2 hrs",
+      "detail": "From ticket dispatch to drafted PR",
+      "tone": "positive"
+    },
+    {
+      "label": "Agent-Eligible Backlog",
+      "value": "12",
+      "detail": "Low-complexity issues ready for dispatch",
+      "tone": "neutral"
+    }
+  ],
+  "sections": [
+    {
+      "type": "table",
+      "title": "Eligible Tickets",
+      "description": "Incoming support tickets automatically flagged as low-complexity UX fixes suitable for agent dispatch.",
+      "columns": [
+        "Ticket ID",
+        "Description",
+        "Agent Confidence",
+        "Action"
+      ],
+      "rows": [
+        [
+          "#4192",
+          "Update button colour on pricing page to match brand guidelines",
+          "High (92%)",
+          "Dispatch Agent"
+        ],
+        [
+          "#4195",
+          "Typo in the password reset email template",
+          "High (98%)",
+          "Dispatch Agent"
+        ],
+        [
+          "#4198",
+          "Inconsistent scroll behaviour on the mobile navigation menu",
+          "Medium (74%)",
+          "Review Ticket"
+        ]
+      ],
+      "emptyMessage": "No eligible tickets currently in the queue."
+    },
+    {
+      "type": "table",
+      "title": "Dispatched Agents",
+      "description": "Track the progress of AI agents acting as junior engineers on assigned tickets.",
+      "columns": [
+        "Ticket ID",
+        "Assigned Agent",
+        "Status",
+        "Output"
+      ],
+      "rows": [
+        [
+          "#4188",
+          "Agent Alpha",
+          "Awaiting Eng Review",
+          "PR #102"
+        ],
+        [
+          "#4190",
+          "Agent Beta",
+          "Drafting Code",
+          "In Progress"
+        ],
+        [
+          "#4185",
+          "Agent Alpha",
+          "Merged",
+          "PR #99"
+        ]
+      ],
+      "emptyMessage": "No agents currently dispatched."
+    },
+    {
+      "type": "list",
+      "title": "Recent Activity Log",
+      "description": "Audit trail of agent orchestration and completed fixes.",
+      "items": [
+        "Agent Alpha merged PR #99: Fixed padding alignment on settings modal.",
+        "Agent Beta assigned to Ticket #4190 by Support Lead.",
+        "Agent Alpha submitted PR #102 for engineering review.",
+        "System flagged 3 new tickets as agent-eligible."
+      ],
+      "ordered": false,
+      "emptyMessage": "No recent activity."
+    }
+  ],
+  "demoSteps": [
+    "Review the 'Eligible Tickets' queue to see auto-flagged paper cuts.",
+    "Simulate clicking 'Dispatch Agent' on a high-confidence ticket (e.g., #4192).",
+    "Observe the ticket move from the queue into the 'Dispatched Agents' table with a 'Drafting Code' status.",
+    "View the completed PR output link, illustrating how non-technical staff hand off the final review to senior engineers."
+  ],
+  "notes": [
+    "Ensure the demo clearly communicates that code is drafted but never auto-deployed without human engineering review.",
+    "Use UK spelling conventions (e.g., 'colour', 'behaviour') throughout the hardcoded fixtures.",
+    "The UI should look like an internal support tool, not a complex IDE."
+  ]
+}

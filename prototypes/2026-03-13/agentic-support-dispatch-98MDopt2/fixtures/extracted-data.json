@@ -1,0 +1,5 @@
+{
+  "schedule": [],
+  "scoring": [],
+  "summary": "A V1 prototype enabling customer support teams to bypass the traditional engineering backlog by directly dispatching AI agents to fix minor UX issues and 'paper cuts'. It treats the AI as a junior engineering intern, translating support tickets directly into draft pull requests for senior review."
+}

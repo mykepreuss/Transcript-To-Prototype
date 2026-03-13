@@ -1,5 +1,14 @@
 [
   {
+    "issue_number": 35,
+    "title": "Prototype: Agentic Support Dispatch (Ev0AL37E98MD-opt-2)",
+    "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/35",
+    "created_at": "2026-03-13T21:06:44Z",
+    "run_dir": "prototypes/2026-03-13/agentic-support-dispatch-98MDopt2",
+    "preview_url": "https://mykepreuss.github.io/Transcript-To-Prototype/prototypes/2026-03-13/agentic-support-dispatch-98MDopt2/",
+    "summary": "A V1 prototype enabling customer support teams to bypass the traditional engineering backlog by directly dispatching AI agents to fix minor UX issues and 'paper cuts'. It treats the AI as a junior engineering intern, translating support tickets directly into draft pull requests for senior review.\n\n## Chosen prototype\n\n- Title: Agentic Support Dispatch\n- Eyebrow: Issue Resolution\n- Sections: Eligible Tickets, Dispatched Agents, Recent Activity Log\n\n## Design direction\n\n- Purpose: Bridge the gap between customer support feedback and codebase execution for low-risk polish tasks.\n- Audience: Customer support leads and product operations staff.\n- Tone: Empowering, practical, and action-oriented.\n- Memorable detail: Frames the user as a manager dispatching tasks to 'junior engineer' agents, enforcing the mental model of orchestration over manual coding.\n- Constraints: No real code generation or deployment in V1; simulate the PR creation process. | Must clearly distinguish between 'Drafting' and 'Awaiting Review' states. | Use UK spelling across all UI elements."
+  },
+  {
     "issue_number": 34,
     "title": "Prototype: Agent Upward Review (Ev0AL37E98MD-opt-1)",
     "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/34",

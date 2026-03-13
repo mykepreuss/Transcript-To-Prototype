@@ -1,0 +1,285 @@
+/* CSS Variables - Industrial Operator Console Theme */
+:root {
+  --bg-color: #0d0d0c;
+  --panel-bg: #161615;
+  --text-primary: #e8e6df;
+  --text-muted: #8b8982;
+  --accent-color: #ff5e00;
+  --accent-hover: #ff8533;
+  --border-color: #383733;
+  --highlight-bg: #211f1c;
+  --success-color: #00ff66;
+  
+  /* Typography: Avoiding standard safe fonts. Using rigid Monospace for data, elegant Serif for authority */
+  --font-mono: 'Courier New', Courier, monospace;
+  --font-serif: Georgia, 'Times New Roman', Times, serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.app-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Header */
+.site-header {
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 2rem;
+}
+
+.eyebrow {
+  color: var(--accent-color);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.site-title {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.lede {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  max-width: 800px;
+}
+
+/* Highlights */
+.highlights-panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.metric-card {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.metric-value {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.metric-detail {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Panels & Grid */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.panel {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-header {
+  padding: 1.5rem;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.panel-header h2 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+}
+
+.panel-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Tables */
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.9rem;
+}
+
+th {
+  color: var(--text-muted);
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+  background: var(--highlight-bg);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover td {
+  background: var(--highlight-bg);
+}
+
+.ticket-id {
+  color: var(--accent-color);
+}
+
+/* Buttons */
+.btn-dispatch {
+  background: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  padding: 0.5rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-dispatch:hover {
+  background: var(--accent-color);
+  color: var(--bg-color);
+}
+
+.btn-disabled {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--text-muted);
+  padding: 0.5rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--border-color);
+  font-size: 0.8rem;
+}
+
+.status-drafting {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.status-review {
+  border-color: #d4a373;
+  color: #d4a373;
+}
+
+.status-merged {
+  border-color: var(--success-color);
+  color: var(--success-color);
+}
+
+/* Log Window */
+.terminal-window {
+  background: #000;
+  padding: 1.5rem;
+  height: 250px;
+  overflow-y: auto;
+  border-top: 1px solid var(--border-color);
+}
+
+.log-list {
+  list-style: none;
+}
+
+.log-list li {
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--success-color);
+  opacity: 0.8;
+  display: flex;
+  gap: 1rem;
+}
+
+.log-list li::before {
+  content: '>';
+  color: var(--accent-color);
+}
+
+.empty-message {
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-title {
+    font-size: 2rem;
+  }
+  .app-container {
+    padding: 1rem;
+  }
+  th, td {
+    padding: 0.75rem;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

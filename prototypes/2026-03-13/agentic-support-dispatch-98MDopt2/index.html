@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agentic Support Dispatch</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="site-header">
+      <div class="eyebrow">[ Issue Resolution ]</div>
+      <h1 class="site-title">Agentic Support Dispatch</h1>
+      <p class="lede">Turn user feedback and UX paper cuts into active pull requests without waiting on the engineering backlog.</p>
+    </header>
+
+    <main>
+      <section class="highlights-panel" id="highlights-container">
+        <!-- Injected via JS -->
+      </section>
+
+      <div class="grid-layout">
+        <section class="panel queue-panel">
+          <header class="panel-header">
+            <h2>Eligible Tickets</h2>
+            <p class="panel-desc">Incoming support tickets automatically flagged as low-complexity UX fixes suitable for agent dispatch.</p>
+          </header>
+          <div class="table-container" id="tickets-container">
+             <!-- Injected via JS -->
+          </div>
+        </section>
+
+        <section class="panel active-panel">
+          <header class="panel-header">
+            <h2>Dispatched Agents</h2>
+            <p class="panel-desc">Track the progress of AI agents acting as junior engineers on assigned tickets.</p>
+          </header>
+          <div class="table-container" id="agents-container">
+             <!-- Injected via JS -->
+          </div>
+        </section>
+      </div>
+
+      <section class="panel log-panel">
+        <header class="panel-header">
+          <h2>Recent Activity Log</h2>
+          <p class="panel-desc">Audit trail of agent orchestration and completed fixes.</p>
+        </header>
+        <div class="terminal-window">
+          <ul id="log-container" class="log-list">
+             <!-- Injected via JS -->
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
