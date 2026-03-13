@@ -1,0 +1,105 @@
+{
+  "title": "Brunson Matchup Dependency Index",
+  "eyebrow": "Forward Schedule Analysis",
+  "lede": "Analysing upcoming fixtures to identify where the Knicks face the highest offensive burden, and predicting the scoring band required from Jalen Brunson to secure a likely victory.",
+  "highlights": [
+    {
+      "label": "Recent Form Baseline",
+      "value": "31.4 pts",
+      "detail": "Trailing 10-game average",
+      "tone": "neutral"
+    },
+    {
+      "label": "Highest Burden Fixture",
+      "value": "Boston (Away)",
+      "detail": "Requires exceptional scoring band",
+      "tone": "warning"
+    },
+    {
+      "label": "Base Reliance",
+      "value": "Significant",
+      "detail": "Win rate halves when scoring <25",
+      "tone": "neutral"
+    }
+  ],
+  "sections": [
+    {
+      "type": "table",
+      "title": "Upcoming Fixtures by Burden Level",
+      "description": "The next five games ranked by how heavily the team will rely on Brunson's scoring output.",
+      "columns": [
+        "Date",
+        "Opponent",
+        "Venue",
+        "Burden Level",
+        "Required Scoring Band"
+      ],
+      "rows": [
+        [
+          "12 Mar",
+          "Boston",
+          "Away",
+          "High",
+          "35+ pts"
+        ],
+        [
+          "14 Mar",
+          "Miami",
+          "Home",
+          "Medium",
+          "28-34 pts"
+        ],
+        [
+          "16 Mar",
+          "Charlotte",
+          "Home",
+          "Low",
+          "22-27 pts"
+        ]
+      ],
+      "emptyMessage": "No upcoming fixtures available."
+    },
+    {
+      "type": "series",
+      "title": "Historical Win Likelihood by Scoring Band",
+      "description": "Knicks win percentage mapped against Brunson's scoring brackets.",
+      "unit": "%",
+      "threshold": 50,
+      "thresholdLabel": "Win Parity",
+      "points": [
+        {
+          "label": "Under 25 pts",
+          "value": 38,
+          "detail": "Low probability of victory"
+        },
+        {
+          "label": "25 to 29 pts",
+          "value": 54,
+          "detail": "Even matchup"
+        },
+        {
+          "label": "30+ pts",
+          "value": 76,
+          "detail": "High probability of victory"
+        }
+      ],
+      "emptyMessage": "Insufficient historical data to calculate win likelihood."
+    },
+    {
+      "type": "text",
+      "title": "Methodology & Transparent Logic",
+      "body": "Burden levels are calculated without opaque machine learning. The index takes Brunson's trailing 10-game scoring average and adjusts for the upcoming opponent's defensive context and the venue (home vs. away). This adjusted projection is mapped against historical team win rates to categorise the fixture's overall dependency level."
+    }
+  ],
+  "demoSteps": [
+    "Initialise the view with local fixtures for the next five games and the last 10 game logs.",
+    "Observe the high-burden indicator on the away Boston fixture.",
+    "Review the series chart to understand why dropping below 25 points triggers a systemic risk for the team.",
+    "Read the methodology section to confirm the lack of black-box betting mechanics."
+  ],
+  "notes": [
+    "Use descriptive UI elements to highlight the 'Burden Level' categorisation (e.g., subtle colour shifts for High/Medium/Low).",
+    "Ensure the term 'Likelihood' is used rather than 'Probability' to respect the team's concern over defending rigorous mathematical models.",
+    "Do not connect to external sports data APIs; use provided fixture shapes to hardcode deterministic states for the V1 presentation."
+  ]
+}

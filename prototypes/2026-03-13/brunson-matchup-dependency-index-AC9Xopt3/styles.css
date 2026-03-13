@@ -1,0 +1,306 @@
+:root {
+  /* Editorial Dark Theme */
+  --bg-primary: #0a0a0c;
+  --bg-secondary: #161719;
+  --text-primary: #ededed;
+  --text-secondary: #9a9d9f;
+  --text-muted: #5e6267;
+  --border-color: #2c2e33;
+  --border-light: #1f2024;
+  
+  /* Semantic Colours */
+  --burden-high: #f58426; /* Knicks Orange - stark warning */
+  --burden-medium: #a3a6aa; /* Neutral grey */
+  --burden-low: #006bb6; /* Knicks Blue - calm/low burden */
+  
+  /* Typography (Avoiding generic sans-serifs) */
+  --font-serif: "Georgia", "Times New Roman", serif;
+  --font-mono: "Courier New", Courier, monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-serif);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  padding: 2rem;
+}
+
+/* Layout */
+.report-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid-split {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .grid-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+/* Header */
+.report-header {
+  border-bottom: 2px solid var(--text-primary);
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.lede {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 800px;
+}
+
+/* Sections */
+.data-section {
+  margin-bottom: 3rem;
+}
+
+.section-header {
+  margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+  font-size: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* Highlights */
+.highlights-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.highlight-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  position: relative;
+}
+
+.highlight-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--border-color);
+}
+
+.highlight-card[data-tone="warning"]::before {
+  background-color: var(--burden-high);
+}
+
+.highlight-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.highlight-value {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+  font-family: var(--font-mono);
+}
+
+.highlight-detail {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Table */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.dependency-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.dependency-table th {
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  padding: 1rem 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dependency-table td {
+  padding: 1.25rem 0.5rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.align-right {
+  text-align: right;
+}
+
+/* Burden Indicators */
+.burden-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid;
+  background: transparent;
+}
+
+.burden-high {
+  color: var(--burden-high);
+  border-color: var(--burden-high);
+  background: rgba(245, 132, 38, 0.1);
+}
+
+.burden-medium {
+  color: var(--text-primary);
+  border-color: var(--burden-medium);
+}
+
+.burden-low {
+  color: var(--burden-low);
+  border-color: var(--burden-low);
+  background: rgba(0, 107, 182, 0.1);
+}
+
+/* Likelihood Chart */
+.likelihood-chart {
+  position: relative;
+  padding-top: 2rem;
+  font-family: var(--font-mono);
+}
+
+.parity-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: var(--border-color);
+  border-left: 1px dashed var(--text-muted);
+  z-index: 0;
+}
+
+.parity-line::after {
+  content: '50% PARITY';
+  position: absolute;
+  top: 0;
+  left: 5px;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+.likelihood-row {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1.5rem;
+}
+
+.likelihood-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.likelihood-label {
+  color: var(--text-primary);
+}
+
+.likelihood-value {
+  color: var(--text-secondary);
+}
+
+.bar-track {
+  width: 100%;
+  height: 8px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.bar-fill {
+  height: 100%;
+  transition: width 1s ease-out;
+}
+
+.likelihood-detail {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+/* Methodology */
+.methodology-section {
+  background: var(--bg-secondary);
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.methodology-body p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.methodology-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .bar-fill {
+    transition: none;
+  }
+}

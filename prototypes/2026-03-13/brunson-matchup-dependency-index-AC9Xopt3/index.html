@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brunson Matchup Dependency Index</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="report-container">
+    <header class="report-header">
+      <div class="eyebrow">Forward Schedule Analysis</div>
+      <h1 class="title">Brunson Matchup Dependency Index</h1>
+      <p class="lede">Analysing upcoming fixtures to identify where the Knicks face the highest offensive burden, and predicting the scoring band required from Jalen Brunson to secure a likely victory.</p>
+    </header>
+
+    <main>
+      <section class="highlights-section" id="highlights-container">
+        <!-- Populated by JS -->
+      </section>
+
+      <div class="grid-split">
+        <section class="data-section fixtures-section">
+          <header class="section-header">
+            <h2>Upcoming Fixtures by Burden Level</h2>
+            <p class="description">The next five games ranked by how heavily the team will rely on Brunson's scoring output.</p>
+          </header>
+          <div class="table-wrapper">
+            <table class="dependency-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Opponent</th>
+                  <th>Venue</th>
+                  <th>Burden Level</th>
+                  <th class="align-right">Required Scoring Band</th>
+                </tr>
+              </thead>
+              <tbody id="fixtures-body">
+                <!-- Populated by JS -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <aside class="sidebar">
+          <section class="data-section likelihood-section">
+            <header class="section-header">
+              <h2>Historical Win Likelihood</h2>
+              <p class="description">Knicks win percentage mapped against Brunson's scoring brackets.</p>
+            </header>
+            <div class="likelihood-chart" id="likelihood-container">
+               <div class="parity-line" title="Win Parity (50%)"></div>
+               <!-- Populated by JS -->
+            </div>
+          </section>
+
+          <section class="data-section methodology-section">
+            <header class="section-header">
+              <h2>Methodology &amp; Transparent Logic</h2>
+            </header>
+            <div class="methodology-body">
+              <p>Burden levels are calculated without opaque machine learning. The index takes Brunson's trailing 10-game scoring average and adjusts for the upcoming opponent's defensive context and the venue (home vs. away). This adjusted projection is mapped against historical team win rates to categorise the fixture's overall dependency level.</p>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </main>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>

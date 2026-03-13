@@ -1,5 +1,14 @@
 [
   {
+    "issue_number": 33,
+    "title": "Prototype: Brunson Matchup Dependency Index (Ev0ALXEGAC9X-opt-3)",
+    "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/33",
+    "created_at": "2026-03-13T20:48:39Z",
+    "run_dir": "prototypes/2026-03-13/brunson-matchup-dependency-index-AC9Xopt3",
+    "preview_url": "https://mykepreuss.github.io/Transcript-To-Prototype/prototypes/2026-03-13/brunson-matchup-dependency-index-AC9Xopt3/",
+    "summary": "The team pivoted from a basic stats tracker to a predictive, contextual product that links Jalen Brunson's scoring to team success. Following the confirmed direction, this prototype builds the 'Matchup Dependency Index', a forward-looking tool that analyses the upcoming schedule to rank fixtures by their offensive burden\u2014highlighting where the Knicks are most reliant on a massive scoring night from Brunson.\n\n## Chosen prototype\n\n- Title: Brunson Matchup Dependency Index\n- Eyebrow: Forward Schedule Analysis\n- Sections: Upcoming Fixtures by Burden Level, Historical Win Likelihood by Scoring Band, Methodology & Transparent Logic\n\n## Design direction\n\n- Purpose: To contextualise Jalen Brunson's scoring requirements against the upcoming schedule, showing fans not just what he might score, but what the team actually needs him to score to secure a win.\n- Audience: Knicks fans and basketball analysts who want narrative and context beyond standard player game logs.\n- Tone: Analytical, transparent, and restrained. Avoids sports-betting jargon and 'black box' machine learning claims.\n- Memorable detail: The 'Burden Level' indicator, which shifts the paradigm from tracking a player's stats to tracking the team's structural reliance on that player.\n- Constraints: Must use UK spelling (e.g., analysing, categorise). | Must rely purely on local deterministic fixtures for V1; no live APIs. | Logic must be transparent to the user, not a mystery algorithm. | Limit recent form baseline strictly to a 10-game sample."
+  },
+  {
     "issue_number": 32,
     "title": "Prototype: Win Likelihood Simulator (Ev0ALXEGAC9X-opt-2)",
     "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/32",
