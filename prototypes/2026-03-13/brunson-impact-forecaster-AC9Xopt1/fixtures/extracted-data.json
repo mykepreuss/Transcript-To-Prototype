@@ -1,0 +1,5 @@
+{
+  "schedule": [],
+  "scoring": [],
+  "summary": "The team agreed to pivot from a generic schedule tracker to a targeted 'Scoring Impact Forecaster'. The V1 prototype predicts Jalen Brunson's likely scoring band for the next fixture based on recent form and venue, then analyses how that output correlates with the Knicks' historical win likelihood. The execution relies strictly on local fixtures, transparent logic, and minimal visual design."
+}

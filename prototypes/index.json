@@ -1,5 +1,14 @@
 [
   {
+    "issue_number": 31,
+    "title": "Prototype: Brunson Impact Forecaster (Ev0ALXEGAC9X-opt-1)",
+    "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/31",
+    "created_at": "2026-03-13T20:45:37Z",
+    "run_dir": "prototypes/2026-03-13/brunson-impact-forecaster-AC9Xopt1",
+    "preview_url": "https://mykepreuss.github.io/Transcript-To-Prototype/prototypes/2026-03-13/brunson-impact-forecaster-AC9Xopt1/",
+    "summary": "The team agreed to pivot from a generic schedule tracker to a targeted 'Scoring Impact Forecaster'. The V1 prototype predicts Jalen Brunson's likely scoring band for the next fixture based on recent form and venue, then analyses how that output correlates with the Knicks' historical win likelihood. The execution relies strictly on local fixtures, transparent logic, and minimal visual design.\n\n## Chosen prototype\n\n- Title: Brunson Impact Forecaster\n- Eyebrow: Next Fixture Analysis\n- Sections: Forecast Logic, Historical Impact by Scoring Tier, Recent Form Baseline\n\n## Design direction\n\n- Purpose: To contextualise player performance by connecting predicted scoring ranges directly to team win likelihood.\n- Audience: Dedicated fans seeking predictive, logic-based matchup insights rather than static, historical data tables.\n- Tone: Direct, analytical, and transparent.\n- Memorable detail: Exposing the exact variables (recent form, venue, opponent) used to calculate the scoring band so the forecast never feels like a black box.\n- Constraints: Use local data fixtures only; no live API integrations for V1. | Frame outcomes as historical likelihoods rather than absolute probabilities. | Keep visual presentation minimal; avoid dashboard chart junk. | Limit the baseline to the last 10 games to balance recency and sample size."
+  },
+  {
     "issue_number": 30,
     "title": "Prototype: Brunson Dependency Index (Ev0ALMJB7KED-opt-3)",
     "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/30",

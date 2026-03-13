@@ -1,0 +1,115 @@
+{
+  "title": "Brunson Impact Forecaster",
+  "eyebrow": "Next Fixture Analysis",
+  "lede": "Forecasts Jalen Brunson's likely scoring band for the upcoming match and maps it to historical Knicks win outcomes.",
+  "highlights": [
+    {
+      "label": "Projected Band",
+      "value": "28–32 pts",
+      "detail": "Based on last 10 games",
+      "tone": "neutral"
+    },
+    {
+      "label": "Win Likelihood",
+      "value": "68%",
+      "detail": "When scoring 28–32 pts",
+      "tone": "positive"
+    },
+    {
+      "label": "Matchup Context",
+      "value": "High Burden",
+      "detail": "Away vs strong defence",
+      "tone": "warning"
+    }
+  ],
+  "sections": [
+    {
+      "type": "list",
+      "title": "Forecast Logic",
+      "description": "The variables factored into today's projected scoring band.",
+      "items": [
+        "Base: Last 10 games average (31.4 pts)",
+        "Venue: Away game adjustment (-1.2 pts)",
+        "Opponent: Top-tier defence adjustment (-2.0 pts)"
+      ],
+      "ordered": false,
+      "emptyMessage": "No logic data available."
+    },
+    {
+      "type": "table",
+      "title": "Historical Impact by Scoring Tier",
+      "description": "How the Knicks' win likelihood shifts based on Brunson's output.",
+      "columns": [
+        "Scoring Tier",
+        "Win Rate",
+        "Recent Record"
+      ],
+      "rows": [
+        [
+          "Under 25 pts",
+          "35%",
+          "7-13"
+        ],
+        [
+          "25 to 29 pts",
+          "55%",
+          "15-12"
+        ],
+        [
+          "30+ pts",
+          "75%",
+          "24-8"
+        ]
+      ],
+      "emptyMessage": "No historical data available."
+    },
+    {
+      "type": "series",
+      "title": "Recent Form Baseline",
+      "description": "Brunson's scoring totals over the preceding 10 fixtures.",
+      "unit": "pts",
+      "threshold": 30,
+      "thresholdLabel": "High Impact Target",
+      "points": [
+        {
+          "label": "Game 1",
+          "value": 34,
+          "detail": "Away"
+        },
+        {
+          "label": "Game 2",
+          "value": 26,
+          "detail": "Home"
+        },
+        {
+          "label": "Game 3",
+          "value": 31,
+          "detail": "Home"
+        },
+        {
+          "label": "Game 4",
+          "value": 29,
+          "detail": "Away"
+        },
+        {
+          "label": "Game 5",
+          "value": 36,
+          "detail": "Away"
+        }
+      ],
+      "emptyMessage": "No recent form data available."
+    }
+  ],
+  "demoSteps": [
+    "View the projected scoring band in the highlights to see what is expected for the next match.",
+    "Review the Forecast Logic list to understand exactly how the projected band was calculated.",
+    "Check the Historical Impact table to see the team's historical win rate when Brunson lands in or above that band.",
+    "Scroll down to the Recent Form Baseline to verify the 10-game performance trend supporting the forecast."
+  ],
+  "notes": [
+    "All stats and historical records are illustrative for the V1 demo and should be powered entirely by local JSON fixtures.",
+    "Ensure UK spelling is used throughout the user interface (e.g., 'defence', 'analyse', 'favourable').",
+    "Do not present the win rate as a guaranteed prediction; maintain the framing of 'historical likelihood'.",
+    "If the extracted fixtures array is empty, populate the demo with illustrative data matching the 28-32 point band logic."
+  ]
+}
