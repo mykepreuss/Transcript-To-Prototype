@@ -1,0 +1,100 @@
+{
+  "title": "Win Likelihood Simulator",
+  "eyebrow": "Brunson Scoring Dependency",
+  "lede": "Analyse how variations in Jalen Brunson's scoring behaviour correlate with Knicks victories.",
+  "highlights": [
+    {
+      "label": "Recent Form",
+      "value": "31.4",
+      "detail": "Average points over the last 10 fixtures.",
+      "tone": "neutral"
+    },
+    {
+      "label": "High Output",
+      "value": "30+",
+      "detail": "Points required for an optimal win likelihood.",
+      "tone": "positive"
+    },
+    {
+      "label": "Low Output",
+      "value": "< 25",
+      "detail": "Historically yields a negative win expectancy.",
+      "tone": "warning"
+    }
+  ],
+  "sections": [
+    {
+      "type": "series",
+      "title": "Win Likelihood by Scoring Band",
+      "description": "Historical win percentage based on Brunson's point production across recent games.",
+      "unit": "%",
+      "threshold": 50,
+      "thresholdLabel": "Baseline Expectancy",
+      "points": [
+        {
+          "label": "Under 25 pts",
+          "value": 35,
+          "detail": "High vulnerability"
+        },
+        {
+          "label": "25 to 29 pts",
+          "value": 55,
+          "detail": "Neutral performance"
+        },
+        {
+          "label": "30+ pts",
+          "value": 75,
+          "detail": "High reliance success"
+        }
+      ],
+      "emptyMessage": "No historical correlation data available."
+    },
+    {
+      "type": "table",
+      "title": "Recent Matchup Logs",
+      "description": "The ten most recent fixtures forming the baseline data.",
+      "columns": [
+        "Opponent",
+        "Venue",
+        "Brunson Pts",
+        "Knicks Result"
+      ],
+      "rows": [
+        [
+          "Boston Celtics",
+          "Away",
+          "32",
+          "Win"
+        ],
+        [
+          "Miami Heat",
+          "Home",
+          "24",
+          "Loss"
+        ],
+        [
+          "Orlando Magic",
+          "Away",
+          "28",
+          "Win"
+        ]
+      ],
+      "emptyMessage": "No recent game logs found."
+    },
+    {
+      "type": "text",
+      "title": "Model Methodology",
+      "body": "This tool strictly analyses the last ten deterministic fixtures to calculate win likelihood. It prioritises transparent logic over complex modelling, establishing expectations based purely on venue, opponent, and historical point totals."
+    }
+  ],
+  "demoSteps": [
+    "Observe the recent form highlight to establish the current scoring baseline.",
+    "Review the series chart to see the step-function change in win probability across point bands.",
+    "Examine the matchup logs to verify the raw data driving the simulator's behaviour."
+  ],
+  "notes": [
+    "The UI should ideally support interactive toggles for scoring bands, but V1 will display static bands derived from the local fixtures.",
+    "Assume local deterministic data is injected at load time to prevent API latency or credential errors.",
+    "Ensure visual indicators use subtle colour coding to highlight the transition from low-likelihood to high-likelihood scoring tiers."
+  ]
+}

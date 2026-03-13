@@ -1,0 +1,333 @@
+/* CSS Variables & Theme Configuration */
+:root {
+    --col-bg: #090a0c;
+    --col-surface: #121418;
+    --col-border: #2a2d35;
+    --col-text-main: #f3f4f6;
+    --col-text-muted: #8b92a5;
+    
+    /* Knicks-adjacent palette used clinically */
+    --col-accent-orange: #f58426;
+    --col-accent-blue: #006bb6;
+    
+    /* Semantic colours */
+    --col-warning: #e11d48;
+    --col-positive: #10b981;
+    --col-neutral: #8b92a5;
+
+    /* Typography: Strict Monospace for analytical feel */
+    --font-mono: "SF Mono", "JetBrains Mono", "Fira Code", "Cascadia Code", Consolas, "Courier New", monospace;
+    
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+
+    --border-width: 2px;
+}
+
+/* Reset & Base Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-mono);
+    background-color: var(--col-bg);
+    color: var(--col-text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    padding: var(--spacing-md);
+}
+
+/* Layout Container */
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    border: var(--border-width) solid var(--col-border);
+    background-color: var(--col-surface);
+}
+
+/* Header */
+.site-header {
+    padding: var(--spacing-md);
+    border-bottom: var(--border-width) solid var(--col-border);
+    background-color: var(--col-bg);
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--col-accent-orange);
+    margin-bottom: var(--spacing-xs);
+    display: inline-block;
+    border: 1px solid var(--col-accent-orange);
+    padding: 2px 8px;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin-bottom: var(--spacing-xs);
+}
+
+.lede {
+    color: var(--col-text-muted);
+    font-size: 1.1rem;
+    max-width: 60ch;
+}
+
+/* Main Grid */
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "highlights highlights"
+        "simulator simulator"
+        "logs methodology";
+}
+
+@media (max-width: 900px) {
+    .grid-layout {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "highlights"
+            "simulator"
+            "logs"
+            "methodology";
+    }
+}
+
+/* Shared Region Styles */
+.region {
+    padding: var(--spacing-md);
+    border-bottom: var(--border-width) solid var(--col-border);
+}
+
+.region:not(:last-child) {
+    border-right: var(--border-width) solid var(--col-border);
+}
+
+@media (max-width: 900px) {
+    .region:not(:last-child) {
+        border-right: none;
+    }
+}
+
+.region-header h2 {
+    font-size: 1.25rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-xs);
+    color: var(--col-text-main);
+}
+
+.region-header p {
+    color: var(--col-text-muted);
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-md);
+}
+
+/* Region: Highlights */
+.region-highlights {
+    grid-area: highlights;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    background-color: var(--col-bg);
+}
+
+.highlight-card {
+    border: 1px solid var(--col-border);
+    padding: var(--spacing-sm);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--col-text-muted);
+}
+
+.highlight-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--col-text-muted);
+    margin-bottom: var(--spacing-xs);
+}
+
+.highlight-value {
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: var(--spacing-xs);
+}
+
+.highlight-detail {
+    font-size: 0.85rem;
+    color: var(--col-text-muted);
+}
+
+/* Highlight Tones */
+.highlight-card[data-tone="neutral"] .highlight-value { color: var(--col-text-main); }
+.highlight-card[data-tone="positive"] .highlight-value { color: var(--col-positive); }
+.highlight-card[data-tone="warning"] .highlight-value { color: var(--col-warning); }
+
+/* Region: Simulator / Chart */
+.region-simulator {
+    grid-area: simulator;
+    border-right: none !important;
+}
+
+.chart-container {
+    position: relative;
+    height: 300px;
+    border-bottom: var(--border-width) solid var(--col-border);
+    border-left: var(--border-width) solid var(--col-border);
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+}
+
+.chart-threshold-line {
+    position: absolute;
+    top: 50%; /* 50% threshold */
+    left: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px dashed var(--col-text-muted);
+    z-index: 1;
+}
+
+.chart-threshold-line span {
+    position: absolute;
+    right: 0;
+    top: -20px;
+    font-size: 0.75rem;
+    color: var(--col-text-muted);
+    background: var(--col-surface);
+    padding-left: var(--spacing-xs);
+}
+
+.chart-bars {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    width: 100%;
+    padding: 0 var(--spacing-sm);
+    gap: var(--spacing-md);
+    position: relative;
+    z-index: 2;
+}
+
+.chart-bar-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.chart-bar {
+    width: 100%;
+    background-color: var(--col-border);
+    transition: background-color 0.3s ease, height 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    border: 1px solid transparent;
+}
+
+.chart-bar::before {
+    content: attr(data-value) '%';
+    position: absolute;
+    top: -25px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--col-text-main);
+}
+
+.chart-bar:hover {
+    border-color: var(--col-text-main);
+    cursor: crosshair;
+}
+
+/* Map colours to values conceptually based on threshold */
+.chart-bar[data-value="35"] { background-color: var(--col-warning); }
+.chart-bar[data-value="55"] { background-color: var(--col-neutral); }
+.chart-bar[data-value="75"] { background-color: var(--col-positive); }
+
+.chart-label {
+    margin-top: var(--spacing-sm);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--col-text-main);
+}
+
+.chart-detail {
+    font-size: 0.75rem;
+    color: var(--col-text-muted);
+    text-align: center;
+    margin-top: 4px;
+}
+
+/* Region: Logs */
+.region-logs {
+    grid-area: logs;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+th, td {
+    padding: var(--spacing-sm);
+    border-bottom: 1px solid var(--col-border);
+}
+
+th {
+    text-transform: uppercase;
+    color: var(--col-text-muted);
+    font-weight: normal;
+    border-bottom: var(--border-width) solid var(--col-border);
+}
+
+tr:hover td {
+    background-color: rgba(255,255,255,0.02);
+}
+
+.result-win { color: var(--col-positive); }
+.result-loss { color: var(--col-warning); }
+
+/* Region: Methodology */
+.region-methodology {
+    grid-area: methodology;
+    border-right: none !important;
+    border-bottom: none !important;
+}
+
+.text-body p {
+    color: var(--col-text-muted);
+    font-size: 0.95rem;
+}
+
+/* Reduced Motion Fallback */
+@media (prefers-reduced-motion: reduce) {
+    .chart-bar,
+    .highlight-card {
+        transition: none;
+    }
+}

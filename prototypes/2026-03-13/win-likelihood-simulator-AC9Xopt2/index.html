@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Win Likelihood Simulator | Knicks Tracker</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="site-header">
+            <div class="eyebrow">Brunson Scoring Dependency</div>
+            <h1 class="title">Win Likelihood Simulator</h1>
+            <p class="lede">Analyse how variations in Jalen Brunson's scoring behaviour correlate with Knicks victories.</p>
+        </header>
+
+        <main class="grid-layout">
+            <!-- Section: Highlights -->
+            <section class="region region-highlights" id="highlights-container">
+                <!-- Populated by JS -->
+            </section>
+
+            <!-- Section: Core Logic (Chart) -->
+            <section class="region region-simulator">
+                <header class="region-header">
+                    <h2>Win Likelihood by Scoring Band</h2>
+                    <p>Historical win percentage based on Brunson's point production across recent games.</p>
+                </header>
+                <div class="chart-container" id="chart-container">
+                    <div class="chart-threshold-line"><span>Baseline Expectancy (50%)</span></div>
+                    <div class="chart-bars" id="chart-bars">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Data Logs -->
+            <section class="region region-logs">
+                <header class="region-header">
+                    <h2>Recent Matchup Logs</h2>
+                    <p>The ten most recent fixtures forming the baseline data.</p>
+                </header>
+                <div class="table-wrapper">
+                    <table id="logs-table">
+                        <thead>
+                            <!-- Populated by JS -->
+                        </thead>
+                        <tbody>
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Section: Methodology -->
+            <section class="region region-methodology">
+                <header class="region-header">
+                    <h2>Model Methodology</h2>
+                </header>
+                <div class="text-body">
+                    <p>This tool strictly analyses the last ten deterministic fixtures to calculate win likelihood. It prioritises transparent logic over complex modelling, establishing expectations based purely on venue, opponent, and historical point totals.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
