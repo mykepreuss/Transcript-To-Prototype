@@ -1,5 +1,14 @@
 [
   {
+    "issue_number": 38,
+    "title": "Prototype: Agent Management Scorecard (Ev0ALXP04Y5P-opt-2)",
+    "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/38",
+    "created_at": "2026-03-13T21:40:40Z",
+    "run_dir": "prototypes/2026-03-13/management-scorecard-4Y5Popt2",
+    "preview_url": "https://mykepreuss.github.io/Transcript-To-Prototype/prototypes/2026-03-13/management-scorecard-4Y5Popt2/",
+    "summary": "A scorecard that treats AI agents as junior engineers, providing 'upward reviews' to evaluate and optimise how well senior engineers manage, prompt, and direct their AI counterparts.\n\n## Chosen prototype\n\n- Title: Agent Management Scorecard\n- Eyebrow: Team Performance\n- Sections: Engineer Performance, Recent Upward Reviews, Agent Autonomy Trend\n\n## Design direction\n\n- Purpose: To reframe engineering as management by surfacing feedback from LLMs on prompt clarity and context quality.\n- Audience: Engineering managers and senior developers.\n- Tone: Professional, analytical, and constructive.\n- Memorable detail: LLMs providing 'upward feedback' on the human engineer's management and communication skills.\n- Constraints: Must use UK spelling (e.g., behaviour, optimise). | Focus on the management paradigm, avoiding generic code-commit trackers. | Metrics should reflect prompt quality and agent autonomy, not just raw output."
+  },
+  {
     "issue_number": 37,
     "title": "Prototype: Papercut Resolver (Ev0ALXP04Y5P-opt-1)",
     "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/37",

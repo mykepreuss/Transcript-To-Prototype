@@ -1,0 +1,117 @@
+{
+  "title": "Agent Management Scorecard",
+  "eyebrow": "Team Performance",
+  "lede": "Evaluate how effectively your engineers direct, manage, and optimise their AI reports.",
+  "highlights": [
+    {
+      "label": "Prompt Clarity Score",
+      "value": "82%",
+      "detail": "Based on LLM comprehension checks",
+      "tone": "positive"
+    },
+    {
+      "label": "First-Pass Success",
+      "value": "64%",
+      "detail": "Target: 80% without human intervention",
+      "tone": "warning"
+    },
+    {
+      "label": "Pending Upward Reviews",
+      "value": "12",
+      "detail": "New feedback from agents",
+      "tone": "neutral"
+    }
+  ],
+  "sections": [
+    {
+      "type": "table",
+      "title": "Engineer Performance",
+      "description": "Evaluate how well team members are managing their AI resources.",
+      "columns": [
+        "Engineer",
+        "Prompt Clarity",
+        "Context Quality",
+        "Agent Success Rate",
+        "Management Behaviour"
+      ],
+      "rows": [
+        [
+          "Alice Chen",
+          "91%",
+          "High",
+          "88%",
+          "Excellent"
+        ],
+        [
+          "Bob Smith",
+          "74%",
+          "Medium",
+          "58%",
+          "Needs Improvement"
+        ],
+        [
+          "Charlie Davis",
+          "85%",
+          "High",
+          "79%",
+          "Solid"
+        ]
+      ],
+      "emptyMessage": "No engineer data available."
+    },
+    {
+      "type": "list",
+      "title": "Recent Upward Reviews",
+      "description": "Direct feedback from AI agents regarding the instructions they received.",
+      "items": [
+        "Alice Chen: 'Excellent context provided via related files. I was able to infer the error handling behaviour easily.'",
+        "Bob Smith: 'Instructions lacked edge-case definitions for the API integration. Required 3 clarifying prompts.'",
+        "Charlie Davis: 'Good overarching goal, but the architectural constraints were slightly ambiguous. A more detailed lede would optimise my first pass.'"
+      ],
+      "ordered": false,
+      "emptyMessage": "No upward reviews generated yet."
+    },
+    {
+      "type": "series",
+      "title": "Agent Autonomy Trend",
+      "description": "Percentage of AI tasks completed successfully without human correction.",
+      "unit": "%",
+      "threshold": 80,
+      "thresholdLabel": "Target Autonomy",
+      "points": [
+        {
+          "label": "Week 1",
+          "value": 45,
+          "detail": "Initial adoption"
+        },
+        {
+          "label": "Week 2",
+          "value": 52,
+          "detail": "Training phase"
+        },
+        {
+          "label": "Week 3",
+          "value": 60,
+          "detail": "Improving context"
+        },
+        {
+          "label": "Week 4",
+          "value": 64,
+          "detail": "Current average"
+        }
+      ],
+      "emptyMessage": "Not enough historical data to display trends."
+    }
+  ],
+  "demoSteps": [
+    "Review the top-level highlights to gauge overall team management of AI.",
+    "Check the 'Engineer Performance' table to identify who needs better prompting habits.",
+    "Read the 'Recent Upward Reviews' to see exact examples of where instructions fell short or excelled.",
+    "Analyze the autonomy trend to see if the team's management skills are improving over time."
+  ],
+  "notes": [
+    "Use static mock data for the V1 to illustrate the concept of LLM 'upward reviews'.",
+    "Ensure UK spelling is used throughout the UI rendering.",
+    "The threshold in the series chart is set to 80% to show a goal-oriented view."
+  ]
+}

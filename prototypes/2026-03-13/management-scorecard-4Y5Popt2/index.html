@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent Management Scorecard</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <p class="eyebrow" id="header-eyebrow"></p>
+      <h1 class="title" id="header-title"></h1>
+      <p class="lede" id="header-lede"></p>
+    </header>
+
+    <main class="app-main">
+      <section class="highlights-grid" id="highlights-container">
+        <!-- Highlights injected via JS -->
+      </section>
+
+      <section class="data-section">
+        <div class="section-header">
+          <h2 id="table-title"></h2>
+          <p class="section-desc" id="table-desc"></p>
+        </div>
+        <div class="table-container">
+          <table id="performance-table">
+            <thead>
+              <tr id="table-headers"></tr>
+            </thead>
+            <tbody id="table-body">
+              <!-- Rows injected via JS -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <div class="split-layout">
+        <section class="data-section">
+          <div class="section-header">
+            <h2 id="reviews-title"></h2>
+            <p class="section-desc" id="reviews-desc"></p>
+          </div>
+          <div class="reviews-list" id="reviews-container">
+            <!-- Reviews injected via JS -->
+          </div>
+        </section>
+
+        <section class="data-section">
+          <div class="section-header">
+            <h2 id="chart-title"></h2>
+            <p class="section-desc" id="chart-desc"></p>
+          </div>
+          <div class="chart-container" id="chart-container">
+            <!-- Chart injected via JS -->
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
