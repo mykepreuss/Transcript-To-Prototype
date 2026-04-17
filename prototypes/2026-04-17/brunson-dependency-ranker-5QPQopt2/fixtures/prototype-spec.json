@@ -1,0 +1,113 @@
+{
+  "title": "Brunson Dependency Ranker",
+  "eyebrow": "Upcoming Fixture Analysis",
+  "lede": "Evaluating the Knicks' next five games to identify where the team is most dependent on a high-scoring performance from Jalen Brunson.",
+  "highlights": [
+    {
+      "label": "Peak Burden",
+      "value": "Boston (Away)",
+      "detail": "Highest offensive dependency in the next 5 games",
+      "tone": "warning"
+    },
+    {
+      "label": "Recent Baseline",
+      "value": "29.4 pts",
+      "detail": "Moving average over the last 10 games",
+      "tone": "neutral"
+    },
+    {
+      "label": "Target Band",
+      "value": "30+ pts",
+      "detail": "Historical scoring threshold for >70% win likelihood",
+      "tone": "positive"
+    }
+  ],
+  "sections": [
+    {
+      "type": "table",
+      "title": "Upcoming Schedule Dependency",
+      "description": "Ranked view of the next five fixtures and the required scoring band to secure a favourable win probability.",
+      "columns": [
+        "Date",
+        "Opponent",
+        "Venue",
+        "Expected Scoring Band",
+        "Dependency Level"
+      ],
+      "rows": [
+        [
+          "12 Mar",
+          "Boston",
+          "Away",
+          "32-36 pts",
+          "High"
+        ],
+        [
+          "14 Mar",
+          "Miami",
+          "Home",
+          "28-32 pts",
+          "Medium"
+        ],
+        [
+          "16 Mar",
+          "Charlotte",
+          "Away",
+          "22-26 pts",
+          "Low"
+        ],
+        [
+          "18 Mar",
+          "Orlando",
+          "Home",
+          "28-32 pts",
+          "Medium"
+        ]
+      ],
+      "emptyMessage": "No upcoming fixtures available in the current data set."
+    },
+    {
+      "type": "series",
+      "title": "Win Likelihood by Scoring Band",
+      "description": "Historical Knicks win percentage based on Brunson's scoring totals.",
+      "unit": "%",
+      "threshold": 50,
+      "thresholdLabel": "Baseline Win Rate",
+      "points": [
+        {
+          "label": "Under 25 pts",
+          "value": 38,
+          "detail": "Requires secondary scorers to step up"
+        },
+        {
+          "label": "25 to 29 pts",
+          "value": 54,
+          "detail": "Average team performance"
+        },
+        {
+          "label": "30+ pts",
+          "value": 72,
+          "detail": "Strongest indicator of a Knicks victory"
+        }
+      ],
+      "emptyMessage": "Historical scoring data is currently unavailable."
+    },
+    {
+      "type": "text",
+      "title": "Methodology",
+      "body": "This tool does not use complex machine learning. The Dependency Level is calculated transparently using three factors: Brunson's scoring average over his last 10 games, the historical difficulty of the opponent, and home/away splits. These factors determine the likely scoring band, which is then mapped against historical Knicks win rates to assess how desperately a big night is needed."
+    }
+  ],
+  "demoSteps": [
+    "Review the Highlights to see Brunson's current 10-game baseline and the most critical upcoming matchup.",
+    "Scan the 'Upcoming Schedule Dependency' table to see how the offensive burden shifts depending on the opponent and venue.",
+    "Check the 'Win Likelihood' chart to understand the historical context behind the dependency ratings.",
+    "Read the Methodology section to confirm the logic is straightforward and avoids black-box sports betting math."
+  ],
+  "notes": [
+    "The UI should look distinctly analytical and dense, avoiding generic dashboard widgets or flashy charts.",
+    "All data in V1 must be powered by local JSON fixtures to ensure the demo never breaks during presentations.",
+    "Future iterations may include an adapter for real API data, but the internal schema must remain identical to the local fixtures.",
+    "Use UK spelling exclusively (e.g., 'offence', 'favourable')."
+  ]
+}

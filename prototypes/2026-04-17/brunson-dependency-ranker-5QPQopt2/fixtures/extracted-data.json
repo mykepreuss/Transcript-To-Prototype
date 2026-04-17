@@ -1,0 +1,5 @@
+{
+  "schedule": [],
+  "scoring": [],
+  "summary": "The prototype focuses on the 'Schedule Dependency Ranker', evaluating upcoming Knicks fixtures to determine how heavily the team must rely on Jalen Brunson's offence. It avoids generic stat tracking, instead offering a forward-looking planner backed by local fixtures, recent 10-game form, and historical win-likelihood bands."
+}

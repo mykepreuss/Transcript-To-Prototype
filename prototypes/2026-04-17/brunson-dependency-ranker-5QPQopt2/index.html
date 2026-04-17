@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brunson Dependency Ranker</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="site-header">
+            <div class="eyebrow">Upcoming Fixture Analysis</div>
+            <h1>Brunson Dependency Ranker</h1>
+            <p class="lede">Evaluating the Knicks' next five games to identify where the team is most dependent on a high-scoring performance from Jalen Brunson.</p>
+        </header>
+
+        <main>
+            <section aria-label="Key Highlights" class="highlights-grid" id="highlights-container">
+                <!-- Highlights injected via JS -->
+            </section>
+
+            <section class="content-section">
+                <div class="section-header">
+                    <h2>Upcoming Schedule Dependency</h2>
+                    <p class="section-desc">Ranked view of the next five fixtures and the required scoring band to secure a favourable win probability.</p>
+                </div>
+                <div class="table-container">
+                    <table id="dependency-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Opponent</th>
+                                <th>Venue</th>
+                                <th>Expected Scoring Band</th>
+                                <th>Dependency Level</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dependency-tbody">
+                            <!-- Table rows injected via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <div class="section-header">
+                    <h2>Win Likelihood by Scoring Band</h2>
+                    <p class="section-desc">Historical Knicks win percentage based on Brunson's scoring totals.</p>
+                </div>
+                <div class="chart-container" id="likelihood-chart">
+                    <div class="threshold-line" style="left: 50%;"></div>
+                    <div class="threshold-label" style="left: 50%;">Baseline Win Rate (50%)</div>
+                    <div id="chart-bars">
+                        <!-- Chart bars injected via JS -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section methodology">
+                <h2>Methodology</h2>
+                <p>This tool does not use complex machine learning. The Dependency Level is calculated transparently using three factors: Brunson's scoring average over his last 10 games, the historical difficulty of the opponent, and home/away splits. These factors determine the likely scoring band, which is then mapped against historical Knicks win rates to assess how desperately a big night is needed.</p>
+            </section>
+        </main>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

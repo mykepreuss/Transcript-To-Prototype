@@ -1,5 +1,14 @@
 [
   {
+    "issue_number": 43,
+    "title": "Prototype: Brunson Dependency Ranker (Ev0ATP715QPQ-opt-2)",
+    "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/43",
+    "created_at": "2026-04-17T22:18:07Z",
+    "run_dir": "prototypes/2026-04-17/brunson-dependency-ranker-5QPQopt2",
+    "preview_url": "https://mykepreuss.github.io/Transcript-To-Prototype/prototypes/2026-04-17/brunson-dependency-ranker-5QPQopt2/",
+    "summary": "The prototype focuses on the 'Schedule Dependency Ranker', evaluating upcoming Knicks fixtures to determine how heavily the team must rely on Jalen Brunson's offence. It avoids generic stat tracking, instead offering a forward-looking planner backed by local fixtures, recent 10-game form, and historical win-likelihood bands.\n\n## Chosen prototype\n\n- Title: Brunson Dependency Ranker\n- Eyebrow: Upcoming Fixture Analysis\n- Sections: Upcoming Schedule Dependency, Win Likelihood by Scoring Band, Methodology\n\n## Design direction\n\n- Purpose: To rank upcoming games by the expected offensive burden placed on Jalen Brunson, giving fans a predictive storyline before tipoff.\n- Audience: Knicks fans and analysts looking for meaningful pre-game context rather than raw trivia.\n- Tone: Analytical, transparent, and minimal. No mystery math or chart junk.\n- Memorable detail: Translating player stat predictions into a 'dependency ranking' that frames the team's vulnerability for upcoming fixtures.\n- Constraints: Must fall back to deterministic local fixtures for robust demos | Logic must be visually transparent to the user | Restrict recent form baseline strictly to the last 10 games | Use UK spelling across all interface copy"
+  },
+  {
     "issue_number": 42,
     "title": "Prototype: Brunson Impact Forecaster (Ev0ATP715QPQ-opt-1)",
     "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/42",

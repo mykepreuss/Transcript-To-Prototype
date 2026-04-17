@@ -1,0 +1,300 @@
+/* Base Variables & Theme */
+:root {
+    --bg-colour: #080808;
+    --surface-colour: #141414;
+    --border-colour: #2a2a2a;
+    --text-main: #f0f0f0;
+    --text-muted: #8c8c8c;
+    
+    /* Accents */
+    --accent-brand: #ff6b00; /* Technical Orange */
+    --dep-high: #ff3b30;
+    --dep-med: #ffcc00;
+    --dep-low: #32d74b;
+    
+    /* Typography - Strict avoidance of generic sans-serifs */
+    --font-data: 'Courier New', Courier, monospace;
+    --font-prose: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Reset & Base Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-colour);
+    color: var(--text-main);
+    font-family: var(--font-prose);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.app-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+/* Typography specifics */
+h1, h2, h3, .eyebrow, table, .highlight-value, .chart-label {
+    font-family: var(--font-data);
+}
+
+/* Header */
+.site-header {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--border-colour);
+    padding-bottom: 2rem;
+}
+
+.eyebrow {
+    color: var(--accent-brand);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.lede {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 800px;
+}
+
+/* Sections */
+.content-section {
+    margin-bottom: 4rem;
+}
+
+.section-header {
+    margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.section-desc {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+/* Highlights Grid */
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.highlight-card {
+    background-color: var(--surface-colour);
+    border: 1px solid var(--border-colour);
+    padding: 1.5rem;
+    position: relative;
+}
+
+.highlight-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: var(--border-colour);
+}
+
+.highlight-card[data-tone="warning"]::before { background-color: var(--dep-high); }
+.highlight-card[data-tone="positive"]::before { background-color: var(--dep-low); }
+
+.highlight-label {
+    font-family: var(--font-data);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-value {
+    font-size: 2rem;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+.highlight-card[data-tone="warning"] .highlight-value { color: var(--dep-high); }
+
+.highlight-detail {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Table */
+.table-container {
+    overflow-x: auto;
+    background-color: var(--surface-colour);
+    border: 1px solid var(--border-colour);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+th, td {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-colour);
+}
+
+th {
+    color: var(--text-muted);
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* The Memorable Detail: Dependency Tags */
+.tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border: 1px solid var(--border-colour);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+}
+
+.tag-high { border-color: var(--dep-high); color: var(--dep-high); }
+.tag-medium { border-color: var(--dep-med); color: var(--dep-med); }
+.tag-low { border-color: var(--dep-low); color: var(--dep-low); }
+
+/* Chart Series */
+.chart-container {
+    background-color: var(--surface-colour);
+    border: 1px solid var(--border-colour);
+    padding: 2.5rem 1.5rem 1.5rem;
+    position: relative;
+}
+
+.threshold-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: dashed 1px var(--text-muted);
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.threshold-label {
+    position: absolute;
+    top: 0.75rem;
+    transform: translateX(-50%);
+    font-family: var(--font-data);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    z-index: 1;
+    background: var(--surface-colour);
+    padding: 0 0.5rem;
+}
+
+.bar-row {
+    position: relative;
+    margin-bottom: 1.5rem;
+    z-index: 2;
+}
+
+.bar-row:last-child {
+    margin-bottom: 0;
+}
+
+.bar-label-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-data);
+}
+
+.bar-label {
+    color: var(--text-main);
+}
+
+.bar-value {
+    color: var(--text-muted);
+}
+
+.bar-track {
+    width: 100%;
+    height: 24px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-colour);
+    position: relative;
+}
+
+.bar-fill {
+    height: 100%;
+    background-color: var(--text-muted);
+    transition: width 1s ease-out;
+}
+
+.bar-row[data-index="2"] .bar-fill { background-color: var(--dep-low); } /* 30+ pts */
+.bar-row[data-index="1"] .bar-fill { background-color: var(--dep-med); } /* 25-29 pts */
+.bar-row[data-index="0"] .bar-fill { background-color: var(--dep-high); } /* Under 25 */
+
+.bar-detail {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+    font-family: var(--font-prose);
+}
+
+/* Methodology */
+.methodology {
+    border-top: 1px solid var(--border-colour);
+    padding-top: 2rem;
+    color: var(--text-muted);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    th, td {
+        padding: 0.75rem 1rem;
+    }
+    
+    .chart-container {
+        padding: 3rem 1rem 1rem;
+    }
+}
