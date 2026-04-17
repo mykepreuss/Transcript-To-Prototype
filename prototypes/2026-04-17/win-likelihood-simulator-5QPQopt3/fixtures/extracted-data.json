@@ -1,0 +1,5 @@
+{
+  "schedule": [],
+  "scoring": [],
+  "summary": "The team agreed to build a 'Win Likelihood Simulator' that connects Jalen Brunson's expected scoring to the Knicks' chances of winning. Moving away from a generic stats tracker, the prototype will use a 10-game baseline to forecast a scoring band for the upcoming match. It will feature a transparent, interactive tool allowing users to see how different scoring behaviours impact historical team success. The V1 will be strictly backed by local fixtures to ensure a deterministic, reliable demo."
+}

@@ -1,5 +1,14 @@
 [
   {
+    "issue_number": 44,
+    "title": "Prototype: Win Likelihood Simulator (Ev0ATP715QPQ-opt-3)",
+    "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/44",
+    "created_at": "2026-04-17T22:19:50Z",
+    "run_dir": "prototypes/2026-04-17/win-likelihood-simulator-5QPQopt3",
+    "preview_url": "https://mykepreuss.github.io/Transcript-To-Prototype/prototypes/2026-04-17/win-likelihood-simulator-5QPQopt3/",
+    "summary": "The team agreed to build a 'Win Likelihood Simulator' that connects Jalen Brunson's expected scoring to the Knicks' chances of winning. Moving away from a generic stats tracker, the prototype will use a 10-game baseline to forecast a scoring band for the upcoming match. It will feature a transparent, interactive tool allowing users to see how different scoring behaviours impact historical team success. The V1 will be strictly backed by local fixtures to ensure a deterministic, reliable demo.\n\n## Chosen prototype\n\n- Title: Win Likelihood Simulator\n- Eyebrow: Next Matchup Analysis\n- Sections: Forecast Logic, Historical Win Likelihood by Point Band, Recent Form Baseline\n\n## Design direction\n\n- Purpose: To demonstrate the direct relationship between a key player's scoring output and overall team success without relying on opaque predictive models.\n- Audience: Fans and analysts who want context-driven insights rather than flat, raw statistics.\n- Tone: Analytical, transparent, and direct.\n- Memorable detail: The immediate visual shift in team win likelihood when transitioning between distinct player scoring bands.\n- Constraints: Must rely exclusively on local data fixtures for the V1 demo. | Avoid 'probability' framing and complex machine learning claims; use 'likelihood' and basic historical mapping. | Base recent form calculations strictly on a 10-game window. | Interface must remain clean and minimal, avoiding decorative dashboard charts. | Use UK spelling across all user-facing copy."
+  },
+  {
     "issue_number": 43,
     "title": "Prototype: Brunson Dependency Ranker (Ev0ATP715QPQ-opt-2)",
     "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/43",

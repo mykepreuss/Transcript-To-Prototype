@@ -1,0 +1,101 @@
+{
+  "title": "Win Likelihood Simulator",
+  "eyebrow": "Next Matchup Analysis",
+  "lede": "Explore how Jalen Brunson's expected scoring behaviour correlates with the Knicks' likelihood of securing a win.",
+  "highlights": [
+    {
+      "label": "Next Opponent",
+      "value": "BOS (Away)",
+      "detail": "High pressure fixture",
+      "tone": "warning"
+    },
+    {
+      "label": "Predicted Band",
+      "value": "28–32 pts",
+      "detail": "Based on last 10 matches",
+      "tone": "neutral"
+    },
+    {
+      "label": "Win Likelihood",
+      "value": "Strong",
+      "detail": "When scoring in target band",
+      "tone": "positive"
+    }
+  ],
+  "sections": [
+    {
+      "type": "text",
+      "title": "Forecast Logic",
+      "body": "This simulation evaluates Brunson's recent form over his last 10 games, adjusting for venue and opponent context. Adjust the hypothetical points total to see how historical team outcomes change based on his offensive output."
+    },
+    {
+      "type": "series",
+      "title": "Historical Win Likelihood by Point Band",
+      "description": "Visualise how team success scales with individual scoring milestones.",
+      "unit": "%",
+      "threshold": 50,
+      "thresholdLabel": "Even Odds",
+      "points": [
+        {
+          "label": "Under 25 pts",
+          "value": 35,
+          "detail": "Low correlation with wins"
+        },
+        {
+          "label": "25–29 pts",
+          "value": 55,
+          "detail": "Moderate correlation"
+        },
+        {
+          "label": "30+ pts",
+          "value": 75,
+          "detail": "High correlation with wins"
+        }
+      ],
+      "emptyMessage": "No correlation data available."
+    },
+    {
+      "type": "table",
+      "title": "Recent Form Baseline",
+      "description": "The 10-game baseline used to calculate the expected scoring band.",
+      "columns": [
+        "Match",
+        "Venue",
+        "Points",
+        "Team Result"
+      ],
+      "rows": [
+        [
+          "vs ORL",
+          "Home",
+          "26",
+          "Win"
+        ],
+        [
+          "vs PHI",
+          "Away",
+          "31",
+          "Win"
+        ],
+        [
+          "vs MIA",
+          "Home",
+          "22",
+          "Loss"
+        ]
+      ],
+      "emptyMessage": "Awaiting fixture data to populate recent matches."
+    }
+  ],
+  "demoSteps": [
+    "Review the predicted scoring band for the upcoming away fixture.",
+    "Interact with the win likelihood simulator by selecting different scoring bands (e.g., under 25, 25-29, 30+).",
+    "Observe the shift in the team's historical win likelihood as the expected point value changes.",
+    "Consult the 10-game recent form table to validate the transparency of the forecast baseline."
+  ],
+  "notes": [
+    "The UI should include an interactive control (like a segmented toggle or slider) to let the user pick a 'What-If' points band, which dynamically updates the highlighted Win Likelihood.",
+    "Ensure all UI copy strictly follows UK spelling conventions (e.g., behaviour, colour, organise).",
+    "The 'Recent Form Baseline' table is populated with placeholder fixture data to demonstrate the 10-game window logic without requiring a live API."
+  ]
+}
