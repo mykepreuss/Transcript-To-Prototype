@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brunson Impact Forecaster</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="document-wrapper">
+    <header class="doc-header">
+      <span class="eyebrow">Next Matchup Context</span>
+      <h1 class="title">Brunson Impact Forecaster</h1>
+      <p class="lede">Projecting Jalen Brunson's scoring output for the upcoming game and its historical impact on the Knicks' chances.</p>
+    </header>
+
+    <main>
+      <section class="highlights-region" aria-label="Key Projections">
+        <div class="highlight-grid" id="highlight-container">
+          <!-- Populated by app.js -->
+        </div>
+      </section>
+
+      <div class="content-split">
+        <section class="logic-region" aria-label="Forecasting Baseline">
+          <header class="section-header">
+            <h2>Forecasting Baseline</h2>
+            <p>The contextual factors driving today's projected scoring band.</p>
+          </header>
+          <div class="memo-block">
+            <ul id="baseline-list" class="typewriter-list">
+              <!-- Populated by app.js -->
+            </ul>
+          </div>
+        </section>
+
+        <section class="outcomes-region" aria-label="Historical Outcomes">
+          <header class="section-header">
+            <h2>Team Outcomes by Scoring Band</h2>
+            <p>How the Knicks have historically fared depending on Brunson's scoring volume.</p>
+          </header>
+          <table class="ledger-table">
+            <thead>
+              <tr>
+                <th scope="col">Scoring Band</th>
+                <th scope="col" class="num-col">Games Logged</th>
+                <th scope="col" class="num-col">Knicks Win Rate</th>
+              </tr>
+            </thead>
+            <tbody id="outcomes-table-body">
+              <!-- Populated by app.js -->
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>

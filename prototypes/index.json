@@ -1,5 +1,14 @@
 [
   {
+    "issue_number": 42,
+    "title": "Prototype: Brunson Impact Forecaster (Ev0ATP715QPQ-opt-1)",
+    "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/42",
+    "created_at": "2026-04-17T22:16:44Z",
+    "run_dir": "prototypes/2026-04-17/brunson-impact-forecaster-5QPQopt1",
+    "preview_url": "https://mykepreuss.github.io/Transcript-To-Prototype/prototypes/2026-04-17/brunson-impact-forecaster-5QPQopt1/",
+    "summary": "A pre-game forecasting prototype that predicts Jalen Brunson's scoring band for the upcoming matchup and maps it to the Knicks' likelihood of winning based on recent form and historical data.\n\n## Chosen prototype\n\n- Title: Brunson Impact Forecaster\n- Eyebrow: Next Matchup Context\n- Sections: Forecasting Baseline, Team Outcomes by Scoring Band\n\n## Design direction\n\n- Purpose: Connect individual player forecasts to team outcomes without relying on opaque predictive models.\n- Audience: Basketball fans and analysts wanting pre-game context grounded in recent form.\n- Tone: Analytical, transparent, and measured.\n- Memorable detail: Exposing the forecasting logic in plain text rather than hiding it behind a black-box probability score.\n- Constraints: Use UK English spelling (e.g., defence). | Must operate using local fixtures only for V1. | Forecasting logic must be explicitly visible (last 10 games, venue, opponent). | No decorative dashboard elements or chart junk."
+  },
+  {
     "issue_number": 41,
     "title": "Prototype: Brunson Dependency Tracker (Ev0ALGTPM49L-opt-2)",
     "issue_url": "https://github.com/mykepreuss/Transcript-To-Prototype/issues/41",

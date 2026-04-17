@@ -1,0 +1,208 @@
+:root {
+  --colour-bg: #EAE6DF;
+  --colour-surface: #F3F1ED;
+  --colour-ink-dark: #1A1A1A;
+  --colour-ink-light: #55534E;
+  --colour-accent: #C84B31;
+  --colour-border: #CCC7BC;
+  
+  --font-serif: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  --font-mono: "Consolas", "Courier New", Courier, monospace;
+  
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+}
+
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--colour-bg);
+  color: var(--colour-ink-dark);
+  font-family: var(--font-serif);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+p {
+  color: var(--colour-ink-light);
+}
+
+/* Layout */
+.document-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+}
+
+/* Header */
+.doc-header {
+  border-bottom: 4px solid var(--colour-ink-dark);
+  padding-bottom: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.eyebrow {
+  display: block;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+  color: var(--colour-ink-light);
+  margin-bottom: var(--space-xs);
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: var(--space-sm);
+  letter-spacing: -0.02em;
+}
+
+.lede {
+  font-size: 1.25rem;
+  max-width: 80%;
+}
+
+/* Highlights */
+.highlights-region {
+  margin-bottom: var(--space-lg);
+}
+
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-md);
+}
+
+.highlight-card {
+  border-top: 1px solid var(--colour-border);
+  padding-top: var(--space-sm);
+}
+
+.hl-label {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--colour-ink-light);
+  display: block;
+  margin-bottom: var(--space-xs);
+}
+
+.hl-value {
+  font-size: 2.5rem;
+  color: var(--colour-accent);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.hl-value.neutral {
+  color: var(--colour-ink-dark);
+}
+
+.hl-detail {
+  font-size: 0.9rem;
+  color: var(--colour-ink-light);
+}
+
+/* Split Layout for Logic & Outcomes */
+.content-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .content-split {
+    grid-template-columns: 1fr 1.2fr;
+  }
+}
+
+.section-header {
+  margin-bottom: var(--space-sm);
+}
+
+.section-header h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Logic Block - Memorable UI Detail */
+.memo-block {
+  background-color: var(--colour-surface);
+  border: 1px solid var(--colour-border);
+  padding: var(--space-md);
+  box-shadow: 4px 4px 0px rgba(0,0,0,0.05);
+}
+
+.typewriter-list {
+  list-style: none;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--colour-ink-dark);
+}
+
+.typewriter-list li {
+  margin-bottom: var(--space-sm);
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.typewriter-list li::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  color: var(--colour-accent);
+}
+
+.typewriter-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Ledger Table */
+.ledger-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.ledger-table th,
+.ledger-table td {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--colour-border);
+  text-align: left;
+}
+
+.ledger-table th {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--colour-ink-light);
+  border-bottom: 2px solid var(--colour-ink-dark);
+}
+
+.ledger-table .num-col {
+  text-align: right;
+  font-family: var(--font-mono);
+}
+
+/* Reduced Motion Fallback */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

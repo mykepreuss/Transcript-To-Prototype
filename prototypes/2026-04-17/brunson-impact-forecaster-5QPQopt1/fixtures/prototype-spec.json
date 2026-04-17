@@ -1,0 +1,77 @@
+{
+  "title": "Brunson Impact Forecaster",
+  "eyebrow": "Next Matchup Context",
+  "lede": "Projecting Jalen Brunson's scoring output for the upcoming game and its historical impact on the Knicks' chances.",
+  "highlights": [
+    {
+      "label": "Next Matchup",
+      "value": "BOS (Away)",
+      "detail": "Upcoming fixture context",
+      "tone": "neutral"
+    },
+    {
+      "label": "Projected Band",
+      "value": "28–32 pts",
+      "detail": "Based on 10-game recent form",
+      "tone": "positive"
+    },
+    {
+      "label": "Win Likelihood",
+      "value": "68%",
+      "detail": "When scoring in projected band",
+      "tone": "neutral"
+    }
+  ],
+  "sections": [
+    {
+      "type": "list",
+      "title": "Forecasting Baseline",
+      "description": "The contextual factors driving today's projected scoring band.",
+      "items": [
+        "Recent form: Averaging 31.4 points over the last 10 games.",
+        "Venue split: Away game behaviour adjusts projection slightly downward.",
+        "Opponent defence: Boston allows 108.5 points per game (high resistance)."
+      ],
+      "ordered": false,
+      "emptyMessage": "No baseline data available."
+    },
+    {
+      "type": "table",
+      "title": "Team Outcomes by Scoring Band",
+      "description": "How the Knicks have historically fared depending on Brunson's scoring volume.",
+      "columns": [
+        "Scoring Band",
+        "Games Logged",
+        "Knicks Win Rate"
+      ],
+      "rows": [
+        [
+          "Under 25 pts",
+          "14",
+          "35%"
+        ],
+        [
+          "25 to 29 pts",
+          "22",
+          "55%"
+        ],
+        [
+          "30+ pts",
+          "31",
+          "71%"
+        ]
+      ],
+      "emptyMessage": "No historical outcomes available."
+    }
+  ],
+  "demoSteps": [
+    "Review the top highlights to see the upcoming matchup, the forecasted scoring band, and the corresponding win likelihood.",
+    "Read the Forecasting Baseline list to understand the plain-text logic behind the projection.",
+    "Examine the Team Outcomes table to see the broader relationship between individual scoring volume and team success."
+  ],
+  "notes": [
+    "Extracted fixtures were empty; the V1 code generator should supply illustrative deterministic data to populate these fields.",
+    "Ensure the interface remains minimal and strictly avoids typical sports betting visual language.",
+    "Future iteration will extend this logic into a schedule-wide 'dependency index' across the next 5 games."
+  ]
+}
